@@ -1,0 +1,121 @@
+@import './../../variables.scss';
+
+.remote {
+
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+
+    .controller {
+        width: 200px;
+        height: 200px;
+        // perspective: 600px;
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateY(15deg) rotateX(20deg);
+
+            .btn-power {
+                flex-basis: 100%;
+            }
+
+            .btn-push {
+                position: relative;
+                top: 0px;
+                font-family: "Open Sans";
+                text-decoration: none;
+                font-size: 20px;
+                background: #f7f7f7;
+                padding: 2px 10px;
+                margin: 0 10px 10px;
+                border: 1px solid #c4c4c4;
+                border-radius: 5px;
+                box-shadow: -3px 3px 0px #c4c4c4;
+                color: #222;
+                text-shadow: 1px 1px 1px #fff;
+                transition: All 250ms ease;
+
+                &:active {
+                    position: relative;
+                    top: 3px;
+                    left: -3px;
+                    box-shadow: none !important;
+                    transition: All 250ms ease;
+                }
+
+                &.navy {
+                    background: #1b486d;
+                    border: 1px solid #07121b;
+                    border-radius: 5px;
+                    box-shadow: -3px 3px 0px #07121b;
+                    color: #fff;
+                    text-shadow: 1px 1px 1px #07121b;
+                }
+
+                &.green {
+                    background: #7cc576;
+                    color: #fff;
+                    border: 1px solid #46963f;
+                    border-radius: 5px;
+                    box-shadow: -3px 3px 0px #46963f;
+                    text-shadow: 1px 1px 1px #46963f;
+                }
+
+                &.red {
+                    background: #df4242;
+                    color: #fff;
+                    border: 1px solid #a01b1b;
+                    border-radius: 5px;
+                    box-shadow: -3px 3px 0px #a01b1b;
+                    text-shadow: 1px 1px 1px #a01b1b;
+                }
+
+                &.blue {
+                    background: #2ec2dd;
+                    color: #fff;
+                    border: 1px solid #177c8e;
+                    border-radius: 5px;
+                    box-shadow: -3px 3px 0px #177c8e;
+                    text-shadow: 1px 1px 1px #177c8e;
+                }
+            }
+
+            .cube-face {
+                position: absolute;
+
+
+                &.top {
+                    transform: rotateY(0deg) translateZ(100px);
+                    width: 200px;
+                    height: 300px;
+                    background: $pcolor0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: center;
+                    justify-content: center;
+                }
+
+                &.left {
+                    transform: rotateY(-90deg) translateZ(100px);
+                    background: #ccc;
+                    height: 300px;
+                    width: 90px;
+                    top: -18px;
+                    left: 70px;
+                }
+
+                &.bottom {
+                    transform: rotateX(-90deg) translateZ(100px);
+                    background: #ccc;
+                    height: 90px;
+                    width: 200px;
+                    top: 137px;
+                    left: 14px;
+                }
+            }
+        }
+    }
+}
