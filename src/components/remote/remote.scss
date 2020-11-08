@@ -38,6 +38,23 @@
                 text-shadow: 1px 1px 1px #fff;
                 transition: All 250ms ease;
 
+                &.guide {
+                    margin: 0 4px 10px;
+                    font-size: 16px;
+                    padding: 8px 12px;
+                }
+
+                &.netflix {
+                    margin: 0 4px 10px;
+                    font-size: 16px;
+                    padding: 8px 12px;
+                }
+
+                &.zero {
+                    margin: 0 8px 12px;
+                    padding: 4px 10px;
+                }
+
                 &:active {
                     position: relative;
                     top: 3px;
@@ -88,32 +105,29 @@
 
 
                 &.top {
-                    transform: rotateY(0deg) translateZ(100px);
+                    transform: rotateY(0deg) translateZ(35px);
                     width: 200px;
                     height: 300px;
-                    background: $pcolor0;
+                    background: #000;
                     display: flex;
                     flex-wrap: wrap;
                     align-content: center;
                     justify-content: center;
+                    border-radius: 25px;
+                    border: 1px solid #444;
                 }
 
-                &.left {
-                    transform: rotateY(-90deg) translateZ(100px);
-                    background: #ccc;
-                    height: 300px;
-                    width: 90px;
-                    top: -18px;
-                    left: 70px;
-                }
 
                 &.bottom {
-                    transform: rotateX(-90deg) translateZ(100px);
-                    background: #ccc;
-                    height: 90px;
-                    width: 200px;
-                    top: 137px;
-                    left: 14px;
+                    transform: rotateY(0deg) translateZ(0px);
+                    background: #000;
+                    height: 300px;
+                    width: 210px;
+                    top: 0px;
+                    left: -5px;
+                    border: 1px solid #444;
+                    border-radius: 25px;
+
                 }
             }
         }

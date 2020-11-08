@@ -1,10 +1,24 @@
 import React from 'react';
-import './channel-1.scss';
+import './channel-0.scss';
 import ChannelNumber from './../channel-number/channel-number.component';
+import tvStaticSrc from './../../../assets/audio/tv-static.mp3';
 
 
-export default function Channel1(props) {
+export default function Channel0(props) {
 
-	return(<div className="channel-1"><ChannelNumber number="1" />  Chattanoga. Bachelor's in Business. House project.</div>);
+
+  let audio = new Audio(tvStaticSrc);
+
+  const start = () => {
+  	audio.loop = true;
+  	audio.load();
+    audio.play();
+  }
+  start();
+
+
+	return(<div className="channel-0"><ChannelNumber number="0" />  
+
+	</div>);
 
 }
