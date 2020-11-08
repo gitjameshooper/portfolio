@@ -6,27 +6,15 @@ import ChannelNumber from './../channel-number/channel-number.component';
 export default function Channel6(props) {
 
 	return(<div className="channel-6"><ChannelNumber number="6" />
-		WOrking at Volusion and Flosports
-		Front End Web Developer
-Company NameVolusion, LLC
-Dates EmployedMay 2015 – Sep 2016
-Employment Duration1 yr 5 mos
+Living in San Diego and Trading Stock Trader
+Company Name Self-employed
+Dates EmployedNov 2014 – Aug 2020
+Employment Duration5 yrs 10 mos
 LocationAustin, Texas Area
--Programmed on the 3 main Volusion marketing websites: Volusion.com, Material.com, Mozu.com
--Used AngularJS, vanilla JS, Node/NPM, Gulp, Prismic.io(CMS), Materialize, Github
--Developed in a Scrum environment using continuous integration
--Added third party APIs(Salesforce) for workflow to help sales
-
-Full-Stack Web Engineer
-Company NameFloSports
-Dates EmployedSep 2016 – Nov 2017
-Employment Duration1 yr 3 mos
-LocationAustin, Texas Area
--Worked on the Flosports vertical sites in Angular 4: Flotrack.org, Flowrestling.org, Flovolleyball.tv etc…
--Coded in Angular 4 building components and services using RXJS, Typescript, Node/NPM
--Developed in a functional paradigm with version control systems(Github) in an agile environment
--Experimented with A/B tests in Optimizely to capture analytics to help improve the sales funnel
--Collaborated with marketing to accomplish their goals with Marketo, Kissmetrics, Segment, GA
+-Performing day and swing trades on US equities capitalizing on liquidity and volatility
+-Created a proprietary application in Angular 6 with stock APIs(ally.com, AlphaVantage.com)
+-Earned 80% ROI on 1,400 trades in 2018 using technical analysis
+-Averaged a Risk Reward Ratio of 2.30 and winning percentage of 60% on 350 trades in 2017
 		</div>);
 
 }

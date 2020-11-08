@@ -12,11 +12,16 @@ import Channel7 from './components/channels/channel-7/channel-7.component';
 import Channel8 from './components/channels/channel-8/channel-8.component';
 import Channel9 from './components/channels/channel-9/channel-9.component';
 import Netflix from './components/channels/netflix/netflix.component';
+import Guide from './components/guide/guide.component';
+import lgLogo from './assets/img/lg-logo-2.png';
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
+    <span className="on-off-light"></span>
+    <img className="lg-logo" src={lgLogo} />
+    <Guide />
         <Router>
           <Switch>
              <Route path="/" exact component={Channel1} />

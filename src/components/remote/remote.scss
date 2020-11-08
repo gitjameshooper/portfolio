@@ -5,11 +5,10 @@
     position: absolute;
     bottom: 100px;
     right: 200px;
-
+        z-index: 2;
     .controller {
         width: 200px;
         height: 200px;
-        // perspective: 600px;
 
         .cube {
             width: 100%;

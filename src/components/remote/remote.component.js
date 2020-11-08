@@ -23,11 +23,6 @@ export default function Remote(props) {
     audio.play();
   }
 
-
-
-
-    
-
     return (
         <div className="remote">
 
