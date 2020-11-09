@@ -1,20 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Context } from './../../../store';
 import './channel-6.scss';
 import ChannelNumber from './../channel-number/channel-number.component';
 
 
-export default function Channel6(props) {
+export default function Channel4(props) {
+const [store, setStore] = useContext(Context); 
 
-	return(<div className="channel-6 channels"><ChannelNumber number="6" />
-Living in San Diego and Trading Stock Trader
-Company Name Self-employed
-Dates EmployedNov 2014 – Aug 2020
-Employment Duration5 yrs 10 mos
-LocationAustin, Texas Area
--Performing day and swing trades on US equities capitalizing on liquidity and volatility
--Created a proprietary application in Angular 6 with stock APIs(ally.com, AlphaVantage.com)
--Earned 80% ROI on 1,400 trades in 2018 using technical analysis
--Averaged a Risk Reward Ratio of 2.30 and winning percentage of 60% on 350 trades in 2017
-		</div>);
+	return(<div className={`channel-6 channels ${store.isTvOn ? 'active' : 'hidden'} `}>
+		<div className="wrapper"><ChannelNumber number="6" /> 
+					Live News. Current projects.   Land Accrue,  Stock Trading Application
+		</div></div>);
 
 }

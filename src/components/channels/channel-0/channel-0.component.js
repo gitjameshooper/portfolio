@@ -1,24 +1,27 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { Context } from './../../../store';
 import './channel-0.scss';
 import ChannelNumber from './../channel-number/channel-number.component';
 import tvStaticSrc from './../../../assets/audio/tv-static.mp3';
 
 
 export default function Channel0(props) {
-
+		const [store, setStore] = useContext(Context); 
 
   let audio = new Audio(tvStaticSrc);
 
-  const start = () => {
-  	audio.loop = true;
-  	audio.load();
-    audio.play();
-  }
-  start();
+   useEffect(() => {
+   		if(!store.mute){ 
+	    	audio.loop = true;
+  			audio.load();
+    		audio.play();
+    	}
 
+	   return function cleanup () {
+	      audio.pause();
+	   }
+	}, [])
 
-	return(<div className="channel-0"><ChannelNumber number="0" />  
-
-	</div>);
+	return(<div className="channel-0"><ChannelNumber number="0" /></div>);
 
 }

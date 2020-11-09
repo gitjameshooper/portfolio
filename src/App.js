@@ -1,4 +1,5 @@
 import React from 'react';
+import Store from './store';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Remote from './components/remote/remote.component';
 import Channel0 from './components/channels/channel-0/channel-0.component';
@@ -18,9 +19,10 @@ import './App.scss';
 
 function App() {
   return (
+    <Store>
     <div className="App">
-    <span className="on-off-light"></span>
-    <img className="lg-logo" src={lgLogo} />
+      <span className="on-off-light"></span>
+      <img className="lg-logo" src={lgLogo} />
     <Guide />
         <Router>
           <Switch>
@@ -40,6 +42,7 @@ function App() {
              <Remote  />
         </Router>
     </div>
+    </Store>
   );
 }
 

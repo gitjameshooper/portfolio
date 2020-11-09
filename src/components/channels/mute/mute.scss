@@ -1,0 +1,21 @@
+@import './../../../variables.scss';
+
+.mute-component {
+    display: none;
+    width: 80px;
+    height: 80px;
+    color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        font-size: 56px;
+    }
+
+    &.active {
+        display: flex;
+    }
+}
