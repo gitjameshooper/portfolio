@@ -5,6 +5,6 @@ import ChannelNumber from './../channel-number/channel-number.component';
 
 export default function Channel9(props) {
 
-	return(<div className="channel-9"><ChannelNumber number="9" />  My heros and quotes I live by .  Inspiration channel</div>);
+	return(<div className="channel-9 channels"><ChannelNumber number="9" />  My heros and quotes I live by .  Inspiration channel</div>);
 
 }

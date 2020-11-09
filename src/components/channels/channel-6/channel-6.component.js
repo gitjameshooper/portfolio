@@ -5,7 +5,7 @@ import ChannelNumber from './../channel-number/channel-number.component';
 
 export default function Channel6(props) {
 
-	return(<div className="channel-6"><ChannelNumber number="6" />
+	return(<div className="channel-6 channels"><ChannelNumber number="6" />
 Living in San Diego and Trading Stock Trader
 Company Name Self-employed
 Dates EmployedNov 2014 – Aug 2020

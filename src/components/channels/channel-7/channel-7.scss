@@ -1,5 +1,11 @@
 @import './../../../variables.scss';
 
-.channel-7{
-	background: $pcolor1;
+.channel-7 {
+
+        background-image: url('./../../../assets/img/world-map.jpg');
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+    
+
 }

@@ -4,7 +4,7 @@ import ChannelNumber from './../channel-number/channel-number.component';
 
 export default function Channel4(props) {
 
-	return(<div className="channel-4"><ChannelNumber number="4" />
+	return(<div className="channel-4 channels"><ChannelNumber number="4" />
 			WOrking at Mass Relevance and Spredfast
 Front End Web Developer
 Company Name Mass Relevance

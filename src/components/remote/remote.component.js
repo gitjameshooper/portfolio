@@ -3,6 +3,8 @@ import './remote.scss';
 import clickOnSrc from './../../assets/audio/click-on.mp3';
 import { useHistory } from 'react-router-dom';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 export default function Remote(props) {
@@ -14,6 +16,7 @@ export default function Remote(props) {
 	let audio = new Audio(clickOnSrc);
 
   const start = (e) => {
+  	console.log(e.target);
   	e.preventDefault();
   	audio.load();
   	if(e.target.pathname){
@@ -29,22 +32,26 @@ export default function Remote(props) {
 		<div className="controller">
 		  <div className="cube">
 		    <div className="cube-face top">
-		    	<a className="btn-push btn-power red" href="/" onClick={start}><PowerSettingsNewIcon />Power</a>
-				<a className="btn-push" href="/channel-1" onClick={start}>1</a>
-				<a className="btn-push"  href="/channel-2" onClick={start}>2</a>
-				<a className="btn-push"  href="/channel-3" onClick={start}>3</a>
-				<a className="btn-push"  href="/channel-4" onClick={start}>4</a>
-				<a className="btn-push"  href="/channel-5" onClick={start}>5</a>
-				<a className="btn-push"  href="/channel-6" onClick={start}>6</a>
-				<a className="btn-push"  href="/channel-7" onClick={start}>7</a>
-				<a className="btn-push"  href="/channel-8" onClick={start}>8</a>
-				<a className="btn-push"  href="/channel-9" onClick={start}>9</a>
+		    	<div className="btn-power"><a className="btn-push red" href="/" onClick={start}><PowerSettingsNewIcon /></a></div>
+				<a className="btn-push numbers" href="/channel-1" onClick={start}>1</a>
+				<a className="btn-push numbers"  href="/channel-2" onClick={start}>2</a>
+				<a className="btn-push numbers"  href="/channel-3" onClick={start}>3</a>
+				<a className="btn-push numbers"  href="/channel-4" onClick={start}>4</a>
+				<a className="btn-push numbers"  href="/channel-5" onClick={start}>5</a>
+				<a className="btn-push numbers"  href="/channel-6" onClick={start}>6</a>
+				<a className="btn-push numbers"  href="/channel-7" onClick={start}>7</a>
+				<a className="btn-push numbers"  href="/channel-8" onClick={start}>8</a>
+				<a className="btn-push numbers"  href="/channel-9" onClick={start}>9</a>
 				<a className="btn-push navy guide"  href="/" onClick={start}>Guide</a>
-				<a className="btn-push zero"  href="/channel-0" onClick={start}>0</a>
+				<a className="btn-push numbers zero"  href="/channel-0" onClick={start}>0</a>
 				<a className="btn-push red netflix"  href="/netflix" onClick={start}>Netflix</a>
-				<a className="btn-push blue"  href="/netflix" onClick={start}>+ Vol -</a>
-				<a className="btn-push"  href="/channel-9" onClick={start}>Mute</a>
-				<a className="btn-push blue"  href="/netflix" onClick={start}>(CH)</a>
+				<div className="btn-push blue btn-volume"><a className="volume-top" onClick={start}>+<br />Vol</a>
+				<a className="volume-bot" onClick={start}>_</a></div>
+				<a className="btn-push mute"  onClick={start}>Mute</a>
+				<div className="btn-push blue btn-channel"><a className="channel-top" onClick={start}><ExpandLessIcon /><span className="text">CH</span></a>
+				<a className="channel-bot" onClick={start}><ExpandMoreIcon /></a></div>
+
+
 		    </div>
 		    <div className="cube-face bottom">bottom</div>
 		  </div>
@@ -53,3 +60,4 @@ export default function Remote(props) {
 		</div>);
 
 }
+	

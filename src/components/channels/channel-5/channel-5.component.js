@@ -5,7 +5,7 @@ import ChannelNumber from './../channel-number/channel-number.component';
 
 export default function Channel5(props) {
 
-	return(<div className="channel-5"><ChannelNumber number="5" />
+	return(<div className="channel-5 channels"><ChannelNumber number="5" />
 		WOrking at Volusion and Flosports
 		Front End Web Developer
 Company NameVolusion, LLC
