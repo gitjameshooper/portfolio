@@ -34,10 +34,10 @@ export default function Guide(props) {
 
     function btnClick(e, btnName, path) {
         e.preventDefault();
-        console.log(path);
+
         setStore({ ...store, guide: false });
         if (path) {
-            console.log(history);
+
             history.push(path);
         }
     }

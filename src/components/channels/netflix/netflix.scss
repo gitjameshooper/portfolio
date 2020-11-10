@@ -1,0 +1,12 @@
+@import './../../../variables.scss';
+
+
+.netflix{
+    iframe{
+    	position: 'relative';
+    	    &.hidden {
+        display: none;
+       }
+    }
+
+}

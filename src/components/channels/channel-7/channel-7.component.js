@@ -2,13 +2,14 @@ import React, { useContext } from 'react';
 import { Context } from './../../../store';
 import './channel-7.scss';
 import ChannelNumber from './../channel-number/channel-number.component';
+import Mute from './../mute/mute.component';
 
 
 export default function Channel7(props) {
 const [store, setStore] = useContext(Context); 
 
 	return(<div className={`channel-7 channels ${store.isTvOn ? 'active' : 'hidden'} `}>
-		<div className="wrapper"><ChannelNumber number="7" /> Traveling 
+		<div className="wrapper"><ChannelNumber number="7" /><Mute muted={store.mute} /> Traveling 
 		<div>
 			<h3>Trip to El Salvador</h3>
 				San Salvador

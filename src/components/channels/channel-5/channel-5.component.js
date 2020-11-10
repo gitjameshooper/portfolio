@@ -2,13 +2,14 @@ import React, { useContext } from 'react';
 import { Context } from './../../../store';
 import './channel-5.scss';
 import ChannelNumber from './../channel-number/channel-number.component';
+import Mute from './../mute/mute.component';
 
 
 export default function Channel5(props) {
 const [store, setStore] = useContext(Context); 
 
 	return(<div className={`channel-5 channels ${store.isTvOn ? 'active' : 'hidden'} `}>
-		<div className="wrapper"><ChannelNumber number="5" /> 
+		<div className="wrapper"><ChannelNumber number="5" /> <Mute muted={store.mute} />
 	Living in San Diego and Trading Stock Trader
 Company Name Self-employed
 Dates EmployedNov 2014 – Aug 2020

@@ -23,8 +23,8 @@ function App() {
     <div className="App">
       <span className="on-off-light"></span>
       <img className="lg-logo" src={lgLogo} />
-    <Guide />
         <Router>
+          <Guide />
           <Switch>
              <Route path="/" exact component={Channel1} />
              <Route path="/channel-0" exact component={Channel0} />

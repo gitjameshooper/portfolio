@@ -2,13 +2,14 @@ import React, { useContext } from 'react';
 import { Context } from './../../../store';
 import './channel-2.scss';
 import ChannelNumber from './../channel-number/channel-number.component';
+import Mute from './../mute/mute.component';
 
 
 export default function Channel2(props) {
 const [store, setStore] = useContext(Context); 
 
 	return(<div className={`channel-2 channels ${store.isTvOn ? 'active' : 'hidden'} `}>
-		<div className="wrapper"><ChannelNumber number="2" />
+		<div className="wrapper"><ChannelNumber number="2" /><Mute muted={store.mute} />
 			First tech job and making a portfolio 	WOrking at Cart Designers
 				Web Developer
 Company NameCart Designers

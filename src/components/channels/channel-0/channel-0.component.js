@@ -3,6 +3,7 @@ import { Context } from './../../../store';
 import './channel-0.scss';
 import ChannelNumber from './../channel-number/channel-number.component';
 import tvStaticSrc from './../../../assets/audio/tv-static.mp3';
+import Mute from './../mute/mute.component';
 
 
 export default function Channel0(props) {
@@ -22,6 +23,6 @@ export default function Channel0(props) {
 	   }
 	}, [])
 
-	return(<div className="channel-0"><ChannelNumber number="0" /></div>);
+	return(<div className="channel-0"><ChannelNumber number="0" /><Mute muted={store.mute} /></div>);
 
 }
