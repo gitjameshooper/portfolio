@@ -8,8 +8,6 @@
     right: 0;
     bottom: 0;
     border: 30px solid #1a1a1a;
-    background: linear-gradient(top, rgba(255, 255, 255, .15), rgba(0, 0, 0, .25)),
-        linear-gradient(left top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .1) 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
 
     &:before {
         content: '';
@@ -28,6 +26,7 @@
         left: 0;
         right: 0;
         bottom: 0;
+        overflow: hidden;
     }
 
     .on-off-light {

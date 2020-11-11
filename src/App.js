@@ -18,6 +18,8 @@ import lgLogo from './assets/img/logos/lg.png';
 import './App.scss';
 
 function App() {
+
+
   return (
     <Store>
     <div className="App">

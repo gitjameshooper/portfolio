@@ -6,8 +6,8 @@ const initialState = {
       channel: 1,
       volume: 'low',
       guide: false,
-      mute: false
-
+      mute: false,
+      
 };
 
 

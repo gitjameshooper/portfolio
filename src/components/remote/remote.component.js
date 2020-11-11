@@ -3,7 +3,7 @@ import { Context } from './../../store';
 import './remote.scss';
 import clickOnSrc from './../../assets/audio/click-on.mp3';
 import clickOffSrc from './../../assets/audio/click-off.mp3';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Redirect } from 'react-router-dom';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -12,7 +12,6 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 export default function Remote(props) {
     const [store, setStore] = useContext(Context);
     let history = useHistory();
-    
 
     function playonClickSound(src) {
         let audio = new Audio(src);

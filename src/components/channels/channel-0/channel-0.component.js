@@ -18,11 +18,15 @@ export default function Channel0(props) {
     		audio.play();
     	}
 
+    	if(store.mute){
+    		audio.pause();
+    	}
+
 	   return function cleanup () {
 	      audio.pause();
 	   }
 	}, [])
 
-	return(<div className="channel-0"><ChannelNumber number="0" /><Mute muted={store.mute} /></div>);
+	return(<div className={`channel-0 channels ${store.isTvOn ? 'active' : 'hidden'} `}><ChannelNumber number="0" /><Mute muted={store.mute} /></div>);
 
 }

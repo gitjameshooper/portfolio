@@ -3,6 +3,7 @@ import { Context } from './../../../store';
 import './channel-1.scss';
 import ChannelNumber from './../channel-number/channel-number.component';
 import Mute from './../mute/mute.component';
+import jamesSrc from './../../../assets/img/channel-1/james.jpg';
 
 
 export default function Channel1(props) {
@@ -13,8 +14,11 @@ export default function Channel1(props) {
 		<ChannelNumber number="1" />
 		<Mute muted={store.mute} />
 		<h3>Intro about growing up in chattanooga</h3>
+		<h4>Contact me</h4>
+		<p>512-769-0980</p>
+		<a href="" target="_new">jamesthomashooper@gmail.com</a>
 		<p>
-		Hello, I am James Hooper. I grew up in Chattanoga, TN a beautiful city nested between 2 mountains with a river running through it.
+		Hello, I am James Hooper.  <img alt="James Hooper" src={jamesSrc} />I grew up in Chattanoga, TN a beautiful city nested between 2 mountains with a river running through it.
 		 I atteneded The University of Tenn. at Chattanooga and graduated with a Bachelor's Degree in Business. I worked my way through college and had a great experience fixing up a house.
 		 I love the city, but after college I knew there was something bigger for me. So I bought a truck, said my goodbyes, and moved to Austin, TX.</p>
 		 [Intro pic]

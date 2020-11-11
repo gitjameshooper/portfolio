@@ -3,6 +3,8 @@ import { Context } from './../../../store';
 import './channel-4.scss';
 import ChannelNumber from './../channel-number/channel-number.component';
 import Mute from './../mute/mute.component';
+import fsTeamSrc from './../../../assets/img/channel-4/flosports-team.jpg';
+import fsLogoSrc from './../../../assets/img/logos/flosports.png';
 
 
 export default function Channel4(props) {
@@ -10,6 +12,8 @@ const [store, setStore] = useContext(Context);
 
 	return(<div className={`channel-4 channels ${store.isTvOn ? 'active' : 'hidden'} `}>
 		<div className="wrapper"><ChannelNumber number="4" /> <Mute muted={store.mute} />
+		<img alt="Flosports Logo" src={fsLogoSrc} />
+		<img alt="Flosports Team" src={fsTeamSrc} />
 			WOrking at Volusion and Flosports
 		Front End Web Developer
 Company NameVolusion, LLC

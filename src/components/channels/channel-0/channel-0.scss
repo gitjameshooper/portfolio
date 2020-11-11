@@ -7,8 +7,8 @@
     background: url('./../../../assets/img/bw-static.gif');
     height: 100%;
     width: 100%;
-    .dots {
-       
-
+     &.hidden {
+        display: none;
     }
+
 }

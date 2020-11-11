@@ -53,6 +53,9 @@
 }
 
 .channel-1 {
+    img{
+        width: 200px;
+    }
     &.hidden {
         display: none;
     }
