@@ -1,0 +1,24 @@
+@import "./../../variables.scss";
+.jh-logo {
+  font-family: "Arimo", sans-serif;
+  font-size: 80px;
+  color: $pcolor1;
+  position: relative;
+  top: 40%;
+  &.hidden {
+    display: none;
+  }
+  .j-letter {
+    border-bottom: 10px solid;
+    width: 60px;
+    display: inline-block;
+  }
+  .h-letter {
+    border-top: 10px solid;
+    width: 60px;
+    display: inline-block;
+  }
+  .tv-text {
+    font-size: 18px;
+  }
+}

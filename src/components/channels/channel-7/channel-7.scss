@@ -1,26 +1,21 @@
-@import './../../../variables.scss';
+@import "./../../../variables.scss";
 
- 
 .channel-7 {
+  &.hidden {
+    display: none;
+  }
 
-    &.hidden {
-        display: none;
+  &.active {
+    .wrapper {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-image: url("./../../../assets/img/channel-7/world-map.jpg");
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      background-size: cover;
     }
-
- 
-   &.active {
-        .wrapper {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-              background-image: url('./../../../assets/img/channel-7/world-map.jpg');
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        background-size: cover;
-        }
-    }
-
- 
+  }
 }

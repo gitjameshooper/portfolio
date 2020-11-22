@@ -1,24 +1,18 @@
-@import './../../../variables.scss';
-
-
+@import "./../../../variables.scss";
 
 .channel-2 {
-    background: #E7B631;
-    &.hidden {
-        display: none;
+  background: #e7b631;
+  &.hidden {
+    display: none;
+  }
+
+  &.active {
+    .wrapper {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
     }
-
- 
-   &.active {
-        .wrapper {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-
-        }
-    }
-
- 
+  }
 }

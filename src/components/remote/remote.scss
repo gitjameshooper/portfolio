@@ -1,222 +1,267 @@
-@import './../../variables.scss';
-
-.remote {
-
-    position: absolute;
-    bottom: 100px;
+@import "./../../variables.scss";
+@keyframes slideIn {
+  0% {
+    right: -2000px;
+  }
+  60% {
+    right: 300px;
+  }
+  75% {
+    right: 0px;
+  }
+  90% {
+    right: 100px;
+  }
+  100% {
     right: 50px;
-    z-index: 2;
-
-    .controller {
-        width: 200px;
-        height: 200px;
-
-        .cube {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            transform-style: preserve-3d;
-            transform: rotateY(15deg) rotateX(20deg);
-
-            .btn-power {
-                width: 100%;
-
-                .btn-push {
-                    width: 60px;
-                    display: inline-block;
-                    height: 22px;
-
-                    svg {
-                        position: relative;
-                        bottom: 2px;
-                    }
-                }
-            }
-
-            .btn-push {
-                cursor: pointer;
-                position: relative;
-                top: 0px;
-                font-family: "Open Sans";
-                text-decoration: none;
-                font-size: 20px;
-                background: #f7f7f7;
-                border: 1px solid #c4c4c4;
-                border-radius: 5px;
-                box-shadow: -3px 3px 0px #c4c4c4;
-                color: #222;
-                text-shadow: 1px 1px 1px #fff;
-                transition: All 250ms ease;
-
-                &.numbers {
-                    height: 27px;
-                    width: 30px;
-                    margin: 6px 10px;
-                    padding-top: 3px;
-                }
-
-                &.guide {
-                    font-size: 16px;
-                    padding-top: 6px;
-                    height: 26px;
-                    width: 55px;
-                    margin: 5px;
-                }
-
-                &.netflix {
-                    font-size: 16px;
-                    padding-top: 6px;
-                    height: 26px;
-                    width: 55px;
-                    margin: 5px;
-                }
-
-                &.zero {}
-
-                &.btn-volume {
-                    width: 40px;
-                    height: 70px;
-                    margin: 5px 10px;
-
-                    .volume-top {
-                        display: inline-block;
-                        width: 40px;
-                        height: 35px;
-                    }
-
-                    .volume-bot {
-                        display: inline-block;
-                        width: 40px;
-                        height: 35px;
-                        position: relative;
-                        bottom: 10px;
-                    }
-                }
-
-                &.btn-channel {
-                    width: 40px;
-                    height: 70px;
-                    margin: 5px 10px;
-
-                    .channel-top {
-                        display: inline-block;
-                        width: 40px;
-                        height: 35px;
-                    }
-
-                    .text {
-                        position: relative;
-                        bottom: 6px;
-                    }
-
-                    .channel-bot {
-                        display: inline-block;
-                        width: 40px;
-                        height: 35px;
-                        position: relative;
-                        bottom: 15px;
-                        padding-top: 5px;
-                    }
-                }
-
-
-
-
-                &.volume {
-                    height: 70px;
-                    width: 40px;
-                    margin: 5px 10px;
-                }
-
-                &.channel {
-                    height: 70px;
-                    width: 40px;
-                    margin: 5px 10px;
-                }
-
-                &.mute {
-                    font-size: 16px;
-                    padding-top: 6px;
-                    height: 25px;
-                    width: 50px;
-                    margin: 23px 0px;
-                }
-
-                &:active {
-                    position: relative;
-                    top: 3px;
-                    left: -3px;
-                    box-shadow: none !important;
-                    transition: All 250ms ease;
-                }
-
-                &.navy {
-                    background: #1b486d;
-                    border: 1px solid #07121b;
-                    border-radius: 5px;
-                    box-shadow: -3px 3px 0px #07121b;
-                    color: #fff;
-                    text-shadow: 1px 1px 1px #07121b;
-                }
-
-                &.green {
-                    background: #7cc576;
-                    color: #fff;
-                    border: 1px solid #46963f;
-                    border-radius: 5px;
-                    box-shadow: -3px 3px 0px #46963f;
-                    text-shadow: 1px 1px 1px #46963f;
-                }
-
-                &.red {
-                    background: #df4242;
-                    color: #fff;
-                    border: 1px solid #a01b1b;
-                    border-radius: 5px;
-                    box-shadow: -3px 3px 0px #a01b1b;
-                    text-shadow: 1px 1px 1px #a01b1b;
-                }
-
-                &.blue {
-                    background: #2ec2dd;
-                    color: #fff;
-                    border: 1px solid #177c8e;
-                    border-radius: 5px;
-                    box-shadow: -3px 3px 0px #177c8e;
-                    text-shadow: 1px 1px 1px #177c8e;
-                }
-            }
-
-            .cube-face {
-                position: absolute;
-
-
-                &.top {
-                    transform: rotateY(0deg) translateZ(35px);
-                    width: 200px;
-                    height: 310px;
-                    background: #000;
-                    display: flex;
-                    flex-wrap: wrap;
-                    align-content: center;
-                    justify-content: center;
-                    border-radius: 25px;
-                    border: 1px solid #444;
-                }
-
-
-                &.bottom {
-                    transform: rotateY(0deg) translateZ(0px);
-                    background: #000;
-                    height: 310px;
-                    width: 210px;
-                    top: 0px;
-                    left: -5px;
-                    border: 1px solid #444;
-                    border-radius: 25px;
-
-                }
-            }
-        }
+  }
+}
+@keyframes upDown {
+  0% {
+    bottom: 30px;
+  }
+  50% {
+    bottom: 50px;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
+.remote-component {
+  position: absolute;
+  bottom: 100px;
+  right: 50px;
+  z-index: 2;
+  &.animate {
+    animation: slideIn 3s ease-in-out;
+  }
+  .tooltip {
+    color: $pcolor1;
+    position: relative;
+    bottom: 30px;
+    background: #177c8e;
+    border-radius: 5px;
+    padding: 8px;
+    animation: upDown 2s infinite ease-in-out;
+    &.hidden {
+      display: none;
     }
+    .triangle-down {
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 20px solid #177c8e;
+      position: absolute;
+      top: 34px;
+      right: 42%;
+      z-index: 1;
+    }
+  }
+
+  .controller {
+    width: 200px;
+    height: 200px;
+
+    .cube {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transform: rotateY(15deg) rotateX(20deg);
+
+      .btn-power {
+        width: 100%;
+
+        .btn-push {
+          width: 60px;
+          display: inline-block;
+          height: 22px;
+
+          svg {
+            position: relative;
+            bottom: 2px;
+          }
+        }
+      }
+
+      .btn-push {
+        cursor: pointer;
+        position: relative;
+        top: 0px;
+        font-family: "Open Sans";
+        text-decoration: none;
+        font-size: 20px;
+        background: #f7f7f7;
+        border: 1px solid #c4c4c4;
+        border-radius: 5px;
+        box-shadow: -3px 3px 0px #c4c4c4;
+        color: #222;
+        text-shadow: 1px 1px 1px #fff;
+        transition: All 250ms ease;
+
+        &.numbers {
+          height: 27px;
+          width: 30px;
+          margin: 6px 10px;
+          padding-top: 3px;
+        }
+
+        &.guide {
+          font-size: 16px;
+          padding-top: 6px;
+          height: 26px;
+          width: 55px;
+          margin: 5px;
+        }
+
+        &.netflix {
+          font-size: 16px;
+          padding-top: 6px;
+          height: 26px;
+          width: 55px;
+          margin: 5px;
+        }
+
+        &.zero {
+        }
+
+        &.btn-volume {
+          width: 40px;
+          height: 70px;
+          margin: 5px 10px;
+
+          .volume-top {
+            display: inline-block;
+            width: 40px;
+            height: 35px;
+          }
+
+          .volume-bot {
+            display: inline-block;
+            width: 40px;
+            height: 35px;
+            position: relative;
+            bottom: 10px;
+          }
+        }
+
+        &.btn-channel {
+          width: 40px;
+          height: 70px;
+          margin: 5px 10px;
+
+          .channel-top {
+            display: inline-block;
+            width: 40px;
+            height: 35px;
+          }
+
+          .text {
+            position: relative;
+            bottom: 6px;
+          }
+
+          .channel-bot {
+            display: inline-block;
+            width: 40px;
+            height: 35px;
+            position: relative;
+            bottom: 15px;
+            padding-top: 5px;
+          }
+        }
+
+        &.volume {
+          height: 70px;
+          width: 40px;
+          margin: 5px 10px;
+        }
+
+        &.channel {
+          height: 70px;
+          width: 40px;
+          margin: 5px 10px;
+        }
+
+        &.mute {
+          font-size: 16px;
+          padding-top: 6px;
+          height: 25px;
+          width: 50px;
+          margin: 23px 0px;
+        }
+
+        &:active {
+          position: relative;
+          top: 3px;
+          left: -3px;
+          box-shadow: none !important;
+          transition: All 250ms ease;
+        }
+
+        &.navy {
+          background: #1b486d;
+          border: 1px solid #07121b;
+          border-radius: 5px;
+          box-shadow: -3px 3px 0px #07121b;
+          color: #fff;
+          text-shadow: 1px 1px 1px #07121b;
+        }
+
+        &.green {
+          background: #7cc576;
+          color: #fff;
+          border: 1px solid #46963f;
+          border-radius: 5px;
+          box-shadow: -3px 3px 0px #46963f;
+          text-shadow: 1px 1px 1px #46963f;
+        }
+
+        &.red {
+          background: #df4242;
+          color: #fff;
+          border: 1px solid #a01b1b;
+          border-radius: 5px;
+          box-shadow: -3px 3px 0px #a01b1b;
+          text-shadow: 1px 1px 1px #a01b1b;
+        }
+
+        &.blue {
+          background: #2ec2dd;
+          color: #fff;
+          border: 1px solid #177c8e;
+          border-radius: 5px;
+          box-shadow: -3px 3px 0px #177c8e;
+          text-shadow: 1px 1px 1px #177c8e;
+        }
+      }
+
+      .cube-face {
+        position: absolute;
+
+        &.top {
+          transform: rotateY(0deg) translateZ(35px);
+          width: 200px;
+          height: 310px;
+          background: #000;
+          display: flex;
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
+          border-radius: 25px;
+          border: 1px solid #444;
+        }
+
+        &.bottom {
+          transform: rotateY(0deg) translateZ(0px);
+          background: #000;
+          height: 310px;
+          width: 210px;
+          top: 0px;
+          left: -5px;
+          border: 1px solid #444;
+          border-radius: 25px;
+        }
+      }
+    }
+  }
 }

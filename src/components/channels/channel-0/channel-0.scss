@@ -1,14 +1,10 @@
-@import './../../../variables.scss';
-
- 
+@import "./../../../variables.scss";
 
 .channel-0 {
-
-    background: url('./../../../assets/img/bw-static.gif');
-    height: 100%;
-    width: 100%;
-     &.hidden {
-        display: none;
-    }
-
+  background: url("./../../../assets/img/bw-static.gif");
+  height: 100%;
+  width: 100%;
+  &.hidden {
+    display: none;
+  }
 }

@@ -1,24 +1,21 @@
-@import './../../../variables.scss';
+@import "./../../../variables.scss";
 
 .channel-3 {
-    background: #EA5D30;
-    &.hidden {
-        display: none;
-    }
-    img{
-        max-width: 300px;
-    }
- 
-   &.active {
-        .wrapper {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-         
-        }
-    }
+  background: #ea5d30;
+  &.hidden {
+    display: none;
+  }
+  img {
+    max-width: 300px;
+  }
 
- 
+  &.active {
+    .wrapper {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+  }
 }

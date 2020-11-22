@@ -1,61 +1,56 @@
-@import './../../variables.scss';
-
-
+@import "./../../variables.scss";
 
 .guide-component {
-    &.active {
-        display: block;
-    }
+  &.active {
+    display: block;
+  }
+  display: none;
+  background: dodgerblue;
+  position: relative;
+  z-index: 1;
+  width: 80%;
+  margin: 20px auto;
+  overflow: scroll;
+  max-height: 100vh;
+  box-shadow: 0px 0px 60px #000;
 
-    display: none;
-    background: dodgerblue;
-    position: relative;
-    z-index: 1;
-    width: 80%;
-    margin: 20px auto;
-    overflow: scroll;
-    max-height: 100vh;
-    box-shadow: 0px 0px 60px #000;
+  ul {
+    list-style: none;
+    margin: 10px 25px 100px;
+    padding: 0;
 
-    ul {
-        list-style: none;
-        margin: 10px 25px 100px;
-        padding: 0;
+    li {
+      a {
+        display: flex;
+        height: 90px;
+        border-bottom: 1px solid #000;
+        text-decoration: none;
+        color: #fff;
+        align-items: center;
 
-        li {
-            a {
-                display: flex;
-                height: 90px;
-                border-bottom: 1px solid #000;
-                text-decoration: none;
-                color: #fff;
-                align-items: center;
-
-                &:hover {
-                    background: #454545;
-
-                }
-
-                img {
-                    width: 90px;
-                    padding: 0 20px;
-                    max-height: 70px;
-                }
-
-                .guide-number {
-                    padding: 0 20px;
-                    font-size: 32px;
-                    border-left: 1px solid #fff;
-                    margin-right: 15px;
-                }
-
-                .guide-name {
-                    font-size: 32px;
-                    min-width: 290px;
-                    text-align: left;
-                }
-            }
+        &:hover {
+          background: #454545;
         }
 
+        img {
+          width: 90px;
+          padding: 0 20px;
+          max-height: 70px;
+        }
+
+        .guide-number {
+          padding: 0 20px;
+          font-size: 32px;
+          border-left: 1px solid #fff;
+          margin-right: 15px;
+        }
+
+        .guide-name {
+          font-size: 32px;
+          min-width: 290px;
+          text-align: left;
+        }
+      }
     }
+  }
 }

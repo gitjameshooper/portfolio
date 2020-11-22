@@ -1,25 +1,21 @@
-@import './../../../variables.scss';
+@import "./../../../variables.scss";
 
 .channel-5 {
-    img{
-        max-width: 300px;
-    }
-    background: #30EA9E;
-    &.hidden {
-        display: none;
-    }
+  img {
+    max-width: 300px;
+  }
+  background: #30ea9e;
+  &.hidden {
+    display: none;
+  }
 
- 
-   &.active {
-        .wrapper {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            right: 0;
-            left: 0;
-           
-        }
+  &.active {
+    .wrapper {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
     }
-
- 
+  }
 }
