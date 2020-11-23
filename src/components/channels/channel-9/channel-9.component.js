@@ -34,9 +34,9 @@ export default function Channel9(props) {
       author: "James Allen",
       secs: 10,
     },
-    // { quote: "Never put passion in front of principle, even if you win, you’ll lose", author: "Mr. Miyagi" },
+    { quote: "Never put passion in front of principle, even if you win, you’ll lose", author: "Mr. Miyagi", secs: 10 },
     // { quote: "When I do good, I feel good When I do bad, I feel bad. That's my religion", author: "Abraham Lincoln" },
-    // { quote: "Being realistic is the most commonly traveled path to mediocrity", author: "Will Smith" },
+    { quote: "Being realistic is the most commonly traveled path to mediocrity", author: "Will Smith", secs: 10 },
     // {
     //   quote: "USA is a campaign of fear and consumption. Keep everyone afraid and they will consume",
     //   author: "Marylin Manson",

@@ -13,7 +13,7 @@
     transform: rotate(1turn);
   }
 }
-@keyframes fadeIn {
+@keyframes fadeIn9 {
   0% {
     opacity: 0;
   }
@@ -24,7 +24,7 @@
     opacity: 0;
   }
 }
-@keyframes fadeInVideo {
+@keyframes fadeInVideo9 {
   0% {
     opacity: 0;
   }
@@ -68,7 +68,7 @@
       display: inline-block;
       border-radius: 50%;
       max-width: 300px;
-      animation: fadeInVideo linear;
+      animation: fadeInVideo9 linear;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       box-shadow: 0 0 50px #ccc;
@@ -84,7 +84,7 @@
       font-style: italic;
       max-width: 600px;
       display: inline-block;
-      animation: fadeIn ease;
+      animation: fadeIn9 ease;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       .author {
