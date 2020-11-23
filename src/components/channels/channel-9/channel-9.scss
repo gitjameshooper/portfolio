@@ -1,7 +1,46 @@
 @import "./../../../variables.scss";
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  }
+  100% {
+    border-radius: 40% 60%;
+  }
+}
 
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeInVideo {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .channel-9 {
-  background: #c030ea;
+  background-image: url("./../../../assets/img/channel-9/blue-sky.jpg");
+  background-repeat: repeat;
   &.hidden {
     display: none;
   }
@@ -14,5 +53,69 @@
       right: 0;
       left: 0;
     }
+  }
+  .block {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 80%);
+    video {
+      position: absolute;
+      display: inline-block;
+      border-radius: 50%;
+      max-width: 300px;
+      animation: fadeInVideo linear;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      box-shadow: 0 0 50px #ccc;
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      // opacity: 1;
+      // animation: morph 8s ease-in-out infinite both alternate, spin 12s linear infinite reverse;
+    }
+    .quote {
+      position: absolute;
+      font-family: "Sanchez", serif;
+      font-size: 1.6rem;
+      line-height: 1;
+      font-style: italic;
+      max-width: 600px;
+      display: inline-block;
+      animation: fadeIn ease;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      .author {
+        font-size: 18px;
+        font-style: normal;
+      }
+      &:before {
+        content: "\201C";
+        position: absolute;
+        top: -100%;
+        left: -75px;
+        color: #000;
+        opacity: 0.1;
+        font-size: 6em;
+        z-index: -1;
+      }
+      &:after {
+        content: "\201D";
+        position: absolute;
+        top: 50%;
+        right: 0px;
+        color: #000;
+        opacity: 0.1;
+        font-size: 6em;
+        z-index: -1;
+      }
+    }
+  }
+  .meditation {
+    width: 100%;
+    bottom: -30%;
+    position: relative;
   }
 }

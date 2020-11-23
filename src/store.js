@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 const initialState = {
-  isTvOn: false,
+  isTvOn: true,
   isTvPwrBtn: false,
   channel: 1,
   volume: "low",
