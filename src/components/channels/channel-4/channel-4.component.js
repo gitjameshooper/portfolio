@@ -3,29 +3,51 @@ import { Context } from "./../../../store";
 import "./channel-4.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import Mute from "./../mute/mute.component";
-import fsTeamSrc from "./../../../assets/img/channel-4/flosports-team.jpg";
-import fsLogoSrc from "./../../../assets/img/logos/flosports.png";
+import volLogoSrc from "./../../../assets/img/channel-4/volusion-logo.png";
 
 export default function Channel4(props) {
   const [store, setStore] = useContext(Context);
-
+  const raysArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+  const rays = raysArr.map((i) => <span key={i} className={`ray ray-${i}`}></span>);
   return (
     <div className={`channel-4 channels ${store.isTvOn ? "active" : "hidden"} `}>
       <div className="wrapper">
         <ChannelNumber number="4" /> <Mute muted={store.mute} />
-        <img alt="Flosports Logo" src={fsLogoSrc} />
-        <img alt="Flosports Team" src={fsTeamSrc} />
-        WOrking at Volusion and Flosports Front End Web Developer Company NameVolusion, LLC Dates EmployedMay 2015 – Sep
-        2016 Employment Duration1 yr 5 mos LocationAustin, Texas Area -Programmed on the 3 main Volusion marketing
-        websites: Volusion.com, Material.com, Mozu.com -Used AngularJS, vanilla JS, Node/NPM, Gulp, Prismic.io(CMS),
-        Materialize, Github -Developed in a Scrum environment using continuous integration -Added third party
-        APIs(Salesforce) for workflow to help sales Full-Stack Web Engineer Company NameFloSports Dates EmployedSep 2016
-        – Nov 2017 Employment Duration1 yr 3 mos LocationAustin, Texas Area -Worked on the Flosports vertical sites in
-        Angular 4: Flotrack.org, Flowrestling.org, Flovolleyball.tv etc… -Coded in Angular 4 building components and
-        services using RXJS, Typescript, Node/NPM -Developed in a functional paradigm with version control
-        systems(Github) in an agile environment -Experimented with A/B tests in Optimizely to capture analytics to help
-        improve the sales funnel -Collaborated with marketing to accomplish their goals with Marketo, Kissmetrics,
-        Segment, GA
+        <div className="block-group">
+          <img className="block logo" alt="Volusion Logo" src={volLogoSrc} />
+          <div className="block block-1">
+            <h3 className="role">Role</h3>
+            <div className="content">
+              <span>
+                <b>Title: </b>Front End Developer
+              </span>
+              <br />
+              <span>
+                <b>Employed: </b> May 2015 – Sep 2016
+              </span>
+              <br />
+              <span>
+                <b>Location: </b>Austin, Texas
+              </span>
+            </div>
+          </div>
+          <div className="block block-2">
+            <h3 className="skills">Skills</h3>
+            <ul className="content">
+              <li>Programmed on the 3 main Volusion marketing websites: Volusion.com, Material.com, Mozu.com</li>
+              <li>Used AngularJS, vanilla JS, Node/NPM, Gulp, Prismic.io(CMS), Materialize, Github</li>
+              <li>Developed in a Scrum environment using continuous integration</li>
+              <li>Added third party APIs(Salesforce) for workflow to help sales</li>
+            </ul>
+          </div>
+          <div className="block block-3">
+            <h3 className="company">Company/Team</h3>
+            <p className="content">Volusion is an eCommerce company.</p>
+          </div>
+        </div>
+        <div className="sun">
+          <div className="ray-box">{rays}</div>
+        </div>
       </div>
     </div>
   );
