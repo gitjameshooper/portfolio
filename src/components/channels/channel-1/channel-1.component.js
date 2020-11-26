@@ -33,6 +33,19 @@ export default function Channel1(props) {
         [Intro pic] [Nice picture of the city for bg] Chattanoga. Bachelor's in Business. talk about House project.
         Moving to Austin [photo of me graduating college] show a map going from Chattanooga to Austin. [picture of me
         with my green truck]
+        {/* <div class="text"><p>I’m a speaker, podcaster, author, entrepreneur, and an all-around normal dude trying to make a little dent in the world
+
+I’m married to my high school sweetheart and we have three beautiful little girls. I live in a little Barbie dream house. I love it. I wouldn’t trade lives with anyone.
+
+So I guess you came to this page to get a little more background on who I am right? Here you go…</p></div>
+<div class="scene">
+  <div class="panel blue"><img src="https://m.media-amazon.com/images/I/91+ci5h3EyL._AC_SL1500_.jpg" /></div>
+  <div class="floor"></div>
+ 
+  <div class="panel red">
+
+</div>
+</div> */}
       </section>
     </div>
   );
