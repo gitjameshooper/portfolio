@@ -94,4 +94,72 @@
       display: none;
     }
   }
+  .scene {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    border: 1px solid #ccc;
+    background: #ccc;
+    margin: 40px;
+    /* perspective property */
+    perspective: 600px;
+    overflow: hidden;
+  }
+  img {
+    width: 100px;
+    position: relative;
+    left: 40%;
+    top: 30%;
+  }
+  p {
+    color: #fff;
+    padding: 30px;
+    max-width: 80%;
+  }
+  .panel {
+    width: 77%;
+    height: 100%;
+  }
+  p {
+    padding: 15px;
+    margin: 0;
+  }
+  .text {
+    position: absolute;
+    background: #333;
+    width: 250px;
+    height: 200px;
+    left: 28%;
+    top: 150px;
+    z-index: 2;
+
+    font-size: 12px;
+    transform: rotateY(0deg) rotateX(0deg) translateZ(0px);
+  }
+  .blue {
+    position: absolute;
+    background-image: url("https://img5.goodfon.com/wallpaper/nbig/8/f4/victorian-style-ornament-seamless-ornament-vintazh-bordovyi.jpg");
+    background-size: cover;
+    transform: rotateY(45deg) rotateX(0deg) translateZ(-130px);
+    left: 0%;
+  }
+  .blue:hover {
+    transform: rotateY(15deg) rotateX(0deg) translateZ(-130px);
+    transition: all 3s;
+  }
+  .red {
+    background: #430012;
+    transform: rotateY(-45deg) rotateX(0deg) translateZ(-130px);
+    position: absolute;
+    right: 0%;
+  }
+  .floor {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-image: url("https://image.shutterstock.com/image-photo/old-grunge-vintage-wood-panels-260nw-101246230.jpg");
+    background-size: cover;
+    transform: rotateY(45deg) rotateX(90deg) translateZ(-140px);
+    left: 0%;
+  }
 }
