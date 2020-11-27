@@ -80,7 +80,7 @@ const Globe = React.memo(function Earth(props) {
     },
     {
       id: "marker9",
-      city: "Florence, Italy",
+      city: "Rome, Italy",
       color: "red",
       coordinates: [43.7696, 11.2558],
       flagSrc: "./../assets/img/flags/italy.png",
@@ -136,17 +136,16 @@ const Globe = React.memo(function Earth(props) {
         setTimeout(() => {
           console.log(globe);
           props.setModal({ city: marker.city, flagSrc: marker.flagSrc });
-        }, 3000);
+        }, 2000);
 
         console.log(marker, markerObject, event);
       }}
       onGetGlobe={(a) => {
         console.log(a);
       }}
-      // onMouseOutMarker={(marker, markerObject, event) => {
-      //   setModal(false);
-      //   console.log(marker, markerObject, event);
-      // }}
+      onMouseOutMarker={(marker, markerObject, event) => {
+        console.log(marker, markerObject, event);
+      }}
       onGlobeTextureLoaded={() => console.log("globe loaded")}
       onMouseOverMarker={(marker, markerObject, event) => console.log(marker, markerObject, event)}
     />

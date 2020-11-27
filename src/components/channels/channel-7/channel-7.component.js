@@ -16,7 +16,7 @@ export default function Channel7(props) {
       <div className="wrapper">
         <ChannelNumber number="7" />
         <Mute muted={store.mute} />
-        {modal && <Modal modal={modal} />}
+        {modal && <Modal setModal={setModal} modal={modal} />}
         <div className="globe-wrapper">
           <img className="logo" src={tcSrc} alt="Travel Channel Logo" />
           <Globe setModal={setModal} />
