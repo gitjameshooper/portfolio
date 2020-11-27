@@ -5,6 +5,7 @@ import ChannelNumber from "./../channel-number/channel-number.component";
 import Mute from "./../mute/mute.component";
 import fsTeamSrc from "./../../../assets/img/channel-5/flosports-team.jpg";
 import fsLogoSrc from "./../../../assets/img/logos/flosports.png";
+import fsWebSrc from "./../../../assets/img/channel-5/flosports-web.png";
 
 export default function Channel5(props) {
   const [store, setStore] = useContext(Context);
@@ -47,13 +48,29 @@ export default function Channel5(props) {
           </div>
           <div className="block block-3">
             <h3 className="company">Company/Team</h3>
-            <p className="content">Volusion is an eCommerce company.</p>
+            <p className="content">
+              Founded in 2006, FloSports is a venture-backed subscription video streaming service dedicated to sports,
+              offering live and on-demand access to hundreds of thousands of competition events across 25+ vertical
+              sport categories in the US and abroad. With a growing library of more than 300,000 hours of premium
+              content including news, expert commentary, films, documentaries and more, FloSports has established itself
+              as an innovator and leader in sports streaming. Finally, your sport has a home.
+            </p>
+            <img alt="Flosports Team" src={fsTeamSrc} />
           </div>
         </div>
         <div className="sun">
           <div className="ray-box">{rays}</div>
         </div>
-        <img alt="Flosports Team" src={fsTeamSrc} />
+        <div className="projects">
+          <div className="website active">
+            <a target="_blank" href="https://www.flowrestling.org/">
+              <img src={fsWebSrc} />
+            </a>
+            <a className="link" target="_blank" href="https://www.flowrestling.org/">
+              Visit Project
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

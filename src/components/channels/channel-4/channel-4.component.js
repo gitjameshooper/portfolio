@@ -4,6 +4,7 @@ import "./channel-4.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import Mute from "./../mute/mute.component";
 import volLogoSrc from "./../../../assets/img/channel-4/volusion-logo.png";
+import volWebSrc from "./../../../assets/img/channel-4/volusion-website.png";
 
 export default function Channel4(props) {
   const [store, setStore] = useContext(Context);
@@ -47,6 +48,16 @@ export default function Channel4(props) {
         </div>
         <div className="sun">
           <div className="ray-box">{rays}</div>
+        </div>
+        <div className="projects">
+          <div className="website active">
+            <a target="_blank" href="https://www.volusion.com/v1/">
+              <img src={volWebSrc} />
+            </a>
+            <a className="link" target="_blank" href="https://www.volusion.com/v1/">
+              Visit Project
+            </a>
+          </div>
         </div>
       </div>
     </div>

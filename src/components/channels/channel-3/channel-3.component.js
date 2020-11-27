@@ -90,7 +90,8 @@ export default function Channel3(props) {
           <div className="block block-3">
             <h3 className="company">Company/Team</h3>
             <p className="content">
-              Spredfast is social media marketing company.
+              Spredfast is a platform for digital-first customer engagement We are a global leader revolutionizing CX
+              with software and services for digital care, messaging, chat, social marketing, and online communities.
               <img alt="SXSW" src={sxswSrc} />
             </p>
           </div>
