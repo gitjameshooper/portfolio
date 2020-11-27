@@ -43,7 +43,13 @@ export default function Channel4(props) {
           </div>
           <div className="block block-3">
             <h3 className="company">Company/Team</h3>
-            <p className="content">Volusion is an eCommerce company.</p>
+            <p className="content">
+              Volusion is an all-in-one ecommerce solution offering 24/7 support to proactively help entrepreneurs build
+              and manage successful online businesses. Since 1999, our dedicated team of developers, marketers,
+              designers, and technical support experts have been passionate about helping merchants operate and grow
+              their stores, whether startup- or enterprise-level. Two decades later, Volusion has earned dozens of
+              accolades and powered over 180,000 successful online businesses
+            </p>
           </div>
         </div>
         <div className="sun">
