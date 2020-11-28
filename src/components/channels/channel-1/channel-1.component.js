@@ -4,6 +4,9 @@ import "./channel-1.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import Mute from "./../mute/mute.component";
 import jamesSrc from "./../../../assets/img/channel-1/james.jpg";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import FacebookIcon from "@material-ui/icons/Facebook";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 export default function Channel1(props) {
   const [store, setStore] = useContext(Context);
@@ -20,6 +23,16 @@ export default function Channel1(props) {
         <h3>Intro about growing up in chattanooga</h3>
         <h4>Contact me</h4>
         <p>512-769-0980</p>
+        <a href="https://www.linkedin.com/in/james-hooper-a40a9522/">
+          <LinkedInIcon />
+        </a>
+        <a href="https://www.facebook.com/james.hooper.86">
+          <FacebookIcon />
+        </a>
+        <a href="https://github.com/gitjameshooper">
+          <GitHubIcon />
+        </a>
+        <button>Download Resume</button>
         <a href="" target="_new">
           jamesthomashooper@gmail.com
         </a>

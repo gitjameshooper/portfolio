@@ -1,6 +1,8 @@
 [
-    {"src": "./../assets/img/barcelona/1.jpg"},
-    {"src": "./../assets/img/barcelona/2.jpg"},
-    {"src": "./../assets/img/barcelona/3.jpg"},
-    {"src": "./../assets/img/barcelona/4.jpg"},
-    {"src": "./../assets/img/barcelona/5.jpg"}]
+    {"place": "barcelona", "src": "./../assets/img/barcelona/1.jpg"},
+    {"place": "barcelona","src": "./../assets/img/barcelona/2.jpg"},
+    {"place": "barcelona","src": "./../assets/img/barcelona/3.jpg"},
+    {"place": "barcelona","src": "./../assets/img/barcelona/4.jpg"},
+    {"place": "barcelona", "src": "./../assets/img/barcelona/5.jpg"},
+    {"place": "barcelona", "src": "./../assets/img/barcelona/6.jpg"}
+]
