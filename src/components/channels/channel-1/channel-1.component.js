@@ -4,12 +4,14 @@ import "./channel-1.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import Mute from "./../mute/mute.component";
 import jamesSrc from "./../../../assets/img/channel-1/james-3.jpg";
-import gifSrc from "./../../../assets/img/channel-1/giphy.gif";
+import resumeSrc from "./../../../assets/img/channel-1/james-hooper-resume.pdf";
+import gif2Src from "./../../../assets/img/channel-1/giphy-2.gif";
+import gifSrc from "./../../../assets/img/channel-1/giphy-1.gif";
+import lightCansSrc from "./../../../assets/img/channel-1/light-cans.png";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import GetAppIcon from "@material-ui/icons/GetApp";
-import introVid from "./../../../assets/video/intro-loop.mp4";
 
 export default function Channel1(props) {
   const [store, setStore] = useContext(Context);
@@ -29,7 +31,10 @@ export default function Channel1(props) {
         <ChannelNumber number="1" />
         <Mute muted={store.mute} />
         <div className="scene">
-          <div className="top">
+          <div className="ceiling">
+            <img className="light-cans can-1" src={lightCansSrc} />
+            <img className="light-cans can-2" src={lightCansSrc} />
+            <img className="light-cans can-3" src={lightCansSrc} />
             <div className="beam beam-1">
               <div className="inner"></div>
               <div className="inner-2"></div>
@@ -78,9 +83,9 @@ export default function Channel1(props) {
                 <a href="https://github.com/gitjameshooper">
                   <GitHubIcon />
                 </a>
-                <span>
+                <a href={resumeSrc} target="_blank">
                   <GetAppIcon /> Resume
-                </span>
+                </a>
               </div>
             </div>
           </div>
@@ -88,11 +93,15 @@ export default function Channel1(props) {
 
           <div className="right">
             <div className="picture">
+              <img src={gif2Src} />
+              <span className="name">Marilyn Monroe</span>
+            </div>
+            <div className="picture">
               <img src={gifSrc} />
-              {/* <video ref={videoRef} autoPlay muted loop>
+            </div>
+            {/* <video ref={videoRef} autoPlay muted loop>
                 <source src={introVid} type="video/mp4" />
               </video> */}
-            </div>
           </div>
         </div>
       </section>
