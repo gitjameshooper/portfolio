@@ -49,9 +49,10 @@
 }
 
 .channel-1 {
-  img {
-    width: 200px;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   &.hidden {
     display: none;
   }
@@ -69,15 +70,8 @@
       bottom: 0;
       right: 0;
       left: 0;
-      background: url("https://cityscopemag.com/wp-content/uploads/2013/07/WhyChattanooga.downtown-chattanooga-overview.FI_.jpg");
-      background-size: cover;
     }
   }
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 
   .intro {
     width: 0px;
@@ -94,72 +88,159 @@
       display: none;
     }
   }
+
   .scene {
     position: relative;
-    width: 600px;
-    height: 400px;
-    border: 1px solid #ccc;
-    background: #ccc;
-    margin: 40px;
-    /* perspective property */
+    width: 100%;
+    height: 100vh;
+    background: #f1f1f1;
     perspective: 600px;
     overflow: hidden;
-  }
-  img {
-    width: 100px;
-    position: relative;
-    left: 40%;
-    top: 30%;
-  }
-  p {
-    color: #fff;
-    padding: 30px;
-    max-width: 80%;
-  }
-  .panel {
-    width: 77%;
-    height: 100%;
-  }
-  p {
-    padding: 15px;
-    margin: 0;
-  }
-  .text {
-    position: absolute;
-    background: #333;
-    width: 250px;
-    height: 200px;
-    left: 28%;
-    top: 150px;
-    z-index: 2;
+    background: #000;
+    .left {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform: translate3d(-20%, 0%, -310px) rotateY(30deg);
+      transform-origin: center;
+      left: 0%;
+      background: #f1f1f1;
+      border: 2px solid #000;
+      .content {
+        max-width: 800px;
+        position: relative;
+        left: 20%;
+        top: 100px;
+        text-align: justify;
+        font-size: 20px;
+        .portrait {
+          width: 300px;
+          margin-right: 20px;
 
-    font-size: 12px;
-    transform: rotateY(0deg) rotateX(0deg) translateZ(0px);
-  }
-  .blue {
-    position: absolute;
-    background-image: url("https://img5.goodfon.com/wallpaper/nbig/8/f4/victorian-style-ornament-seamless-ornament-vintazh-bordovyi.jpg");
-    background-size: cover;
-    transform: rotateY(45deg) rotateX(0deg) translateZ(-130px);
-    left: 0%;
-  }
-  .blue:hover {
-    transform: rotateY(15deg) rotateX(0deg) translateZ(-130px);
-    transition: all 3s;
-  }
-  .red {
-    background: #430012;
-    transform: rotateY(-45deg) rotateX(0deg) translateZ(-130px);
-    position: absolute;
-    right: 0%;
-  }
-  .floor {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background-image: url("https://image.shutterstock.com/image-photo/old-grunge-vintage-wood-panels-260nw-101246230.jpg");
-    background-size: cover;
-    transform: rotateY(45deg) rotateX(90deg) translateZ(-140px);
-    left: 0%;
+          float: left;
+          .email {
+            margin-top: 8px;
+            color: #000;
+            display: block;
+            font-style: italic;
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          .img-wrapper {
+            border: 15px solid #333;
+            box-shadow: 0 0 10px #000;
+
+            img {
+              display: block;
+              width: 100%;
+            }
+          }
+        }
+
+        .contact {
+          display: flex;
+          justify-content: left;
+          align-items: center;
+          svg {
+            font-size: 40px;
+            margin: 0 20px;
+            color: #000;
+          }
+        }
+      }
+    }
+
+    .top {
+      transform: rotateY(28deg) rotateX(-90deg) translate3d(10%, -5%, -240px);
+      transform-origin: center;
+      background: #111;
+      width: 100%;
+      height: 121%;
+      position: absolute;
+      .beam {
+        height: 25px;
+        width: 100%;
+        background: linear-gradient(to bottom, #37374b 0%, #464757 100%);
+        position: absolute;
+        &.beam-1 {
+          top: 375px;
+        }
+        &.beam-2 {
+          top: 250px;
+        }
+        &.beam-3 {
+          top: 125px;
+        }
+        &.beam-4 {
+          top: 0;
+        }
+        .inner {
+          height: 5px;
+          width: 100%;
+          background: linear-gradient(to bottom, #766f76 0%, #464757 100%);
+          position: relative;
+          top: 25px;
+        }
+        .inner-2 {
+          height: 10px;
+          width: 100%;
+          background: #1b1820;
+          position: relative;
+          top: 25px;
+        }
+        .inner-3 {
+          height: 5px;
+          width: 100%;
+          background: linear-gradient(to bottom, #766f76 0%, #464757 100%);
+          position: relative;
+          top: 25px;
+        }
+      }
+    }
+    .right {
+      width: 100%;
+      height: 117%;
+      background: #f1f1f1;
+      transform: translate3d(52%, -8%, -300px) rotateY(-60deg);
+      transform-origin: center;
+      position: absolute;
+      right: 0%;
+      border: 2px solid #000;
+      box-shadow: 0 0 20px #000;
+      .picture {
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        max-width: 400px;
+
+        img {
+          width: 100%;
+          border: 15px solid #333;
+          box-shadow: 0 0 10px #000;
+        }
+        video {
+          max-width: 300px;
+          position: relative;
+          right: 30%;
+          border: 15px solid #333;
+          box-shadow: 0 0 10px #000;
+        }
+      }
+    }
+    .floor {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url("https://images.creativemarket.com/0.1.0/ps/4430751/1820/1214/m1/fpnw/wm1/vhicg9nehfpmnbqfombhnmfj0wqh6rm5a2wszkamff00aqfdkqdfofpxjifqqxph-.jpg?1525948768&s=93fb843a526b8528b5da28d37ad88b04");
+      background-size: cover;
+      transform: translate3d(0%, 40%, 80px) rotateX(90deg) rotateZ(-30deg);
+      transform-origin: center;
+      left: 0%;
+      border: 2px solid #000;
+    }
   }
 }

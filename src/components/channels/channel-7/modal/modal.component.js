@@ -7,7 +7,7 @@ import CancelIcon from "@material-ui/icons/Cancel";
 
 export default function Modal(props) {
   const style = { height: 200 };
-  const items = travelData.filter() map((item, i) => (
+  const items = travelData.map((item, i) => (
     <img key={i} alt="Hey" style={style} src={item.src} className="yours-custom-class" />
   ));
   const settings = {
