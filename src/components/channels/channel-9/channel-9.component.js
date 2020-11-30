@@ -111,7 +111,7 @@ export default function Channel9(props) {
         position: { left: left, top: getRandomInt(5, 30), marginLeft: marginLeft },
       });
       if (quotes[quoteNum].video) {
-        videoRef.current.play();
+        // videoRef.current.play();
       }
     }, timer);
   }, [quoteNum]);

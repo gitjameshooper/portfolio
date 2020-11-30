@@ -19,12 +19,12 @@ export default function Guide(props) {
   const [store, setStore] = useContext(Context);
   const guidelist = [
     {
-      name: "Chattanooga",
+      name: "About Me",
       channel: 1,
       href: "/channel-1",
       alt: "University of TN at Chattanooga Logo",
-      imgSrc: chattLogo,
-      info: "Moving from Chattanooga, TN to Austin, TX",
+      imgSrc: austinLogo,
+      info: "Intro and Contact Information",
     },
     {
       name: "Cart Designers",
@@ -32,7 +32,7 @@ export default function Guide(props) {
       href: "/channel-2",
       alt: "Cart Designers Logo",
       imgSrc: cdLogo,
-      info: "Working at Cart Designers",
+      info: "Work at Cart Designers",
     },
     {
       name: "Spredfast",
@@ -40,7 +40,7 @@ export default function Guide(props) {
       href: "/channel-3",
       alt: "Spredfast Logo",
       imgSrc: sfLogo,
-      info: "Working at Spredfast",
+      info: "Work at Spredfast",
     },
     {
       name: "Volusion",
@@ -48,7 +48,7 @@ export default function Guide(props) {
       href: "/channel-4",
       alt: "Volusion Logo",
       imgSrc: volLogo,
-      info: "Working at Volusion",
+      info: "Work at Volusion",
     },
     {
       name: "Flosports",
@@ -56,7 +56,7 @@ export default function Guide(props) {
       href: "/channel-5",
       alt: "Flosporst Logo",
       imgSrc: floLogo,
-      info: "Working at Flosports",
+      info: "Work at Flosports",
     },
     {
       name: "Live News",
@@ -64,7 +64,7 @@ export default function Guide(props) {
       href: "/channel-6",
       alt: "Live News Logo",
       imgSrc: newsLogo,
-      info: "The latest projects I have been working",
+      info: "The latest projects I have been working on.",
     },
     {
       name: "Travel",
@@ -74,11 +74,11 @@ export default function Guide(props) {
       imgSrc: tcLogo,
       info: "Where my sense of adventure has taken me.",
     },
-    { name: "Sports", channel: 8, href: "/channel-8", imgSrc: espnLogo, info: "Sports and fitness activities" },
+    { name: "Sports", channel: 8, href: "/channel-8", imgSrc: espnLogo, info: "Sports and activities I enjoy" },
     { name: "Inspiration", channel: 9, href: "/channel-9", imgSrc: inspLogo, info: "People who inspire and I admire" },
     {
       name: "Netflix",
-      channel: 10,
+      channel: "N",
       alt: "Netflix Logo",
       href: "/netflix",
       imgSrc: netLogo,
@@ -94,7 +94,7 @@ export default function Guide(props) {
     }
   }
   const channels = guidelist.map((x) => (
-    <li key={x.channel}>
+    <li key={x.channel} className={`guide-channel-${x.channel}`}>
       <a href={x.href} onClick={(e) => btnClick(e, `btn-${x.channel}`, x.href, x.channel)}>
         <img alt={x.alt} src={x.imgSrc} />
         <span className="guide-number">{x.channel}</span>
