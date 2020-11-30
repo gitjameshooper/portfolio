@@ -47,14 +47,11 @@
 
   &.active {
     .wrapper {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
+      @include abs-expand;
     }
   }
   .block {
+    @include abs-expand;
     position: absolute;
     z-index: 1;
     width: 100%;

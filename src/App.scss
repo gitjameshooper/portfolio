@@ -2,30 +2,22 @@
 
 .App {
   text-align: center;
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
+  @include abs-expand;
   border: 30px solid #1a1a1a;
 
   &:before {
     content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    @include abs-expand;
     box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.5);
     filter: blur(10px);
   }
+  .overflow-wrapper {
+    overflow: hidden;
+    @include abs-expand;
+  }
 
   .channels {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    @include abs-expand;
     overflow: hidden;
   }
 

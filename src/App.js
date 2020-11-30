@@ -25,24 +25,26 @@ function App() {
         <Logo />
         <span className="on-off-light"></span>
         <img alt="LG Logo" className="lg-logo" src={lgLogo} />
-        <Router>
-          <Guide />
-          <Switch>
-            <Route path="/" exact component={Channel1} />
-            <Route path="/channel-0" exact component={Channel0} />
-            <Route path="/channel-1" exact component={Channel1} />
-            <Route path="/channel-2" exact component={Channel2} />
-            <Route path="/channel-3" exact component={Channel3} />
-            <Route path="/channel-4" exact component={Channel4} />
-            <Route path="/channel-5" exact component={Channel5} />
-            <Route path="/channel-6" exact component={Channel6} />
-            <Route path="/channel-7" exact component={Channel7} />
-            <Route path="/channel-8" exact component={Channel8} />
-            <Route path="/channel-9" exact component={Channel9} />
-            <Route path="/netflix" exact component={Netflix} />
-          </Switch>
-          <Remote />
-        </Router>
+        <div className="overflow-wrapper">
+          <Router>
+            <Guide />
+            <Switch>
+              <Route path="/" exact component={Channel1} />
+              <Route path="/channel-0" exact component={Channel0} />
+              <Route path="/channel-1" exact component={Channel1} />
+              <Route path="/channel-2" exact component={Channel2} />
+              <Route path="/channel-3" exact component={Channel3} />
+              <Route path="/channel-4" exact component={Channel4} />
+              <Route path="/channel-5" exact component={Channel5} />
+              <Route path="/channel-6" exact component={Channel6} />
+              <Route path="/channel-7" exact component={Channel7} />
+              <Route path="/channel-8" exact component={Channel8} />
+              <Route path="/channel-9" exact component={Channel9} />
+              <Route path="/netflix" exact component={Netflix} />
+            </Switch>
+            <Remote />
+          </Router>
+        </div>
       </div>
     </Store>
   );
