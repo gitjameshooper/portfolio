@@ -1,5 +1,16 @@
 @import "./../../../variables.scss";
-@keyframes fadeIn7 {
+@-webkit-keyframes fadeIn-7 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn-7 {
   0% {
     opacity: 0;
   }
@@ -29,8 +40,8 @@
         opacity: 0.7;
       }
       .globe-wrapper {
-        animation: fadeIn7 2s linear forwards;
-        cursor: all-scroll;
+        animation: fadeIn-7 2s linear forwards;
+        cursor: pointer;
       }
       .modal {
         background: rgba(0, 0, 0, 0.5);

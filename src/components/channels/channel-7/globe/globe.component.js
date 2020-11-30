@@ -7,7 +7,7 @@ const Globe = React.memo(function Earth(props) {
   const [globe, setGlobe] = useState(null);
   const markers = [
     {
-      id: "marker0",
+      id: "austin",
       city: "Austin, TX",
       color: "red",
       coordinates: [30.2672, -97.7431],
@@ -15,7 +15,7 @@ const Globe = React.memo(function Earth(props) {
       value: 100,
     },
     {
-      id: "marker1",
+      id: "denver",
       city: "Denver, CO",
       color: "red",
       coordinates: [39.7392, -104.9903],
@@ -23,7 +23,7 @@ const Globe = React.memo(function Earth(props) {
       value: 100,
     },
     {
-      id: "marker2",
+      id: "chattanooga",
       city: "Chattanooga, TN",
       color: "red",
       coordinates: [35.0456, -85.3097],
@@ -31,7 +31,7 @@ const Globe = React.memo(function Earth(props) {
       value: 100,
     },
     {
-      id: "marker3",
+      id: "singapore",
       city: "Singapore",
       color: "red",
       coordinates: [1.3521, 103.8198],
@@ -39,23 +39,23 @@ const Globe = React.memo(function Earth(props) {
       value: 100,
     },
     {
-      id: "marker4",
-      city: "Thailand",
+      id: "krabi",
+      city: "Krabi, Thailand",
       color: "red",
       coordinates: [8.0863, 98.9063],
       flagSrc: "./../assets/img/flags/thailand.png",
       value: 100,
     },
     {
-      id: "marker5",
-      city: "San Salvador",
+      id: "san-salvador",
+      city: "San Salvador, El Salvador",
       color: "red",
       coordinates: [13.6929, -89.2182],
       flagSrc: "./../assets/img/flags/el-salvador.svg",
       value: 100,
     },
     {
-      id: "marker6",
+      id: "san-diego",
       city: "San Diego, CA",
       color: "red",
       coordinates: [32.7157, -117.1611],
@@ -63,7 +63,7 @@ const Globe = React.memo(function Earth(props) {
       value: 100,
     },
     {
-      id: "marker7",
+      id: "barcelona",
       city: "Barcelona, Spain",
       color: "red",
       coordinates: [41.3851, 2.1734],
@@ -71,7 +71,7 @@ const Globe = React.memo(function Earth(props) {
       value: 100,
     },
     {
-      id: "marker8",
+      id: "geneva",
       city: "Geneva, Switzerland",
       color: "red",
       coordinates: [46.2044, 6.11432],
@@ -79,7 +79,7 @@ const Globe = React.memo(function Earth(props) {
       value: 100,
     },
     {
-      id: "marker9",
+      id: "rome",
       city: "Rome, Italy",
       color: "red",
       coordinates: [43.7696, 11.2558],
@@ -87,7 +87,7 @@ const Globe = React.memo(function Earth(props) {
       value: 100,
     },
     {
-      id: "marker10",
+      id: "amalfi",
       city: "Amalfi Coast, Italy",
       color: "red",
       coordinates: [40.634, 14.6027],
@@ -95,7 +95,7 @@ const Globe = React.memo(function Earth(props) {
       value: 100,
     },
     {
-      id: "marker11",
+      id: "munich",
       city: "Munich, Germany",
       color: "red",
       coordinates: [48.1351, 11.582],
@@ -103,7 +103,7 @@ const Globe = React.memo(function Earth(props) {
       value: 100,
     },
     {
-      id: "marker12",
+      id: "prague",
       city: "Prague, Czech Republic",
       color: "red",
       coordinates: [50.0755, 14.4378],
@@ -132,22 +132,21 @@ const Globe = React.memo(function Earth(props) {
       options={options}
       width="100%"
       onClickMarker={(marker, markerObject, event) => {
-        console.log(props);
         setTimeout(() => {
-          console.log(globe);
-          props.setModal({ city: marker.city, flagSrc: marker.flagSrc });
+          console.log(marker);
+          props.setModal(marker);
         }, 2000);
 
-        console.log(marker, markerObject, event);
+        // console.log(marker, markerObject, event);
       }}
-      onGetGlobe={(a) => {
-        console.log(a);
-      }}
-      onMouseOutMarker={(marker, markerObject, event) => {
-        console.log(marker, markerObject, event);
-      }}
-      onGlobeTextureLoaded={() => console.log("globe loaded")}
-      onMouseOverMarker={(marker, markerObject, event) => console.log(marker, markerObject, event)}
+      // onGetGlobe={(a) => {
+      //   console.log(a);
+      // }}
+      // onMouseOutMarker={(marker, markerObject, event) => {
+      //   console.log(marker, markerObject, event);
+      // }}
+      // onGlobeTextureLoaded={() => console.log("globe loaded")}
+      // onMouseOverMarker={(marker, markerObject, event) => console.log(marker, markerObject, event)}
     />
   );
 });
