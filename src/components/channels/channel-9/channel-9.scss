@@ -1,10 +1,30 @@
 @import "./../../../variables.scss";
-@keyframes morph-9 {
+@-webkit-keyframes morph-9 {
   0% {
-    border-radius: 20% 80% 30% 60% / 60% 30% 80% 20%;
+    border-radius: 40% 90% 40% 60%;
   }
   100% {
-    border-radius: 80% 30% 60% 20% / 20% 60% 30% 80%;
+    border-radius: 120% 45% 150% 45%;
+  }
+}
+
+@keyframes morph-9 {
+  0% {
+    border-radius: 40% 90% 40% 90%;
+  }
+  100% {
+    border-radius: 120% 45% 120% 45%;
+  }
+}
+@-webkit-keyframes fadeIn-9 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -14,6 +34,20 @@
   }
   50% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeInVideo-9 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
   }
   100% {
     opacity: 0;
@@ -45,6 +79,7 @@
       @include abs-expand;
     }
   }
+
   .block {
     @include abs-expand;
     position: absolute;
@@ -60,12 +95,10 @@
       display: inline-block;
       border-radius: 50%;
       max-width: 300px;
-      animation: fadeInVideo-9 linear, morph-9 2s ease-in-out infinite both alternate;
+      animation: fadeInVideo-9 linear, morph-9 3s ease-in-out infinite both alternate;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       box-shadow: 0 0 50px #ccc;
-      // border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-      // opacity: 1;
     }
     .quote {
       position: absolute;
@@ -85,21 +118,11 @@
       &:before {
         content: "\201C";
         position: absolute;
-        top: -100%;
-        left: -75px;
+        top: -50px;
+        left: -50px;
         color: #000;
         opacity: 0.1;
-        font-size: 6em;
-        z-index: -1;
-      }
-      &:after {
-        content: "\201D";
-        position: absolute;
-        top: 50%;
-        right: 0px;
-        color: #000;
-        opacity: 0.1;
-        font-size: 6em;
+        font-size: 5em;
         z-index: -1;
       }
     }

@@ -4,7 +4,10 @@ import "./channel-9.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import Mute from "./../mute/mute.component";
 import medLogo from "./../../../assets/img/channel-9/meditation.jpg";
-import bruceVideo from "./../../../assets/video/bruce-lee.mp4";
+import bruceLeeVideo from "./../../../assets/video/bruce-lee.mp4";
+import ericThomasVideo from "./../../../assets/video/eric-thomas.mp4";
+import davidGogginsVideo from "./../../../assets/video/david-goggins.mp4";
+import joeDispenzaVideo from "./../../../assets/video/joe-dispenza.mp4";
 
 export default function Channel9(props) {
   const videoRef = useRef();
@@ -19,33 +22,36 @@ export default function Channel9(props) {
   });
   const quotes = [
     { quote: "Invent yourself and then re-invent yourself", author: "Charles Bukowski", secs: 10 },
-
+    { quote: "Being realistic is the most commonly traveled path to mediocrity", author: "Will Smith", secs: 10 },
     {
       quote:
         "Empty your mind, be formless. Shapeless, like water. If you put water into a cup, it becomes the cup. You put water into a bottle and it becomes the bottle. You put it in a teapot, it becomes the teapot. Now, water can flow or it can crash. Be water, my friend.",
       author: "Bruce Lee",
-      video: bruceVideo,
+      video: bruceLeeVideo,
       secs: 26,
+    },
+    {
+      quote:
+        "I don't count my sit-ups. I only start counting when it starts hurting. When I feel pain…. Because that is when it really counts.",
+      author: "Muhammad Ali",
+      secs: 10,
+    },
+    {
+      quote: "It's one thing to make people laugh, it's another to make people smile.",
+      author: "Norm Macdonald",
+      secs: 10,
     },
     { quote: "Ask yourself who do you want to be….not what, but who?", author: "Arnold Schwarzenegger", secs: 10 },
     {
-      quote:
-        "A man cannot directly choose his circumstances, but he can choose his thoughts, and so indirectly, yet surely, shape his circumstances.",
-      author: "James Allen",
-      secs: 10,
+      quote: "Shortening your refractory period",
+      author: "Joe Dispenza",
+      video: joeDispenzaVideo,
+      secs: 72,
     },
 
     {
       quote: "When I do good, I feel good When I do bad, I feel bad. That's my religion",
       author: "Abraham Lincoln",
-      secs: 10,
-    },
-    { quote: "Being realistic is the most commonly traveled path to mediocrity", author: "Will Smith", secs: 10 },
-
-    {
-      quote:
-        "I don't count my sit-ups. I only start counting when it starts hurting. When I feel pain…. Because that is when it really counts.",
-      author: "Muhammad Ali",
       secs: 10,
     },
 
@@ -58,15 +64,25 @@ export default function Channel9(props) {
 
     {
       quote:
+        "A man cannot directly choose his circumstances, but he can choose his thoughts, and so indirectly, yet surely, shape his circumstances.",
+      author: "James Allen",
+      secs: 10,
+    },
+
+    {
+      quote: "The Lion and the Gazelle",
+      author: "Eric Thomas",
+      video: ericThomasVideo,
+      secs: 75,
+    },
+
+    {
+      quote:
         "Luck is where preparation meets opportunity. Even if you get beat 99 times out of 100. It only takes 1 time.",
       author: "The Little Giants",
       secs: 10,
     },
-    {
-      quote: "It's one thing to make people laugh, it's another to make people smile.",
-      author: "Norm Macdonald",
-      secs: 10,
-    },
+
     {
       quote:
         "Home is not a place…it’s a feeling.” But a feeling not shared is nothing. We live in a world where people believe everybody is out to get you, but I’m telling you now. Some people are just out to love you.",
@@ -78,15 +94,17 @@ export default function Channel9(props) {
       author: "Charles Bukowski",
       secs: 10,
     },
+
     {
       quote: "Money is a beautiful thing… but if you are not enough without it you will never be enough with it.",
       author: "John Candy",
       secs: 10,
     },
     {
-      quote: "If you don’t feel a little uncomfortable during your day. You are not growing.",
-      author: "Anonymous",
-      secs: 10,
+      quote: "Get out of your comfort zone",
+      author: "David Goggins",
+      video: davidGogginsVideo,
+      secs: 64,
     },
     {
       quote: "Absorb what is useful. Discard what is useless. Add what is essentially your own.",
@@ -114,13 +132,10 @@ export default function Channel9(props) {
   }
   // error in rotating to the end
   useEffect(() => {
-    console.log("new item");
-    console.log(quoteNum);
-
     let i = quoteNum === 0 ? quotes.length - 1 : quoteNum - 1;
-    let timer = (quotes[i].secs || 10) * 1000;
+    let timerSecs = (quotes[i].secs || 10) * 1000;
 
-    setTimeout(() => {
+    let timer = setTimeout(() => {
       let num = quoteNum + 1;
       if (num > quotes.length - 1) {
         num = 0;
@@ -129,16 +144,19 @@ export default function Channel9(props) {
       setQuote(null);
       let left = getRandomInt(5, 90),
         marginLeft = left > 50 ? -300 : 0;
-      // console.log(videoRef);
 
       setQuote({
         ...quotes[quoteNum],
         position: { left: left, top: getRandomInt(5, 30), marginLeft: marginLeft },
       });
       if (quotes[quoteNum].video) {
-        // videoRef.current.play();
+        videoRef.current.play();
       }
-    }, timer);
+    }, timerSecs);
+
+    return () => {
+      clearTimeout(timer);
+    };
   }, [quoteNum]);
 
   return (
