@@ -30,29 +30,29 @@ export default function Channel8(props) {
   const [store, setStore] = useContext(Context);
   const [modal, setModal] = useState(null);
   const srcs = [
-    { imgSrc: imgSrc1, alt: "Hiking" },
-    { imgSrc: imgSrc2, alt: "Hiking" },
-    { imgSrc: imgSrc3, alt: "Hiking" },
-    { imgSrc: imgSrc4, alt: "Hiking" },
-    { imgSrc: imgSrc5, alt: "Hiking" },
-    { imgSrc: imgSrc6, alt: "Hiking" },
-    { imgSrc: imgSrc7, alt: "Hiking" },
-    { imgSrc: imgSrc8, alt: "Hiking" },
-    { imgSrc: imgSrc9, alt: "Hiking" },
-    { imgSrc: imgSrc10, alt: "Hiking" },
-    { imgSrc: imgSrc11, alt: "Hiking" },
-    { imgSrc: imgSrc12, alt: "Hiking" },
-    { imgSrc: imgSrc13, alt: "Hiking" },
-    { imgSrc: imgSrc14, alt: "" },
-    { imgSrc: imgSrc15, alt: "" },
-    { imgSrc: imgSrc16, alt: "" },
-    { imgSrc: imgSrc17, alt: "" },
-    { imgSrc: imgSrc18, alt: "" },
-    { imgSrc: imgSrc19, alt: "" },
-    { imgSrc: imgSrc20, alt: "" },
+    { imgSrc: imgSrc1, alt: "Hiking Horshoe Bend", pos: "hor" },
+    { imgSrc: imgSrc2, alt: "Scuba Diving Thailand", pos: "vert" },
+    { imgSrc: imgSrc3, alt: "High School Soccer Team", pos: "hor" },
+    { imgSrc: imgSrc4, alt: "Volleyball Tournament", pos: "hor" },
+    { imgSrc: imgSrc5, alt: "Surfing", pos: "hor" },
+    { imgSrc: imgSrc6, alt: "Color Run San Antonio", pos: "vert" },
+    { imgSrc: imgSrc7, alt: "Flying San Diego", pos: "hor" },
+    { imgSrc: imgSrc8, alt: "Volleyball San Diego", pos: "vert" },
+    { imgSrc: imgSrc9, alt: "Batting Practive", pos: "vert" },
+    { imgSrc: imgSrc10, alt: "Rafting Colorado", pos: "hor" },
+    { imgSrc: imgSrc11, alt: "Hiking Zion", pos: "hor" },
+    { imgSrc: imgSrc12, alt: "Hang Gliding Chattanooga", pos: "hor" },
+    { imgSrc: imgSrc13, alt: "High School Soccer", pos: "hor" },
+    { imgSrc: imgSrc14, alt: "Santa Run San Diego", pos: "hor" },
+    { imgSrc: imgSrc15, alt: "Ziplining Austin", pos: "hor" },
+    { imgSrc: imgSrc16, alt: "Austin Volleyball", pos: "vert" },
+    { imgSrc: imgSrc17, alt: "Austing Volleyball", pos: "vert" },
+    { imgSrc: imgSrc18, alt: "Hiking Colorado", pos: "vert" },
+    { imgSrc: imgSrc19, alt: "Wake Boarding Chattanooga", pos: "hor" },
+    { imgSrc: imgSrc20, alt: "Scuba Diving Thailand", pos: "hor" },
   ];
   const sports = srcs.map((item, i) => (
-    <div key={i} onClick={() => setModal(item.imgSrc)} className="item">
+    <div key={i} onClick={() => setModal({ imgSrc: item.imgSrc, alt: item.alt, pos: item.pos })} className="item">
       <img alt={item.alt} src={item.imgSrc} />
     </div>
   ));
@@ -65,8 +65,10 @@ export default function Channel8(props) {
           {sports}
           {modal && (
             <div className="modal">
-              <CancelIcon onClick={() => setModal(null)} className="close-icon" />
-              <img src={modal} />
+              <span className="cancel-btn-wrapper">
+                <CancelIcon onClick={() => setModal(null)} className="close-icon" />
+              </span>
+              <img src={modal.imgSrc} alt={modal.alt} className={modal.pos} />
             </div>
           )}
         </div>

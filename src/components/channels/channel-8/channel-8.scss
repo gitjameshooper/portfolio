@@ -1,6 +1,6 @@
 @import "./../../../variables.scss";
 
-@keyframes expand_8 {
+@-webkit-keyframes expand-8 {
   0% {
     width: 0;
     top: 50%;
@@ -12,6 +12,36 @@
     width: 100%;
     top: 0%;
     left: 0%;
+  }
+}
+@keyframes expand-8 {
+  0% {
+    width: 0;
+    top: 50%;
+    left: 50%;
+    height: 0vh;
+  }
+  100% {
+    height: 100vh;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+  }
+}
+@-webkit-keyframes expand-vert-8 {
+  0% {
+    height: 0vh;
+  }
+  100% {
+    height: 100vh;
+  }
+}
+@keyframes expand-vert-8 {
+  0% {
+    height: 0vh;
+  }
+  100% {
+    height: 100vh;
   }
 }
 .channel-8 {
@@ -39,20 +69,33 @@
         height: 100vh;
         overflow: hidden;
         .modal {
-          position: absolute;
-
-          animation: expand_8 2s forwards;
+          @include abs-expand;
+          animation: expand-8 2s forwards;
           background: rgba(0, 0, 0, 0.75);
-          .close-icon {
+          .cancel-btn-wrapper {
             cursor: pointer;
+            background: rgba(0, 0, 0, 0.5);
+            width: 60px;
+            height: 60px;
             position: absolute;
-            right: 2%;
-            top: 2%;
-            color: #fff;
-            font-size: 40px;
+            right: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .close-icon {
+              cursor: pointer;
+              color: #fff;
+              font-size: 40px;
+            }
           }
-          img {
+          img.hor {
             width: 100%;
+          }
+          img.vert {
+            height: 100vh;
+            animation: expand-vert-8 2s forwards;
           }
           &.active {
             display: block;
@@ -61,8 +104,16 @@
         .item {
           cursor: pointer;
           outline: 3px inset #333;
-          width: 200px;
-          height: 200px;
+          width: 50%;
+          height: 25%;
+          @media screen and (min-width: 600px) {
+            width: 33.3333%;
+            height: 25%;
+          }
+          @media screen and (min-width: 960px) {
+            width: 20%;
+            height: 25%;
+          }
           overflow: hidden;
           display: inline-flex;
           justify-content: center;

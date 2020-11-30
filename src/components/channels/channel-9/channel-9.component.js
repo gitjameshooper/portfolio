@@ -34,53 +34,78 @@ export default function Channel9(props) {
       author: "James Allen",
       secs: 10,
     },
-    { quote: "Never put passion in front of principle, even if you win, you’ll lose", author: "Mr. Miyagi", secs: 10 },
-    // { quote: "When I do good, I feel good When I do bad, I feel bad. That's my religion", author: "Abraham Lincoln" },
+
+    {
+      quote: "When I do good, I feel good When I do bad, I feel bad. That's my religion",
+      author: "Abraham Lincoln",
+      secs: 10,
+    },
     { quote: "Being realistic is the most commonly traveled path to mediocrity", author: "Will Smith", secs: 10 },
-    // {
-    //   quote: "USA is a campaign of fear and consumption. Keep everyone afraid and they will consume",
-    //   author: "Marylin Manson",
-    //   video: bruceVideo,
-    // },
 
-    // {
-    //   quote:
-    //     "I don't count my sit-ups. I only start counting when it starts hurting. When I feel pain…. Because that is when it really counts.",
-    //   author: "Muhammad Ali",
-    // },
+    {
+      quote:
+        "I don't count my sit-ups. I only start counting when it starts hurting. When I feel pain…. Because that is when it really counts.",
+      author: "Muhammad Ali",
+      secs: 10,
+    },
 
-    // {
-    //   quote:
-    //     "Fear is self-imposed. You create it, you can destroy it too. Behind every fear is the person you want to be. When fear is destroyed, it comes back as confidence.",
-    //   author: "Greg Plitt",
-    // },
-    // { quote: "A life inherited is one not lived", author: "James Hooper" },
-    // {
-    //   quote:
-    //     "Luck is where preparation meets opportunity. Even if you get beat 99 times out of 100. It only takes 1 time.",
-    //   author: "The Little Giants",
-    // },
-    // { quote: "It's one thing to make people laugh, it's another to make people smile.", author: "Norm Macdonald" },
-    // {
-    //   quote:
-    //     "Home is not a place…it’s a feeling.” But a feeling not shared is nothing. We live in a world where people believe everybody is out to get you, but I’m telling you now. Some people are just out to love you.",
-    //   author: "William Hollis",
-    // },
-    // {
-    //   quote: "If you are going to try, Go all the way. Do it Do it , All the way, All the way",
-    //   author: "Charles Bukowski",
-    // },
-    // {
-    //   quote: "Money is a beautiful thing… but if you are not enough without it you will never be enough with it.",
-    //   author: "John Candy",
-    // },
-    // { quote: "If you don’t feel a little uncomfortable during your day. You are not growing.", author: "Anonymous" },
-    // { quote: "Absorb what is useful. Discard what is useless. Add what is essentially your own.", author: "Bruce Lee" },
-    // {
-    //   quote:
-    //     "Pain is temporary. It may last a minute, or an hour, or a day, or even a year, but eventually it will subside and something else will take its place. If I quit, however, it lasts forever.",
-    //   author: "Lance Armstrong",
-    // },
+    {
+      quote:
+        "Fear is self-imposed. You create it, you can destroy it too. Behind every fear is the person you want to be. When fear is destroyed, it comes back as confidence.",
+      author: "Greg Plitt",
+      secs: 10,
+    },
+
+    {
+      quote:
+        "Luck is where preparation meets opportunity. Even if you get beat 99 times out of 100. It only takes 1 time.",
+      author: "The Little Giants",
+      secs: 10,
+    },
+    {
+      quote: "It's one thing to make people laugh, it's another to make people smile.",
+      author: "Norm Macdonald",
+      secs: 10,
+    },
+    {
+      quote:
+        "Home is not a place…it’s a feeling.” But a feeling not shared is nothing. We live in a world where people believe everybody is out to get you, but I’m telling you now. Some people are just out to love you.",
+      author: "William Hollis",
+      secs: 10,
+    },
+    {
+      quote: "If you are going to try, Go all the way. Do it! Do it! , All the way!, All the way!",
+      author: "Charles Bukowski",
+      secs: 10,
+    },
+    {
+      quote: "Money is a beautiful thing… but if you are not enough without it you will never be enough with it.",
+      author: "John Candy",
+      secs: 10,
+    },
+    {
+      quote: "If you don’t feel a little uncomfortable during your day. You are not growing.",
+      author: "Anonymous",
+      secs: 10,
+    },
+    {
+      quote: "Absorb what is useful. Discard what is useless. Add what is essentially your own.",
+      author: "Bruce Lee",
+      secs: 10,
+    },
+    {
+      quote:
+        "Pain is temporary. It may last a minute, or an hour, or a day, or even a year, but eventually it will subside and something else will take its place. If I quit, however, it lasts forever.",
+      author: "Lance Armstrong",
+      secs: 10,
+    },
+    { quote: "Never put passion in front of principle, even if you win, you’ll lose", author: "Mr. Miyagi", secs: 10 },
+    { quote: "A life inherited is one not lived", author: "James Hooper", secs: 10 },
+    {
+      quote: "USA is a campaign of fear and consumption. Keep everyone afraid and they will consume",
+      author: "Marylin Manson",
+      secs: 10,
+    },
   ];
   function getRandomInt(min, max) {
     min = Math.ceil(min);

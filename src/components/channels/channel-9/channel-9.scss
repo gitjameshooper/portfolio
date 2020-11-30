@@ -1,19 +1,14 @@
 @import "./../../../variables.scss";
-@keyframes morph {
+@keyframes morph-9 {
   0% {
-    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+    border-radius: 20% 80% 30% 60% / 60% 30% 80% 20%;
   }
   100% {
-    border-radius: 40% 60%;
+    border-radius: 80% 30% 60% 20% / 20% 60% 30% 80%;
   }
 }
 
-@keyframes spin {
-  to {
-    transform: rotate(1turn);
-  }
-}
-@keyframes fadeIn9 {
+@keyframes fadeIn-9 {
   0% {
     opacity: 0;
   }
@@ -24,7 +19,7 @@
     opacity: 0;
   }
 }
-@keyframes fadeInVideo9 {
+@keyframes fadeInVideo-9 {
   0% {
     opacity: 0;
   }
@@ -65,13 +60,12 @@
       display: inline-block;
       border-radius: 50%;
       max-width: 300px;
-      animation: fadeInVideo9 linear;
+      animation: fadeInVideo-9 linear, morph-9 2s ease-in-out infinite both alternate;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       box-shadow: 0 0 50px #ccc;
-      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      // border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
       // opacity: 1;
-      // animation: morph 8s ease-in-out infinite both alternate, spin 12s linear infinite reverse;
     }
     .quote {
       position: absolute;
@@ -81,7 +75,7 @@
       font-style: italic;
       max-width: 600px;
       display: inline-block;
-      animation: fadeIn9 ease;
+      animation: fadeIn-9 ease;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
       .author {
@@ -113,6 +107,7 @@
   .meditation {
     width: 100%;
     bottom: -30%;
-    position: relative;
+    left: 0;
+    position: absolute;
   }
 }
