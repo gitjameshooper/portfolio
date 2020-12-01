@@ -3,7 +3,7 @@ import { Context } from "./../../../store";
 import "./channel-1.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import Mute from "./../mute/mute.component";
-import jamesSrc from "./../../../assets/img/channel-1/james-3.jpg";
+import jamesSrc from "./../../../assets/img/channel-1/james.jpg";
 import resumeSrc from "./../../../assets/img/channel-1/james-hooper-resume.pdf";
 import gifSrc from "./../../../assets/img/channel-1/giphy-1.gif";
 import lightCansSrc from "./../../../assets/img/channel-1/light-cans.png";
