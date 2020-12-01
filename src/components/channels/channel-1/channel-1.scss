@@ -145,11 +145,11 @@
 
   .intro {
     width: 0px;
-    background: #fff;
+    background: $pcolor1;
     height: 0px;
     filter: blur(4px);
     border-radius: 50%;
-    box-shadow: 0px 0px 20px #fff;
+    box-shadow: 0px 0px 20px $pcolor1;
 
     &.animate {
       -webkit-animation: powerOn-1 750ms linear forwards;
@@ -167,7 +167,7 @@
     background: #f1f1f1;
     perspective: 600px;
     overflow: hidden;
-    background: #000;
+    background: $pcolor0;
     .left-wall {
       width: 100%;
       height: 105%;
@@ -176,7 +176,7 @@
       transform-origin: center;
       left: 0%;
       background: #f1f1f1;
-      border: 2px solid #000;
+      border: 2px solid $pcolor0;
       display: flex;
       align-items: center;
       .content {
@@ -191,7 +191,7 @@
           float: left;
           .email {
             margin-top: 8px;
-            color: #000;
+            color: $pcolor0;
             display: block;
             font-style: italic;
             text-decoration: none;
@@ -203,7 +203,7 @@
           }
           .img-wrapper {
             border: 15px solid #333;
-            box-shadow: 0 0 10px #000;
+            box-shadow: 0 0 10px $pcolor0;
 
             img {
               display: block;
@@ -219,7 +219,7 @@
           svg {
             font-size: 40px;
             margin: 0 20px;
-            color: #000;
+            color: $pcolor0;
           }
         }
       }
@@ -304,8 +304,8 @@
       transform-origin: center;
       position: absolute;
       right: 0%;
-      border: 2px solid #000;
-      box-shadow: 0 0 20px #000;
+      border: 2px solid $pcolor0;
+      box-shadow: 0 0 20px $pcolor0;
       .picture {
         max-width: 400px;
 
@@ -318,7 +318,7 @@
           display: block;
           // width: 100%;
           border: 4px solid #f1f1f1;
-          box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px $pcolor0;
           -webkit-animation: changePic-1 4s infinite both alternate;
           animation: changePic-1 4s infinite both alternate;
         }
@@ -327,7 +327,7 @@
           position: relative;
           right: 30%;
           border: 15px solid #333;
-          box-shadow: 0 0 10px #000;
+          box-shadow: 0 0 10px $pcolor0;
         }
       }
     }
@@ -340,7 +340,7 @@
       transform: translate3d(0%, 91.5%, 80px) rotateX(90deg) rotateZ(-30deg);
       transform-origin: left top;
       left: 0%;
-      border: 2px solid #000;
+      border: 2px solid $pcolor0;
     }
   }
 }

@@ -48,7 +48,7 @@
   }
 }
 .channel-4 {
-  background: radial-gradient(farthest-side, #ffbb00, #000);
+  background: radial-gradient(farthest-side, #ffbb00, $pcolor0);
   &.hidden {
     display: none;
   }
@@ -74,7 +74,7 @@
           margin-bottom: 10px;
           h3 {
             background: #ffbb00;
-            color: #fff;
+            color: $pcolor1;
             padding: 3px;
             text-align: center;
             margin: 0;
@@ -84,7 +84,7 @@
             img {
               width: 100%;
               margin-top: 15px;
-              box-shadow: 0 0 8px #000;
+              box-shadow: 0 0 8px $pcolor0;
             }
           }
           ul {
@@ -131,7 +131,7 @@
             bottom: 0;
             width: 98%;
             background: #ffbb00;
-            color: #fff;
+            color: $pcolor1;
             display: inline-block;
             padding: 1%;
             font-weight: bold;

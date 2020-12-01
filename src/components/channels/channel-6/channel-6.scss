@@ -15,8 +15,8 @@ $red: #ab2c20;
         top: 20%;
         width: 100%;
         max-width: 250px;
-        color: #000;
-        background: #fff;
+        color: $pcolor0;
+        background: $pcolor1;
         .city {
           display: inline-block;
           width: 100%;
@@ -43,7 +43,7 @@ $red: #ab2c20;
         right: 5%;
         a {
           display: inline-block;
-          box-shadow: 0 0 20px #000;
+          box-shadow: 0 0 20px $pcolor0;
         }
         img {
           width: 100%;
@@ -56,7 +56,7 @@ $red: #ab2c20;
         text-align: left;
         h3 {
           border-top: 5px solid $red;
-          background: #fff;
+          background: $pcolor1;
           color: $red;
           width: 50%;
           text-align: center;
@@ -68,18 +68,18 @@ $red: #ab2c20;
         .details {
           background: $red;
           padding: 5px 0;
-          box-shadow: 0 0 20px #000;
+          box-shadow: 0 0 20px $pcolor0;
           .person {
             font-size: 32px;
-            color: #fff;
+            color: $pcolor1;
             text-align: center;
             width: 50%;
             display: inline-block;
-            border-right: 2px solid #fff;
+            border-right: 2px solid $pcolor1;
             text-transform: uppercase;
           }
           .subject {
-            color: #fff;
+            color: $pcolor1;
             font-size: 24px;
             text-transform: uppercase;
             padding: 10px 20px;

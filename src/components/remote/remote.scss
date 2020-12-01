@@ -125,7 +125,7 @@
         border-radius: 5px;
         box-shadow: -3px 3px 0px #c4c4c4;
         color: #222;
-        text-shadow: 1px 1px 1px #fff;
+        text-shadow: 1px 1px 1px $pcolor1;
         transition: All 250ms ease;
 
         &.numbers {
@@ -150,10 +150,6 @@
           width: 55px;
           margin: 5px;
         }
-
-        &.zero {
-        }
-
         &.btn-volume {
           width: 40px;
           height: 70px;
@@ -233,13 +229,13 @@
           border: 1px solid #07121b;
           border-radius: 5px;
           box-shadow: -3px 3px 0px #07121b;
-          color: #fff;
+          color: $pcolor1;
           text-shadow: 1px 1px 1px #07121b;
         }
 
         &.green {
           background: #7cc576;
-          color: #fff;
+          color: $pcolor1;
           border: 1px solid #46963f;
           border-radius: 5px;
           box-shadow: -3px 3px 0px #46963f;
@@ -248,7 +244,7 @@
 
         &.red {
           background: #df4242;
-          color: #fff;
+          color: $pcolor1;
           border: 1px solid #a01b1b;
           border-radius: 5px;
           box-shadow: -3px 3px 0px #a01b1b;
@@ -257,7 +253,7 @@
 
         &.blue {
           background: #2ec2dd;
-          color: #fff;
+          color: $pcolor1;
           border: 1px solid #177c8e;
           border-radius: 5px;
           box-shadow: -3px 3px 0px #177c8e;
@@ -272,7 +268,7 @@
           transform: rotateY(0deg) translateZ(35px);
           width: 200px;
           height: 310px;
-          background: #000;
+          background: $pcolor0;
           display: flex;
           flex-wrap: wrap;
           align-content: center;
@@ -283,7 +279,7 @@
 
         &.bottom {
           transform: rotateY(0deg) translateZ(0px);
-          background: #000;
+          background: $pcolor0;
           height: 310px;
           width: 210px;
           top: 0px;
