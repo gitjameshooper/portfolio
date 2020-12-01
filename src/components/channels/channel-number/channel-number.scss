@@ -7,10 +7,14 @@
   font-size: 56px;
   position: absolute;
   z-index: 2;
-  top: 20px;
-  right: 20px;
+  top: 0px;
+  right: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-shadow: 0px 0px 5px $pcolor0;
+  @media screen and (min-width: 600px) {
+    top: 20px;
+    right: 20px;
+  }
 }

@@ -32,12 +32,16 @@
       @include abs-expand;
       .logo {
         position: absolute;
-        bottom: 0;
+        top: 0;
         left: 0;
         max-width: 200px;
         z-index: 1;
         padding: 2%;
         opacity: 0.7;
+        @media screen and (min-width: 600px) {
+          bottom: 0;
+          top: auto;
+        }
       }
       .globe-wrapper {
         -webkit-animation: fadeIn-7 2s linear forwards;

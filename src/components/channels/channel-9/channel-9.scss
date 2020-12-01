@@ -122,8 +122,11 @@
   }
   .meditation {
     width: 100%;
-    bottom: -30%;
+    bottom: 0;
     left: 0;
     position: absolute;
+    @media screen and (min-width: 600px) {
+      bottom: -30%;
+    }
   }
 }

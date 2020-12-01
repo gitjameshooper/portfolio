@@ -30,10 +30,10 @@ export default function Channel3(props) {
   const rays = raysArr.map((i) => <span key={i} className={`ray ray-${i}`}></span>);
   const websites = srcs.map((item, i) => (
     <div key={i} className={`website ${websiteN === i ? "active" : "hidden"} ${exitAnim ? "spin-out" : ""}`}>
-      <a target="_blank" href={item.linkSrc}>
+      <a rel="noreferrer" target="_blank" href={item.linkSrc}>
         <img alt="SpredFast Projects" src={item.imgSrc} />
       </a>
-      <a className="link" target="_blank" href={item.linkSrc}>
+      <a className="link" target="_blank" rel="noreferrer" href={item.linkSrc}>
         Visit Project
       </a>
     </div>
@@ -104,7 +104,7 @@ export default function Channel3(props) {
               Spredfast is a platform for digital-first customer engagement. We are a global leader revolutionizing CX
               with software and services for digital care, messaging, chat, social marketing, and online communities.
               <img alt="Dev Team" src={devTeamSrc} />
-              <span className="caption">Dev Team wins Halloween Contest. Bronies Unite!</span>
+              <span className="caption">Dev team wins Halloween contest. Bronies unite!</span>
             </p>
           </div>
         </div>

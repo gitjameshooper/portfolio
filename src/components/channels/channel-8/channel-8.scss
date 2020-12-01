@@ -55,19 +55,27 @@
       @include abs-expand;
       .logo {
         position: absolute;
-        bottom: 0;
+        top: 0;
         left: 0;
         max-width: 200px;
         z-index: 1;
         padding: 2%;
         opacity: 0.7;
+        @media screen and (min-width: 600px) {
+          bottom: 0;
+          top: auto;
+        }
       }
       .projects {
         position: relative;
         max-width: 1000px;
         margin: 0 auto;
         height: 100vh;
-        overflow: hidden;
+        overflow: scroll;
+        @media screen and (min-width: 600px) {
+          overflow: hidden;
+        }
+
         .modal {
           @include abs-expand;
           -webkit-animation: expand-8 2s forwards;

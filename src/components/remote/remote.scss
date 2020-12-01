@@ -55,11 +55,61 @@
     bottom: 30px;
   }
 }
+.remote-component-mobile {
+  display: flex;
+  align-items: center;
+  background: red;
+  position: fixed;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  left: 0;
+  z-index: 1;
+  .btn-power {
+    width: 20%;
+    background: #df4242;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $pcolor1;
+  }
+  .channel-top {
+    cursor: pointer;
+    color: $pcolor1;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2ec2dd;
+    border-left: 2px solid $pcolor1;
+    border-right: 2px solid$pcolor1;
+  }
+  .channel-bot {
+    cursor: pointer;
+    color: $pcolor1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    background: #2ec2dd;
+  }
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}
 .remote-component {
   position: absolute;
   bottom: 100px;
   right: 50px;
   z-index: 2;
+  display: none;
+  @media screen and (min-width: 600px) {
+    display: block;
+  }
+
   &.animate {
     -webkit-animation: slideIn-r 3s ease-in-out;
     animation: slideIn-r 3s ease-in-out;
