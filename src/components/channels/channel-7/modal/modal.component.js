@@ -22,10 +22,10 @@ export default function Modal(props) {
   };
   return (
     <div className="modal">
-      <h4>
+      <h4 onClick={() => props.setModal(false)}>
         <img className="flag" src={props.modal.flagSrc} alt="Flag" />
         <span className="city">{props.modal.city}</span>
-        <CancelIcon onClick={() => props.setModal(false)} className="close-icon" />
+        <CancelIcon className="close-icon" />
       </h4>
 
       <Slider {...settings}>{items}</Slider>

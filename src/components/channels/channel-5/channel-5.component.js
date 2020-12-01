@@ -38,9 +38,9 @@ export default function Channel5(props) {
             <ul className="content">
               <li>
                 Worked on the Flosports vertical sites in Angular 4: Flotrack.org, Flowrestling.org, Flovolleyball.tv
-                etc…{" "}
+                etc…
               </li>
-              <li>Coded in Angular 4 building components and services using RXJS, Typescript, Node/NPM</li>
+              <li>Coded in Angular 4 building custom components and services using RXJS, Typescript, Node/NPM</li>
               <li>Developed in a functional paradigm with version control systems(Github) in an agile environment</li>
               <li>Experimented with A/B tests in Optimizely to capture analytics to help improve the sales funnel</li>
               <li>Collaborated with marketing to accomplish their goals with Marketo, Kissmetrics, Segment, GA</li>
@@ -54,8 +54,8 @@ export default function Channel5(props) {
               sport categories in the US and abroad. With a growing library of more than 300,000 hours of premium
               content including news, expert commentary, films, documentaries and more, FloSports has established itself
               as an innovator and leader in sports streaming. Finally, your sport has a home.
+              <img alt="Flosports Team" src={fsTeamSrc} />
             </p>
-            <img alt="Flosports Team" src={fsTeamSrc} />
           </div>
         </div>
         <div className="sun">
@@ -63,10 +63,10 @@ export default function Channel5(props) {
         </div>
         <div className="projects">
           <div className="website active">
-            <a target="_blank" href="https://www.flowrestling.org/">
-              <img src={fsWebSrc} />
+            <a target="_blank" href="https://www.flowrestling.org/" rel="noreferrer">
+              <img alt="Flosports website" src={fsWebSrc} />
             </a>
-            <a className="link" target="_blank" href="https://www.flowrestling.org/">
+            <a className="link" target="_blank" href="https://www.flowrestling.org/" rel="noreferrer">
               Visit Project
             </a>
           </div>

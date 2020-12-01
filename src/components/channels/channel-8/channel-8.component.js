@@ -65,8 +65,8 @@ export default function Channel8(props) {
           {sports}
           {modal && (
             <div className="modal">
-              <span className="cancel-btn-wrapper">
-                <CancelIcon onClick={() => setModal(null)} className="close-icon" />
+              <span onClick={() => setModal(null)} className="cancel-btn-wrapper">
+                <CancelIcon className="close-icon" />
               </span>
               <img src={modal.imgSrc} alt={modal.alt} className={modal.pos} />
             </div>

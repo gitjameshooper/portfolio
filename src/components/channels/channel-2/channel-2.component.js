@@ -3,6 +3,7 @@ import { Context } from "./../../../store";
 import "./channel-2.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import Mute from "./../mute/mute.component";
+import sxswSrc from "./../../../assets/img/channel-2/sxsw.jpg";
 import cdLogoSrc from "./../../../assets/img/logos/cart-designers.png";
 import mmSiteSrc from "./../../../assets/img/channel-2/marthaemmanuel.png";
 import oakSiteSrc from "./../../../assets/img/channel-2/oakway.png";
@@ -42,7 +43,6 @@ export default function Channel2(props) {
   ));
 
   useEffect(() => {
-    console.log("new website");
     let nextTimer = setTimeout(() => {
       setExitAnim(false);
       let n = websiteN + 1;
@@ -86,7 +86,7 @@ export default function Channel2(props) {
           <div className="block block-2">
             <h3 className="skills">Skills</h3>
             <ul className="content">
-              <li>Built websites for small to midsize ecommerce businesses with HTML, CSS, PHP, JS(ES5)</li>
+              <li>Built eCommerce websites for small to midsize businesses with HTML, CSS, PHP, JS(ES5)</li>
               <li>Used photoshop designs to create pixel perfect BigCommerce and Wordpress sites.</li>
               <li>Created a better client-side user experience using jQuery and Javascript.</li>
               <li>Sent AJAX API calls to pull third party data into the websites.</li>
@@ -100,6 +100,7 @@ export default function Channel2(props) {
               serious about success. Check out our team! We design and build web solutions that help grow businesses.
               E-commerce is the way of the future and important sales can be lost when businesses do not have the proper
               systems. All your Austin e-commerce needs can be handled by our team below!
+              <img alt="SXSW" src={sxswSrc} />
             </p>
           </div>
         </div>

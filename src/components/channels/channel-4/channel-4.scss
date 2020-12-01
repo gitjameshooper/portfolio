@@ -63,7 +63,13 @@
         flex-direction: column;
         overflow: scroll;
         height: 100vh;
-        max-width: 400px;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        @media screen and (min-width: 600px) {
+          width: 50%;
+          max-width: 400px;
+        }
         .block {
           position: relative;
           margin-bottom: 10px;
@@ -78,6 +84,8 @@
             margin-bottom: 80px;
             img {
               width: 100%;
+              margin-top: 15px;
+              box-shadow: 0 0 8px #000;
             }
           }
           ul {
@@ -92,18 +100,28 @@
             display: block;
             max-width: 340px;
             margin: 0 auto;
+            width: 100%;
           }
         }
       }
 
       .projects {
+        @include abs-expand;
+        left: 30%;
+        display: none;
+        @media screen and (min-width: 960px) {
+          display: block;
+        }
+        @media screen and (min-width: 1280px) {
+          left: 0;
+        }
         .website {
           position: absolute;
           top: 50%;
           left: 50%;
           width: 400px;
           margin-left: -200px;
-          margin-top: -115px;
+          margin-top: -97px;
           display: none;
           box-shadow: 0 0 30px $pcolor0;
           img {
@@ -127,11 +145,8 @@
         }
       }
       .sun {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        @include abs-expand;
+        left: 30%;
         margin: auto;
         width: 70px;
         height: 70px;
@@ -139,6 +154,9 @@
         background: white;
         opacity: 0.9;
         box-shadow: 0px 0px 40px 15px white;
+        @media screen and (min-width: 1280px) {
+          left: 0;
+        }
 
         .ray-box {
           position: absolute;

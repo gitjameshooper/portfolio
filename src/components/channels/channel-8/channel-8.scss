@@ -75,7 +75,7 @@
           .cancel-btn-wrapper {
             cursor: pointer;
             background: rgba(0, 0, 0, 0.5);
-            width: 60px;
+            width: 100%;
             height: 60px;
             position: absolute;
             right: 0;
@@ -85,6 +85,7 @@
             justify-content: center;
 
             .close-icon {
+              position: absolute;
               cursor: pointer;
               color: #fff;
               font-size: 40px;

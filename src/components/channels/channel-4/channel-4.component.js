@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "./../../../store";
 import "./channel-4.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
+import teamSrc from "./../../../assets/img/channel-4/team.jpg";
 import Mute from "./../mute/mute.component";
 import volLogoSrc from "./../../../assets/img/channel-4/volusion-logo.png";
 import volWebSrc from "./../../../assets/img/channel-4/volusion-website.png";
@@ -48,7 +49,8 @@ export default function Channel4(props) {
               and manage successful online businesses. Since 1999, our dedicated team of developers, marketers,
               designers, and technical support experts have been passionate about helping merchants operate and grow
               their stores, whether startup- or enterprise-level. Two decades later, Volusion has earned dozens of
-              accolades and powered over 180,000 successful online businesses
+              accolades and powered over 180,000 successful online businesses.
+              <img alt="Volusion Team" src={teamSrc} />
             </p>
           </div>
         </div>
@@ -57,10 +59,10 @@ export default function Channel4(props) {
         </div>
         <div className="projects">
           <div className="website active">
-            <a target="_blank" href="https://www.volusion.com/v1/">
-              <img src={volWebSrc} />
+            <a target="_blank" href="https://www.volusion.com/v1/" rel="noreferrer">
+              <img alt="Volusion Website" src={volWebSrc} />
             </a>
-            <a className="link" target="_blank" href="https://www.volusion.com/v1/">
+            <a className="link" target="_blank" href="https://www.volusion.com/v1/" rel="noreferrer">
               Visit Project
             </a>
           </div>

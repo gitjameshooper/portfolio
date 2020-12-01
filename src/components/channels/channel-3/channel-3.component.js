@@ -4,7 +4,7 @@ import "./channel-3.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import Mute from "./../mute/mute.component";
 import sfLogoSrc from "./../../../assets/img/logos/spredfast.jpg";
-import sxswSrc from "./../../../assets/img/channel-3/sxsw.jpg";
+import devTeamSrc from "./../../../assets/img/channel-3/dev-team.jpg";
 import guessSrc from "./../../../assets/img/channel-3/guess.png";
 import aeroSrc from "./../../../assets/img/channel-3/aero.png";
 import ibmSrc from "./../../../assets/img/channel-3/ibm.png";
@@ -29,9 +29,9 @@ export default function Channel3(props) {
   const raysArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
   const rays = raysArr.map((i) => <span key={i} className={`ray ray-${i}`}></span>);
   const websites = srcs.map((item, i) => (
-    <div className={`website ${websiteN === i ? "active" : "hidden"} ${exitAnim ? "spin-out" : ""}`}>
+    <div key={i} className={`website ${websiteN === i ? "active" : "hidden"} ${exitAnim ? "spin-out" : ""}`}>
       <a target="_blank" href={item.linkSrc}>
-        <img alt="SpredFast Projects" key={i} src={item.imgSrc} />
+        <img alt="SpredFast Projects" src={item.imgSrc} />
       </a>
       <a className="link" target="_blank" href={item.linkSrc}>
         Visit Project
@@ -40,7 +40,6 @@ export default function Channel3(props) {
   ));
 
   useEffect(() => {
-    console.log("new website");
     let nextTimer = setTimeout(() => {
       setExitAnim(false);
       let n = websiteN + 1;
@@ -84,9 +83,15 @@ export default function Channel3(props) {
           <div className="block block-2">
             <h3 className="skills">Skills</h3>
             <ul className="content">
-              <li>UX developer for marketing campaigns using social media data to make visualizations/microsites</li>
+              <li>
+                UX developer for social media marketing campaigns using a curated data API to make
+                visualizations/microsites
+              </li>
               <li>Worked with top-tier clients such as the Oakley, MTV, iHeartradio, MasterCard, LaSenza, IBM</li>
-              <li>Collaborated with project managers and designers to meet campaign deadlines on tight schedules</li>
+              <li>
+                Collaborated with project managers and designers in Scrum environment to meet campaign deadlines on
+                tight schedules
+              </li>
               <li>
                 Wrote in JS(ES5), CSS3 and HTML5 with a focus on clean code, fast page loads, responsiveness -Utilized
                 libraries including: Bootstrap, jQuery, Underscore.js, D3.js
@@ -96,9 +101,10 @@ export default function Channel3(props) {
           <div className="block block-3">
             <h3 className="company">Company/Team</h3>
             <p className="content">
-              Spredfast is a platform for digital-first customer engagement We are a global leader revolutionizing CX
+              Spredfast is a platform for digital-first customer engagement. We are a global leader revolutionizing CX
               with software and services for digital care, messaging, chat, social marketing, and online communities.
-              <img alt="SXSW" src={sxswSrc} />
+              <img alt="Dev Team" src={devTeamSrc} />
+              <span className="caption">Dev Team wins Halloween Contest. Bronies Unite!</span>
             </p>
           </div>
         </div>
