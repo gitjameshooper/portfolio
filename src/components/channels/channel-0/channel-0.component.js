@@ -24,7 +24,7 @@ export default function Channel0(props) {
     return function cleanup() {
       audio.pause();
     };
-  }, []);
+  });
 
   return (
     <div className={`channel-0 channels ${store.isTvOn ? "active" : "hidden"} `}>

@@ -1,6 +1,6 @@
 @import "./../../../variables.scss";
 
-@-webkit-keyframes changePic {
+@-webkit-keyframes changePic-1 {
   0% {
     background: url("./../../../assets/img/channel-1/marilyn-monroe.jpg");
     background-size: cover;
@@ -14,7 +14,7 @@
     background-size: cover;
   }
 }
-@keyframes changePic {
+@keyframes changePic-1 {
   0% {
     background: url("./../../../assets/img/channel-1/marilyn-monroe.jpg");
     background-size: cover;
@@ -132,6 +132,7 @@
 
   &.animate {
     .wrapper {
+      -webkit-animation: fadeIn-1 1.5s ease-in forwards;
       animation: fadeIn-1 1.5s ease-in forwards;
     }
   }
@@ -151,6 +152,7 @@
     box-shadow: 0px 0px 20px #fff;
 
     &.animate {
+      -webkit-animation: powerOn-1 750ms linear forwards;
       animation: powerOn-1 750ms linear forwards;
     }
     &.hidden {
@@ -317,6 +319,7 @@
           // width: 100%;
           border: 4px solid #f1f1f1;
           box-shadow: 0 0 10px #000;
+          -webkit-animation: changePic 4s infinite both alternate;
           animation: changePic 4s infinite both alternate;
         }
         video {

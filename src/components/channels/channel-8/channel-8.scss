@@ -70,6 +70,7 @@
         overflow: hidden;
         .modal {
           @include abs-expand;
+          -webkit-animation: expand-8 2s forwards;
           animation: expand-8 2s forwards;
           background: rgba(0, 0, 0, 0.75);
           .cancel-btn-wrapper {
@@ -96,6 +97,7 @@
           }
           img.vert {
             height: 100vh;
+            -webkit-animation: expand-vert-8 2s forwards;
             animation: expand-vert-8 2s forwards;
           }
           &.active {

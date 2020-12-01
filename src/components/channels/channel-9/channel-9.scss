@@ -82,22 +82,16 @@
 
   .block {
     @include abs-expand;
-    position: absolute;
     z-index: 1;
     width: 100%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 80%);
     video {
       position: absolute;
       display: inline-block;
       border-radius: 50%;
       max-width: 300px;
+      -webkit-animation: fadeInVideo-9 linear, morph-9 3s ease-in-out infinite both alternate;
       animation: fadeInVideo-9 linear, morph-9 3s ease-in-out infinite both alternate;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
       box-shadow: 0 0 50px #ccc;
     }
     .quote {
@@ -108,9 +102,8 @@
       font-style: italic;
       max-width: 600px;
       display: inline-block;
-      animation: fadeIn-9 ease;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
+      -webkit-animation: fadeIn-9 ease forwards;
+      animation: fadeIn-9 ease forwards;
       .author {
         font-size: 18px;
         font-style: normal;

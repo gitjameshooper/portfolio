@@ -1,5 +1,5 @@
 @import "./../../variables.scss";
-@keyframes slideIn {
+@-webkit-keyframes slideIn-r {
   0% {
     right: -2000px;
   }
@@ -16,7 +16,35 @@
     right: 50px;
   }
 }
-@keyframes upDown {
+@keyframes slideIn-r {
+  0% {
+    right: -2000px;
+  }
+  60% {
+    right: 300px;
+  }
+  75% {
+    right: 0px;
+  }
+  90% {
+    right: 100px;
+  }
+  100% {
+    right: 50px;
+  }
+}
+@-webkit-keyframes upDown-r {
+  0% {
+    bottom: 30px;
+  }
+  50% {
+    bottom: 50px;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
+@keyframes upDown-r {
   0% {
     bottom: 30px;
   }
@@ -33,7 +61,8 @@
   right: 50px;
   z-index: 2;
   &.animate {
-    animation: slideIn 3s ease-in-out;
+    -webkit-animation: slideIn-r 3s ease-in-out;
+    animation: slideIn-r 3s ease-in-out;
   }
   .tooltip {
     color: $pcolor1;
@@ -42,7 +71,8 @@
     background: #177c8e;
     border-radius: 5px;
     padding: 8px;
-    animation: upDown 2s infinite ease-in-out;
+    -webkit-animation: upDown-r 2s infinite ease-in-out;
+    animation: upDown-r 2s infinite ease-in-out;
     &.hidden {
       display: none;
     }

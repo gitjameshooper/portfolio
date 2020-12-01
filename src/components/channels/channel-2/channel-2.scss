@@ -1,6 +1,6 @@
 @import "./../../../variables.scss";
 
-@-webkit-keyframes ray_2 {
+@-webkit-keyframes ray-2 {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -10,7 +10,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes ray_2 {
+@keyframes ray-2 {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -20,19 +20,19 @@
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes spin_2 {
+@-webkit-keyframes spin-2 {
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(360deg);
   }
 }
-@keyframes spin_2 {
+@keyframes spin-2 {
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes move_2 {
+@-webkit-keyframes move-2 {
   10% {
     left: 50%;
     top: 50%;
@@ -42,7 +42,7 @@
     top: 200%;
   }
 }
-@keyframes move_2 {
+@keyframes move-2 {
   10% {
     left: 50%;
     top: 50%;
@@ -52,7 +52,7 @@
     top: 200%;
   }
 }
-@-webkit-keyframes grow_2 {
+@-webkit-keyframes grow-2 {
   0% {
     transform: scale(0);
   }
@@ -65,7 +65,7 @@
     top: 50%;
   }
 }
-@keyframes grow_2 {
+@keyframes grow-2 {
   0% {
     transform: scale(0);
   }
@@ -158,12 +158,12 @@
 
           &.active {
             display: block;
-            -webkit-animation: grow_2 8s linear forwards;
-            animation: grow_2 8s linear forwards;
+            -webkit-animation: grow-2 8s linear forwards;
+            animation: grow-2 8s linear forwards;
           }
           &.spin-out {
-            -webkit-animation: move_2 1.5s forwards, spin_2 250ms linear infinite;
-            animation: move_2 1.5s forwards, spin_2 250ms linear infinite;
+            -webkit-animation: move-2 1.5s forwards, spin-2 250ms linear infinite;
+            animation: move-2 1.5s forwards, spin-2 250ms linear infinite;
           }
         }
       }
@@ -189,8 +189,8 @@
           right: 0;
           bottom: 0;
           width: 70px;
-          -webkit-animation: ray_2 10s linear infinite;
-          animation: ray_2 10s linear infinite;
+          -webkit-animation: ray-2 10s linear infinite;
+          animation: ray-2 10s linear infinite;
 
           .ray {
             background: linear-gradient(

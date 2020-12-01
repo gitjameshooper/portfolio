@@ -40,6 +40,7 @@
         opacity: 0.7;
       }
       .globe-wrapper {
+        -webkit-animation: fadeIn-7 2s linear forwards;
         animation: fadeIn-7 2s linear forwards;
         cursor: pointer;
       }

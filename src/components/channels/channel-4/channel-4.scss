@@ -1,6 +1,6 @@
 @import "./../../../variables.scss";
 
-@-webkit-keyframes ray_4 {
+@-webkit-keyframes ray-4 {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -10,7 +10,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes ray_4 {
+@keyframes ray-4 {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -21,7 +21,7 @@
   }
 }
 
-@-webkit-keyframes grow_4 {
+@-webkit-keyframes grow-4 {
   0% {
     transform: scale(0);
   }
@@ -34,7 +34,7 @@
     top: 50%;
   }
 }
-@keyframes grow_4 {
+@keyframes grow-4 {
   0% {
     transform: scale(0);
   }
@@ -139,8 +139,8 @@
           }
           &.active {
             display: block;
-            -webkit-animation: grow_4 8s linear forwards;
-            animation: grow_4 8s linear forwards;
+            -webkit-animation: grow-4 8s linear forwards;
+            animation: grow-4 8s linear forwards;
           }
         }
       }
@@ -166,8 +166,8 @@
           right: 0;
           bottom: 0;
           width: 70px;
-          -webkit-animation: ray_4 10s linear infinite;
-          animation: ray_4 10s linear infinite;
+          -webkit-animation: ray-4 10s linear infinite;
+          animation: ray-4 10s linear infinite;
 
           .ray {
             background: linear-gradient(
