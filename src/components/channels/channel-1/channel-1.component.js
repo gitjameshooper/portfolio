@@ -1,11 +1,10 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext } from "react";
 import { Context } from "./../../../store";
 import "./channel-1.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import Mute from "./../mute/mute.component";
 import jamesSrc from "./../../../assets/img/channel-1/james-3.jpg";
 import resumeSrc from "./../../../assets/img/channel-1/james-hooper-resume.pdf";
-import gif2Src from "./../../../assets/img/channel-1/giphy-2.gif";
 import gifSrc from "./../../../assets/img/channel-1/giphy-1.gif";
 import lightCansSrc from "./../../../assets/img/channel-1/light-cans.png";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -15,12 +14,6 @@ import GetAppIcon from "@material-ui/icons/GetApp";
 
 export default function Channel1(props) {
   const [store, setStore] = useContext(Context);
-  // const videoRef = useRef(null);
-
-  // useEffect(() => {
-  //   videoRef.current.playbackRate = 2;
-  //   console.log(videoRef.current.playbackRate);
-  // });
   return (
     <div
       className={`channel-1 channels ${
@@ -32,9 +25,9 @@ export default function Channel1(props) {
         <Mute muted={store.mute} />
         <div className="scene">
           <div className="ceiling">
-            <img className="light-cans can-1" src={lightCansSrc} />
-            <img className="light-cans can-2" src={lightCansSrc} />
-            <img className="light-cans can-3" src={lightCansSrc} />
+            <img className="light-cans can-1" alt="Can Lights" src={lightCansSrc} />
+            <img className="light-cans can-2" alt="Can Lights" src={lightCansSrc} />
+            <img className="light-cans can-3" alt="Can Lights" src={lightCansSrc} />
             <div className="beam beam-1">
               <div className="inner"></div>
               <div className="inner-2"></div>
@@ -56,7 +49,7 @@ export default function Channel1(props) {
               <div className="inner-3"></div>
             </div>
           </div>
-          <div className="left">
+          <div className="left-wall">
             <div className="content">
               <div className="portrait">
                 <div className="img-wrapper">
@@ -83,7 +76,7 @@ export default function Channel1(props) {
                 <a href="https://github.com/gitjameshooper">
                   <GitHubIcon />
                 </a>
-                <a href={resumeSrc} target="_blank">
+                <a href={resumeSrc} rel="noreferrer" target="_blank">
                   <GetAppIcon /> Resume
                 </a>
               </div>
@@ -91,17 +84,14 @@ export default function Channel1(props) {
           </div>
           <div className="floor"></div>
 
-          <div className="right">
+          <div className="right-wall">
             <div className="picture">
-              <img src={gif2Src} />
+              <span className="image"></span>
               <span className="name">Marilyn Monroe</span>
             </div>
             <div className="picture">
-              <img src={gifSrc} />
+              <img alt="Colorful Potrait" src={gifSrc} />
             </div>
-            {/* <video ref={videoRef} autoPlay muted loop>
-                <source src={introVid} type="video/mp4" />
-              </video> */}
           </div>
         </div>
       </section>
