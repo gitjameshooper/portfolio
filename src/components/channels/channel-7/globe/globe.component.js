@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactGlobe from "react-globe";
 import "tippy.js/dist/tippy.css";
 import "tippy.js/animations/scale.css";
 
 const Globe = React.memo(function Earth(props) {
-  const [globe, setGlobe] = useState(null);
   const markers = [
     {
       id: "austin",
@@ -133,20 +132,9 @@ const Globe = React.memo(function Earth(props) {
       width="100%"
       onClickMarker={(marker, markerObject, event) => {
         setTimeout(() => {
-          console.log(marker);
           props.setModal(marker);
         }, 2000);
-
-        // console.log(marker, markerObject, event);
       }}
-      // onGetGlobe={(a) => {
-      //   console.log(a);
-      // }}
-      // onMouseOutMarker={(marker, markerObject, event) => {
-      //   console.log(marker, markerObject, event);
-      // }}
-      // onGlobeTextureLoaded={() => console.log("globe loaded")}
-      // onMouseOverMarker={(marker, markerObject, event) => console.log(marker, markerObject, event)}
     />
   );
 });

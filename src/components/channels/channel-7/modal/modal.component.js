@@ -8,11 +8,13 @@ import CancelIcon from "@material-ui/icons/Cancel";
 export default function Modal(props) {
   const style = { height: 200 };
   const items = travelData
-    .filter((item) => item.id === props.modal.id)
-    .map((item, i) => <img key={i} alt="Hey" style={style} src={item.src} className="yours-custom-class" />);
+    .filter((item) => {
+      return item.id === props.modal.id;
+    })
+    .map((item, i) => <img key={i} alt="Vacation photo" style={style} src={item.src} className={item.pos} />);
   const settings = {
     adaptiveHeight: false,
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -21,10 +23,11 @@ export default function Modal(props) {
   return (
     <div className="modal">
       <h4>
-        <span className="city">{props.modal.city}</span>
         <img className="flag" src={props.modal.flagSrc} alt="Flag" />
+        <span className="city">{props.modal.city}</span>
+        <CancelIcon onClick={() => props.setModal(false)} className="close-icon" />
       </h4>
-      <CancelIcon onClick={() => props.setModal(false)} className="close-icon" />
+
       <Slider {...settings}>{items}</Slider>
     </div>
   );

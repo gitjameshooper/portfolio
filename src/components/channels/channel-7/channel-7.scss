@@ -45,18 +45,17 @@
       }
       .modal {
         background: rgba(0, 0, 0, 0.5);
-        width: 80%;
+        width: 100%;
+        max-width: 960px;
         position: absolute;
         z-index: 1;
-        left: 10%;
-        top: 10%;
-        .close-icon {
-          cursor: pointer;
-          color: $pcolor1;
-          position: absolute;
-          left: 0;
-          top: 50%;
-          font-size: 42px;
+        top: 5%;
+        bottom: 5%;
+        overflow: hidden;
+
+        @media screen and (min-width: 960px) {
+          left: 50%;
+          margin-left: -480px;
         }
 
         h4 {
@@ -64,50 +63,58 @@
           font-size: 34px;
           text-align: left;
           text-transform: uppercase;
-          display: inline-block;
           margin: 0;
-          position: absolute;
-          top: 0;
-          left: 0;
-          background: rgba(0, 0, 0, 1);
+          background: rgba(0, 0, 0, 0.25);
           z-index: 2;
           width: 100%;
           height: 80px;
+          display: flex;
+          align-items: center;
           .city {
-            position: relative;
-            top: 20px;
-            padding-left: 40px;
+            margin-left: 30px;
           }
           .flag {
             display: inline-block;
             opacity: 0.5;
+
             height: 80px;
+          }
+          .close-icon {
+            cursor: pointer;
+            color: #fff;
             position: absolute;
-            right: 0;
-            z-index: 1;
-            top: 0;
+            right: 25px;
+
+            font-size: 42px;
           }
         }
         .slick-slider {
-          width: 50%;
-          margin: 0 auto;
+          height: 90%;
           button.slick-arrow.slick-next {
             height: 100%;
             right: 0;
             background: rgba(0, 0, 0, 0.5);
-            width: 30px;
+            width: 50px;
             z-index: 1;
+            &:before {
+              font-size: 30px;
+            }
           }
           button.slick-arrow.slick-prev {
             height: 100%;
             left: 0;
             background: rgba(0, 0, 0, 0.5);
-            width: 30px;
+            width: 50px;
             z-index: 1;
+            &:before {
+              font-size: 30px;
+            }
           }
-          .slick-list {
-            max-height: 500px;
-            max-width: 700px;
+          .slick-slide {
+            img.vert {
+              width: auto !important;
+              height: 80vh;
+            }
           }
         }
       }
