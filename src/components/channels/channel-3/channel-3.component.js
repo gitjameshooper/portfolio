@@ -31,7 +31,7 @@ export default function Channel3(props) {
   const websites = srcs.map((item, i) => (
     <div className={`website ${websiteN === i ? "active" : "hidden"} ${exitAnim ? "spin-out" : ""}`}>
       <a target="_blank" href={item.linkSrc}>
-        <img key={i} src={item.imgSrc} />
+        <img alt="SpredFast Projects" key={i} src={item.imgSrc} />
       </a>
       <a className="link" target="_blank" href={item.linkSrc}>
         Visit Project
@@ -41,16 +41,22 @@ export default function Channel3(props) {
 
   useEffect(() => {
     console.log("new website");
-    setTimeout(() => {
+    let nextTimer = setTimeout(() => {
       setExitAnim(false);
       let n = websiteN + 1;
       if (n >= srcs.length) n = 0;
       setWebsiteN(n);
-      setTimeout(() => {
-        setExitAnim(true);
-      }, 8500);
     }, 10000);
-  }, [websiteN]);
+
+    let animTimer = setTimeout(() => {
+      setExitAnim(true);
+    }, 8500);
+
+    return () => {
+      clearTimeout(nextTimer);
+      clearTimeout(animTimer);
+    };
+  }, [websiteN, srcs.length]);
 
   return (
     <div className={`channel-3 channels ${store.isTvOn ? "active" : "hidden"} `}>

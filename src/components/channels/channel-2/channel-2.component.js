@@ -34,6 +34,7 @@ export default function Channel2(props) {
   const rays = raysArr.map((i) => <span key={i} className={`ray ray-${i}`}></span>);
   const websites = srcs.map((item, i) => (
     <img
+      alt="cart designers ecommerce websites"
       className={`website ${websiteN === i ? "active" : "hidden"} ${exitAnim ? "spin-out" : ""}`}
       key={i}
       src={item}
@@ -42,16 +43,21 @@ export default function Channel2(props) {
 
   useEffect(() => {
     console.log("new website");
-    setTimeout(() => {
+    let nextTimer = setTimeout(() => {
       setExitAnim(false);
       let n = websiteN + 1;
       if (n >= srcs.length) n = 0;
       setWebsiteN(n);
-      setTimeout(() => {
-        setExitAnim(true);
-      }, 8500);
     }, 10000);
-  }, [websiteN]);
+    let animTimer = setTimeout(() => {
+      setExitAnim(true);
+    }, 8500);
+
+    return () => {
+      clearTimeout(nextTimer);
+      clearTimeout(animTimer);
+    };
+  }, [websiteN, srcs.length]);
 
   return (
     <div className={`channel-2 channels ${store.isTvOn ? "active" : "hidden"} `}>

@@ -1,6 +1,6 @@
 @import "./../../../variables.scss";
 
-@-webkit-keyframes ray_3 {
+@-webkit-keyframes ray-3 {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -10,7 +10,7 @@
     transform: rotate(360deg);
   }
 }
-@keyframes ray_3 {
+@keyframes ray-3 {
   0% {
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
@@ -20,19 +20,19 @@
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes spin_3 {
+@-webkit-keyframes spin-3 {
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(360deg);
   }
 }
-@keyframes spin_3 {
+@keyframes spin-3 {
   100% {
     -webkit-transform: rotate(0deg);
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes move_3 {
+@-webkit-keyframes move-3 {
   10% {
     left: 50%;
     top: 50%;
@@ -42,7 +42,7 @@
     top: 200%;
   }
 }
-@keyframes move_3 {
+@keyframes move-3 {
   10% {
     left: 50%;
     top: 50%;
@@ -134,7 +134,7 @@
           left: 50%;
           width: 400px;
           margin-left: -200px;
-          margin-top: -115px;
+          margin-top: -127px;
           display: none;
           box-shadow: 0 0 30px $pcolor0;
           img {
@@ -156,8 +156,8 @@
             animation: grow_3 8s linear forwards;
           }
           &.spin-out {
-            -webkit-animation: move_3 1.5s forwards, spin_3 250ms linear infinite;
-            animation: move_3 1.5s forwards, spin_3 250ms linear infinite;
+            -webkit-animation: move-3 1.5s forwards, spin-3 250ms linear infinite;
+            animation: move-3 1.5s forwards, spin-3 250ms linear infinite;
           }
         }
       }
@@ -183,8 +183,8 @@
           right: 0;
           bottom: 0;
           width: 70px;
-          -webkit-animation: ray_3 10s linear infinite;
-          animation: ray_3 10s linear infinite;
+          -webkit-animation: ray-3 10s linear infinite;
+          animation: ray-3 10s linear infinite;
 
           .ray {
             background: linear-gradient(
