@@ -3,6 +3,8 @@ $red: #ab2c20;
 .channel-6 {
   background: url("./../../../assets/img/channel-6/news-bg.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   &.hidden {
     display: none;
   }
@@ -10,6 +12,17 @@ $red: #ab2c20;
   &.active {
     .wrapper {
       @include abs-expand;
+
+      .chuck {
+        position: absolute;
+        bottom: 0;
+        left: 30%;
+        margin-left: -240px;
+        display: none;
+        @media screen and (min-width: 960px) {
+          display: block;
+        }
+      }
       .location {
         position: absolute;
         top: 20%;
@@ -17,6 +30,11 @@ $red: #ab2c20;
         max-width: 250px;
         color: $pcolor0;
         background: $pcolor1;
+        z-index: 1;
+        display: none;
+        @media screen and (min-width: 960px) {
+          display: block;
+        }
         .city {
           display: inline-block;
           width: 100%;
@@ -36,24 +54,45 @@ $red: #ab2c20;
         }
       }
       .projects {
-        width: 400px;
-        height: 300px;
-        position: absolute;
-        top: 10%;
-        right: 5%;
+        width: 100%;
+        border: 5px solid $pcolor1;
+        margin: 0 auto;
+        @media screen and (min-width: 960px) {
+          position: absolute;
+          top: 15%;
+          right: 10%;
+        }
+        @media screen and (min-width: 600px) {
+          width: 450px;
+        }
         a {
           display: inline-block;
           box-shadow: 0 0 20px $pcolor0;
+          text-decoration: none;
+        }
+        .caption {
+          background: $red;
+          color: $pcolor1;
+          font-size: 24px;
+          text-transform: uppercase;
+          display: block;
+          text-align: left;
+          padding: 3px 10px;
         }
         img {
           width: 100%;
+          display: block;
         }
       }
       .info {
         position: absolute;
         bottom: 0;
-        width: 65%;
+        width: 830px;
         text-align: left;
+        display: none;
+        @media screen and (min-width: 960px) {
+          display: block;
+        }
         h3 {
           border-top: 5px solid $red;
           background: $pcolor1;
@@ -69,6 +108,9 @@ $red: #ab2c20;
           background: $red;
           padding: 5px 0;
           box-shadow: 0 0 20px $pcolor0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           .person {
             font-size: 32px;
             color: $pcolor1;
@@ -80,9 +122,10 @@ $red: #ab2c20;
           }
           .subject {
             color: $pcolor1;
-            font-size: 24px;
+            font-size: 22px;
             text-transform: uppercase;
-            padding: 10px 20px;
+            padding: 0px 20px;
+            display: inline-block;
           }
         }
       }

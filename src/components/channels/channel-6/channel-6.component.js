@@ -7,7 +7,6 @@ import lcSrc from "./../../../assets/img/channel-6/land-accrue-web.png";
 
 export default function Channel6(props) {
   const [store, setStore] = useContext(Context);
-
   const time = () => {
     let t = new Date().toLocaleTimeString();
     let arr = t.split(" ");
@@ -22,22 +21,19 @@ export default function Channel6(props) {
           <span className="city">Austin, TX</span>
           <span className="time">{time()}</span>
         </div>
+        <img alt="Chuck the Reporter" className="chuck" src={`./../assets/img/chuck.gif?${Math.random()}`} />
         <div className="info">
           <h3>Breaking News</h3>
           <div className="details">
-            <span className="person">James Hooper</span>
+            <span className="person">Chuck Stevens</span>
             <span className="subject">Land Accrue project is finished</span>
           </div>
         </div>
         <div className="projects">
-          <a href="https://glacial-oasis-04139.herokuapp.com/">
+          <a target="_blank" rel="noreferrer" href="https://glacial-oasis-04139.herokuapp.com/">
             <img src={lcSrc} alt="Land Accrue" />
+            <span className="caption">Land Accrue App</span>
           </a>
-          Land Accrue, Stock Trading Application Trading Stock Trader Company Name Self-employed Dates EmployedNov 2014
-          – Aug 2020 Employment Duration5 yrs 10 mos LocationAustin, Texas Area -Performing day and swing trades on US
-          equities capitalizing on liquidity and volatility -Created a proprietary application in Angular 6 with stock
-          APIs(ally.com, AlphaVantage.com) -Earned 80% ROI on 1,400 trades in 2018 using technical analysis -Averaged a
-          Risk Reward Ratio of 2.30 and winning percentage of 60% on 350 trades in 2017
         </div>
       </div>
     </div>
