@@ -89,9 +89,9 @@ export default function Channel2(props) {
             <h3 className="experience">Experience</h3>
             <ul className="content">
               <li>Built eCommerce websites for small to midsize businesses with HTML, CSS, PHP, JS(ES5)</li>
-              <li>Used photoshop designs to create pixel perfect BigCommerce and Wordpress sites.</li>
+              <li>Used photoshop designs to create pixel perfect responsive BigCommerce and Wordpress sites.</li>
               <li>Created a better client-side user experience using jQuery and Javascript.</li>
-              <li>Sent AJAX API calls to pull third party data into the websites.</li>
+              <li>Utilized third-party APIs to pull data into the websites.</li>
             </ul>
           </div>
           <div className="block block-4">

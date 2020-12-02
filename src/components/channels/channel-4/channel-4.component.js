@@ -39,9 +39,12 @@ export default function Channel4(props) {
             <h3 className="experience">Experience</h3>
             <ul className="content">
               <li>Programmed on the 3 main Volusion marketing websites: Volusion.com, Material.com, Mozu.com</li>
-              <li>Used AngularJS, vanilla JS, Node/NPM, Gulp, Prismic.io(CMS), Materialize, Github</li>
-              <li>Developed in a Scrum environment using continuous integration</li>
-              <li>Added third party APIs(Salesforce) for workflow to help sales</li>
+              <li>
+                Used AngularJS, vanilla JS, Node/NPM, Gulp, Prismic.io(CMS), Materialize, Github, Optimizely,
+                Browserstack
+              </li>
+              <li>Developed in a Scrum environment with JIRA ticketing using continuous integration</li>
+              <li>Added third party APIs(Salesforce) for workflow to help increase sales</li>
             </ul>
           </div>
           <div className="block block-4">

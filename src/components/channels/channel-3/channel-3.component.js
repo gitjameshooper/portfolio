@@ -91,13 +91,14 @@ export default function Channel3(props) {
               </li>
               <li>Worked with top-tier clients such as the Oakley, MTV, iHeartradio, MasterCard, LaSenza, IBM</li>
               <li>
-                Collaborated with project managers and designers in Scrum environment to meet campaign deadlines on
+                Collaborated with project managers and designers in agency environment to meet campaign deadlines on
                 tight schedules
               </li>
+              <li>Assessed UX and UI designs for technical feasibility</li>
               <li>
-                Wrote in JS(ES5), CSS3 and HTML5 with a focus on clean code, fast page loads, responsiveness -Utilized
-                libraries including: Bootstrap, jQuery, Underscore.js, D3.js
+                Wrote in Vanilla JS(ES5), CSS3 and HTML5 with a focus on clean code, fast page loads, responsiveness
               </li>
+              <li>Integrated libraries including: Bootstrap, jQuery, Underscore.js, D3.js</li>
             </ul>
           </div>
           <div className="block block-4">

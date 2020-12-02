@@ -40,9 +40,11 @@ export default function Channel5(props) {
             <ul className="content">
               <li>
                 Worked on the Flosports vertical sites in Angular 4: Flotrack.org, Flowrestling.org, Flovolleyball.tv
-                etc…
               </li>
-              <li>Coded in Angular 4 building custom components and services using RXJS, Typescript, Node/NPM</li>
+              <li>
+                Coded in Angular 4 in a complete rebuild of the application creating custom components and services
+                using RXJS, Typescript(ES6), Node/NPM
+              </li>
               <li>Developed in a functional paradigm with version control systems(Github) in an agile environment</li>
               <li>Experimented with A/B tests in Optimizely to capture analytics to help improve the sales funnel</li>
               <li>Collaborated with marketing to accomplish their goals with Marketo, Kissmetrics, Segment, GA</li>
