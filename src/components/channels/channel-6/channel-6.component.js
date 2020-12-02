@@ -29,12 +29,12 @@ export default function Channel6(props) {
             <span className="subject">Land Accrue project is finished</span>
           </div>
         </div>
-        <div className="projects">
+        <section className="projects">
           <a target="_blank" rel="noreferrer" href="https://glacial-oasis-04139.herokuapp.com/">
             <img src={lcSrc} alt="Land Accrue" />
             <span className="caption">Land Accrue App</span>
           </a>
-        </div>
+        </section>
       </div>
     </div>
   );

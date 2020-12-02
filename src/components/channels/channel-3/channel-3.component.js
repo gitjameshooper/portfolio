@@ -62,7 +62,7 @@ export default function Channel3(props) {
       <div className="wrapper">
         <ChannelNumber number="3" />
         <Mute muted={store.mute} />
-        <div className="block-group">
+        <section className="block-group">
           <div className="block block-1">
             <img className="logo" alt="Spredfast Logo" src={sfLogoSrc} />
           </div>
@@ -109,11 +109,11 @@ export default function Channel3(props) {
               <span className="caption">Dev team wins Halloween contest. Bronies unite!</span>
             </p>
           </div>
-        </div>
-        <div className="sun">
+        </section>
+        <section className="sun">
           <div className="ray-box">{rays}</div>
-        </div>
-        <div className="projects">{websites}</div>
+        </section>
+        <section className="projects">{websites}</section>
       </div>
     </div>
   );

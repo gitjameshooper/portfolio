@@ -61,7 +61,7 @@ export default function Channel8(props) {
       <div className="wrapper">
         <ChannelNumber number="8" /> <Mute muted={store.mute} />
         <img className="logo" alt="ESPN Logo" src={espnSrc} />
-        <div className="projects">
+        <section className="sports">
           {sports}
           {modal && (
             <div className="modal">
@@ -71,7 +71,7 @@ export default function Channel8(props) {
               <img src={modal.imgSrc} alt={modal.alt} className={modal.pos} />
             </div>
           )}
-        </div>
+        </section>
       </div>
     </div>
   );

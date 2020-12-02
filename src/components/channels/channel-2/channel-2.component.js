@@ -65,7 +65,7 @@ export default function Channel2(props) {
         <ChannelNumber number="2" />
         <Mute muted={store.mute} />
 
-        <div className="block-group">
+        <section className="block-group">
           <div className="block block-1">
             <img className="logo" alt="Cart Designers Logo" src={cdLogoSrc} />
           </div>
@@ -105,11 +105,11 @@ export default function Channel2(props) {
               <img alt="SXSW" src={sxswSrc} />
             </p>
           </div>
-        </div>
-        <div className="sun">
+        </section>
+        <section className="sun">
           <div className="ray-box">{rays}</div>
-        </div>
-        <div className="projects">{websites}</div>
+        </section>
+        <section className="projects">{websites}</section>
       </div>
     </div>
   );

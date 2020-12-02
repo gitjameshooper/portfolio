@@ -169,7 +169,7 @@ export default function Channel9(props) {
         <ChannelNumber number="9" />
         <Mute muted={store.mute} />
         <img className="meditation" alt="Meditation" src={medLogo} />
-        <div className="block">
+        <section className="sky">
           {quote &&
             (quote.video ? (
               <video
@@ -195,7 +195,7 @@ export default function Channel9(props) {
                 <span className="author">- {quote.author}</span>
               </span>
             ))}
-        </div>
+        </section>
       </div>
     </div>
   );

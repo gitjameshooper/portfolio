@@ -15,7 +15,7 @@ export default function Channel4(props) {
     <div className={`channel-4 channels ${store.isTvOn ? "active" : "hidden"} `}>
       <div className="wrapper">
         <ChannelNumber number="4" /> <Mute muted={store.mute} />
-        <div className="block-group">
+        <section className="block-group">
           <div className="block block-1">
             <img className="logo" alt="Volusion Logo" src={volLogoSrc} />
           </div>
@@ -55,11 +55,11 @@ export default function Channel4(props) {
               <img alt="Volusion Team" src={teamSrc} />
             </p>
           </div>
-        </div>
-        <div className="sun">
+        </section>
+        <section className="sun">
           <div className="ray-box">{rays}</div>
-        </div>
-        <div className="projects">
+        </section>
+        <section className="projects">
           <div className="website active">
             <a target="_blank" href="https://www.volusion.com/v1/" rel="noreferrer">
               <img alt="Volusion Website" src={volWebSrc} />
@@ -68,7 +68,7 @@ export default function Channel4(props) {
               Visit Project
             </a>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );

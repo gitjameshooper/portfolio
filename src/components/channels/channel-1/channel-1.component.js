@@ -23,7 +23,7 @@ export default function Channel1(props) {
         <ChannelNumber number="1" />
         <Mute muted={store.mute} />
         <div className="scene">
-          <div className="ceiling">
+          <section className="ceiling">
             <img className="light-cans can-1" alt="Can Lights" src={lightCansSrc} />
             <img className="light-cans can-2" alt="Can Lights" src={lightCansSrc} />
             <img className="light-cans can-3" alt="Can Lights" src={lightCansSrc} />
@@ -47,8 +47,8 @@ export default function Channel1(props) {
               <div className="inner-2"></div>
               <div className="inner-3"></div>
             </div>
-          </div>
-          <div className="left-wall">
+          </section>
+          <section className="left-wall">
             <div className="content">
               <div className="portrait">
                 <div className="img-wrapper">
@@ -80,10 +80,10 @@ export default function Channel1(props) {
                 </span>
               </p>
             </div>
-          </div>
-          <div className="floor"></div>
+          </section>
+          <section className="floor"></section>
 
-          <div className="right-wall">
+          <section className="right-wall">
             <div className="picture-monroe">
               <span className="image"></span>
               <span className="name">Marilyn Monroe</span>
@@ -91,7 +91,7 @@ export default function Channel1(props) {
             <div className="picture-other">
               <img alt="Colorful Potrait" src={gifSrc} />
             </div>
-          </div>
+          </section>
         </div>
       </section>
     </div>

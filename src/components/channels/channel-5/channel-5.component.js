@@ -15,7 +15,7 @@ export default function Channel5(props) {
     <div className={`channel-5 channels ${store.isTvOn ? "active" : "hidden"} `}>
       <div className="wrapper">
         <ChannelNumber number="5" /> <Mute muted={store.mute} />
-        <div className="block-group">
+        <section className="block-group">
           <div className="block block-1">
             <img className="logo" alt="Flosports Logo" src={fsLogoSrc} />
           </div>
@@ -59,11 +59,11 @@ export default function Channel5(props) {
               <img alt="Flosports Team" src={fsTeamSrc} />
             </p>
           </div>
-        </div>
-        <div className="sun">
+        </section>
+        <section className="sun">
           <div className="ray-box">{rays}</div>
-        </div>
-        <div className="projects">
+        </section>
+        <section className="projects">
           <div className="website active">
             <a target="_blank" href="https://www.flowrestling.org/" rel="noreferrer">
               <img alt="Flosports website" src={fsWebSrc} />
@@ -72,7 +72,7 @@ export default function Channel5(props) {
               Visit Project
             </a>
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );
