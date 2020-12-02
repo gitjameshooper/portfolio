@@ -11,7 +11,7 @@ export default function Modal(props) {
     .filter((item) => {
       return item.id === props.modal.id;
     })
-    .map((item, i) => <img key={i} alt="Vacation photo" style={style} src={item.src} className={item.pos} />);
+    .map((item, i) => <img key={i} alt="Vacation" style={style} src={item.src} className={item.pos} />);
   const settings = {
     adaptiveHeight: false,
     dots: false,
@@ -23,7 +23,7 @@ export default function Modal(props) {
   return (
     <div className="modal">
       <h4 onClick={() => props.setModal(false)}>
-        <img className="flag" src={props.modal.flagSrc} alt="Flag" />
+        <img className="flag" src={props.modal.flagSrc} alt={`flag ${props.modal.city}`} />
         <span className="city">{props.modal.city}</span>
         <CancelIcon className="close-icon" />
       </h4>

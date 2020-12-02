@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Context } from "./../../store";
 import "./remote.scss";
 import clickOnSrc from "./../../assets/audio/click-on.mp3";

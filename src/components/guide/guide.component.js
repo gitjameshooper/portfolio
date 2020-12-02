@@ -11,7 +11,6 @@ import netLogo from "./../../assets/img/logos/netflix.jpg";
 import inspLogo from "./../../assets/img/logos/insp.jpg";
 import volLogo from "./../../assets/img/logos/volusion.jpg";
 import austinLogo from "./../../assets/img/logos/austin.jpg";
-import chattLogo from "./../../assets/img/logos/chatt.png";
 import newsLogo from "./../../assets/img/logos/news.png";
 import CancelIcon from "@material-ui/icons/Cancel";
 
