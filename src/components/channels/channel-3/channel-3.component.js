@@ -83,7 +83,7 @@ export default function Channel3(props) {
             </div>
           </div>
           <div className="block block-3">
-            <h3 className="skills">Skills</h3>
+            <h3 className="experience">Experience</h3>
             <ul className="content">
               <li>
                 UX developer for social media marketing campaigns using a curated data API to make

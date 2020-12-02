@@ -42,6 +42,7 @@ $red: #ab2c20;
           text-align: center;
           font-weight: bold;
           font-size: 24px;
+          @include fluid-type($min_width, $max_width, 18px, 24px);
           text-transform: uppercase;
         }
         .time {
@@ -49,7 +50,6 @@ $red: #ab2c20;
           color: $pcolor1;
           width: 100%;
           display: inline-block;
-          font-size: 18px;
           padding: 2px 0px;
         }
       }
@@ -73,7 +73,7 @@ $red: #ab2c20;
         .caption {
           background: $red;
           color: $pcolor1;
-          font-size: 24px;
+          @include fluid-type($min_width, $max_width, 18px, 24px);
           text-transform: uppercase;
           display: block;
           text-align: left;
@@ -86,43 +86,52 @@ $red: #ab2c20;
       }
       .info {
         position: absolute;
-        bottom: 0;
+        bottom: 50px;
         width: 830px;
         text-align: left;
-        display: none;
-        @media screen and (min-width: 960px) {
-          display: block;
+        @media screen and (min-width: 600px) {
+          bottom: 0;
         }
         h3 {
           border-top: 5px solid $red;
           background: $pcolor1;
           color: $red;
-          width: 50%;
-          text-align: center;
-          font-size: 32px;
+          width: 100%;
+          text-align: left;
+          padding-left: 20px;
+          @include fluid-type($min_width, $max_width, 20px, 32px);
           text-transform: uppercase;
           margin: 0;
           position: relative;
+          @media screen and (min-width: 960px) {
+            width: 50%;
+            padding: 0;
+            text-align: center;
+          }
         }
         .details {
           background: $red;
           padding: 5px 0;
           box-shadow: 0 0 20px $pcolor0;
           display: flex;
-          justify-content: center;
           align-items: center;
+
           .person {
-            font-size: 32px;
+            @include fluid-type($min_width, $max_width, 20px, 28px);
             color: $pcolor1;
             text-align: center;
             width: 50%;
             display: inline-block;
             border-right: 2px solid $pcolor1;
             text-transform: uppercase;
+            display: none;
+            @media screen and (min-width: 960px) {
+              display: block;
+            }
           }
           .subject {
             color: $pcolor1;
-            font-size: 22px;
+            @include fluid-type($min_width, $max_width, 18px, 20px);
             text-transform: uppercase;
             padding: 0px 20px;
             display: inline-block;

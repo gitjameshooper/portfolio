@@ -65,6 +65,10 @@
   width: 100%;
   left: 0;
   z-index: 1;
+  font-size: 24px;
+  .MuiSvgIcon-root {
+    font-size: 2rem;
+  }
   .btn-power {
     width: 20%;
     background: #df4242;
@@ -167,9 +171,8 @@
         cursor: pointer;
         position: relative;
         top: 0px;
-        font-family: "Open Sans";
         text-decoration: none;
-        font-size: 20px;
+        font-size: 18px;
         background: #f7f7f7;
         border: 1px solid #c4c4c4;
         border-radius: 5px;
@@ -241,7 +244,7 @@
             width: 40px;
             height: 35px;
             position: relative;
-            bottom: 15px;
+            bottom: 12px;
             padding-top: 5px;
           }
         }

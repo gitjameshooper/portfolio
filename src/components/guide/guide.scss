@@ -75,18 +75,20 @@
 
         .guide-number {
           padding: 0 20px;
-          font-size: 32px;
+          @include fluid-type($min_width, $max_width, 24px, 32px);
           border-left: 1px solid $pcolor1;
           width: 30px;
         }
 
         .guide-name {
-          font-size: 32px;
-          min-width: 290px;
+          min-width: 270px;
           text-align: left;
+          @include fluid-type($min_width, $max_width, 24px, 32px);
         }
         .guide-info {
           display: none;
+          text-align: left;
+          @include fluid-type($min_width, $max_width, 16px, 18px);
           @media screen and (min-width: 960px) {
             display: block;
           }

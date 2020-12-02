@@ -27,9 +27,9 @@ export default function Channel0(props) {
   });
 
   return (
-    <div className={`channel-0 channels ${store.isTvOn ? "active" : "hidden"} `}>
+    <section className={`channel-0 channels ${store.isTvOn ? "active" : "hidden"} `}>
       <ChannelNumber number="0" />
       <Mute muted={store.mute} />
-    </div>
+    </section>
   );
 }

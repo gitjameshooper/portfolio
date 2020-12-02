@@ -36,7 +36,7 @@ export default function Channel5(props) {
             </div>
           </div>
           <div className="block block-3">
-            <h3 className="skills">Skills</h3>
+            <h3 className="experience">Experience</h3>
             <ul className="content">
               <li>
                 Worked on the Flosports vertical sites in Angular 4: Flotrack.org, Flowrestling.org, Flovolleyball.tv

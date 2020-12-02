@@ -36,7 +36,7 @@ export default function Channel4(props) {
             </div>
           </div>
           <div className="block block-3">
-            <h3 className="skills">Skills</h3>
+            <h3 className="experience">Experience</h3>
             <ul className="content">
               <li>Programmed on the 3 main Volusion marketing websites: Volusion.com, Material.com, Mozu.com</li>
               <li>Used AngularJS, vanilla JS, Node/NPM, Gulp, Prismic.io(CMS), Materialize, Github</li>

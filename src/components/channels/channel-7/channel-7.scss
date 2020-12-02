@@ -65,7 +65,6 @@
 
         h4 {
           color: $pcolor1;
-          font-size: 34px;
           text-align: left;
           text-transform: uppercase;
           margin: 0;
@@ -77,6 +76,7 @@
           align-items: center;
           .city {
             margin-left: 30px;
+            @include fluid-type($min_width, $max_width, 24px, 34px);
           }
           .flag {
             display: inline-block;

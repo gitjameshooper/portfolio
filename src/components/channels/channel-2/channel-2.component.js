@@ -86,7 +86,7 @@ export default function Channel2(props) {
             </div>
           </div>
           <div className="block block-3">
-            <h3 className="skills">Skills</h3>
+            <h3 className="experience">Experience</h3>
             <ul className="content">
               <li>Built eCommerce websites for small to midsize businesses with HTML, CSS, PHP, JS(ES5)</li>
               <li>Used photoshop designs to create pixel perfect BigCommerce and Wordpress sites.</li>

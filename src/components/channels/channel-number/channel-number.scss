@@ -4,7 +4,7 @@
   color: $pcolor1;
   width: 80px;
   height: 80px;
-  font-size: 56px;
+  @include fluid-type($min_width, $max_width, 40px, 60px);
   position: absolute;
   z-index: 2;
   top: 0px;

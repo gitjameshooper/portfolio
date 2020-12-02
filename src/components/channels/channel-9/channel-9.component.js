@@ -21,8 +21,8 @@ export default function Channel9(props) {
     video: null,
   });
   const quotes = [
-    { quote: "Invent yourself and then re-invent yourself", author: "Charles Bukowski", secs: 10 },
-    { quote: "Being realistic is the most commonly traveled path to mediocrity", author: "Will Smith", secs: 10 },
+    { quote: "Invent yourself and then re-invent yourself.", author: "Charles Bukowski", secs: 10 },
+    { quote: "Being realistic is the most commonly traveled path to mediocrity.", author: "Will Smith", secs: 10 },
     {
       quote:
         "Empty your mind, be formless. Shapeless, like water. If you put water into a cup, it becomes the cup. You put water into a bottle and it becomes the bottle. You put it in a teapot, it becomes the teapot. Now, water can flow or it can crash. Be water, my friend.",
@@ -50,7 +50,7 @@ export default function Channel9(props) {
     },
 
     {
-      quote: "When I do good, I feel good When I do bad, I feel bad. That's my religion",
+      quote: "When I do good, I feel good When I do bad, I feel bad. That's my religion.",
       author: "Abraham Lincoln",
       secs: 10,
     },
@@ -117,10 +117,14 @@ export default function Channel9(props) {
       author: "Lance Armstrong",
       secs: 10,
     },
-    { quote: "Never put passion in front of principle, even if you win, you’ll lose", author: "Mr. Miyagi", secs: 10 },
-    { quote: "A life inherited is one not lived", author: "James Hooper", secs: 10 },
     {
-      quote: "USA is a campaign of fear and consumption. Keep everyone afraid and they will consume",
+      quote: "Never put passion in front of principle, even if you win, you will lose.",
+      author: "Mr. Miyagi",
+      secs: 10,
+    },
+    { quote: "A life inherited is one not lived.", author: "James Hooper", secs: 10 },
+    {
+      quote: "USA is a campaign of fear and consumption. Keep everyone afraid and they will consume.",
       author: "Marylin Manson",
       secs: 10,
     },

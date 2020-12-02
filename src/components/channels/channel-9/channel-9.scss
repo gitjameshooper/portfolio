@@ -96,17 +96,23 @@
     }
     .quote {
       position: absolute;
-      font-family: "Sanchez", serif;
-      font-size: 1.6rem;
+
+      @include fluid-type($min_width, $max_width, 20px, 28px);
       line-height: 1;
       font-style: italic;
       max-width: 600px;
       display: inline-block;
+      text-align: left;
       -webkit-animation: fadeIn-9 ease forwards;
       animation: fadeIn-9 ease forwards;
       .author {
-        font-size: 18px;
+        display: inline-block;
+        margin-top: 10px;
+        font-family: "Kalam", cursive;
+        @include fluid-type($min_width, $max_width, 20px, 24px);
         font-style: normal;
+        text-align: right;
+        width: 100%;
       }
       &:before {
         content: "\201C";

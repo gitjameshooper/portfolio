@@ -1,5 +1,9 @@
 @import "./variables.scss";
 
+body {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
 .App {
   text-align: center;
   @include abs-expand;

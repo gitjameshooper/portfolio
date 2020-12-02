@@ -10,7 +10,6 @@ import lightCansSrc from "./../../../assets/img/channel-1/light-cans.png";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import GitHubIcon from "@material-ui/icons/GitHub";
-import GetAppIcon from "@material-ui/icons/GetApp";
 
 export default function Channel1(props) {
   const [store, setStore] = useContext(Context);
@@ -55,41 +54,41 @@ export default function Channel1(props) {
                 <div className="img-wrapper">
                   <img alt="James Hooper" src={jamesSrc} />
                 </div>
-                <a className="email" href="mailto:jamesthomashooper@gmail.com" target="_new">
+                <a className="email" href="mailto:jamesthomashooper@gmail.com">
                   jamesthomashooper@gmail.com
                 </a>
               </div>
-              <p>
-                Hello, I am James Hooper. I grew up in Chattanoga, TN a beautiful city nested between 2 mountains with a
-                river running through it. I attended The University of Tenn. at Chattanooga and graduated with a
-                Bachelor's Degree in Business. I worked my way through college and had a great experience fixing up a
-                house. I love the city, but after college I knew there was something bigger for me. So I bought a truck,
-                said my goodbyes, and moved to Austin, TX.
+              <p className="intro-text">
+                Hello, I am James Hooper. I grew up in Chattanoga, TN and graduated from the University of TN at
+                Chattanooga with a Bachelor's Degree in Business. I worked my way through college and had a great
+                experience fixing up an old house. I love my hometown, but after college I knew there was something
+                bigger for me waiting. So I bought a truck, said my goodbyes, and moved to Austin, TX. That is where my
+                adventure began in becoming a self-taught web developer.
+                <span className="contact">
+                  <a href="https://www.linkedin.com/in/james-hooper-a40a9522/" rel="noreferrer" target="_blank">
+                    <LinkedInIcon />
+                  </a>
+                  <a href="https://www.facebook.com/james.hooper.86" rel="noreferrer" target="_blank">
+                    <FacebookIcon />
+                  </a>
+                  <a href="https://github.com/gitjameshooper" rel="noreferrer" target="_blank">
+                    <GitHubIcon />
+                  </a>
+                  <a className="resume" href={resumeSrc} rel="noreferrer" target="_blank">
+                    Resume
+                  </a>
+                </span>
               </p>
-              <div className="contact">
-                <a href="https://www.linkedin.com/in/james-hooper-a40a9522/">
-                  <LinkedInIcon />
-                </a>
-                <a href="https://www.facebook.com/james.hooper.86">
-                  <FacebookIcon />
-                </a>
-                <a href="https://github.com/gitjameshooper">
-                  <GitHubIcon />
-                </a>
-                <a href={resumeSrc} rel="noreferrer" target="_blank">
-                  <GetAppIcon /> Resume
-                </a>
-              </div>
             </div>
           </div>
           <div className="floor"></div>
 
           <div className="right-wall">
-            <div className="picture">
+            <div className="picture-monroe">
               <span className="image"></span>
               <span className="name">Marilyn Monroe</span>
             </div>
-            <div className="picture">
+            <div className="picture-other">
               <img alt="Colorful Potrait" src={gifSrc} />
             </div>
           </div>
