@@ -13,6 +13,7 @@ import volLogo from "./../../assets/img/logos/volusion.jpg";
 import austinLogo from "./../../assets/img/logos/austin.jpg";
 import chattLogo from "./../../assets/img/logos/chatt.png";
 import newsLogo from "./../../assets/img/logos/news.png";
+import CancelIcon from "@material-ui/icons/Cancel";
 
 export default function Guide(props) {
   let history = useHistory();
@@ -87,7 +88,9 @@ export default function Guide(props) {
   ];
 
   function btnClick(e, btnName, path, channel) {
-    e.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
     setStore({ ...store, guide: false, channel: channel });
     if (path) {
       history.push(path);
@@ -96,7 +99,9 @@ export default function Guide(props) {
   const channels = guidelist.map((x) => (
     <li key={x.channel} className={`guide-channel-${x.channel}`}>
       <a href={x.href} onClick={(e) => btnClick(e, `btn-${x.channel}`, x.href, x.channel)}>
-        <img alt={x.alt} src={x.imgSrc} />
+        <span className="guide-logo">
+          <img alt={x.alt} src={x.imgSrc} />
+        </span>
         <span className="guide-number">{x.channel}</span>
         <span className="guide-name">{x.name}</span>
         <span className="guide-info">{x.info}</span>
@@ -106,6 +111,9 @@ export default function Guide(props) {
 
   return (
     <div className={`guide-component ${store.guide ? "active" : "hidden"}`}>
+      <span onClick={() => btnClick(null, "btn-close")} className="close-btn">
+        <CancelIcon className="close-icon" />
+      </span>
       <ul>{channels}</ul>
     </div>
   );

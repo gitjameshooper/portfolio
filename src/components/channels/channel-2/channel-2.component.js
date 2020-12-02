@@ -66,8 +66,10 @@ export default function Channel2(props) {
         <Mute muted={store.mute} />
 
         <div className="block-group">
-          <img className="block logo" alt="Cart Designers Logo" src={cdLogoSrc} />
           <div className="block block-1">
+            <img className="logo" alt="Cart Designers Logo" src={cdLogoSrc} />
+          </div>
+          <div className="block block-2">
             <h3 className="role">Role</h3>
             <div className="content">
               <span>
@@ -83,7 +85,7 @@ export default function Channel2(props) {
               </span>
             </div>
           </div>
-          <div className="block block-2">
+          <div className="block block-3">
             <h3 className="skills">Skills</h3>
             <ul className="content">
               <li>Built eCommerce websites for small to midsize businesses with HTML, CSS, PHP, JS(ES5)</li>
@@ -92,7 +94,7 @@ export default function Channel2(props) {
               <li>Sent AJAX API calls to pull third party data into the websites.</li>
             </ul>
           </div>
-          <div className="block block-3">
+          <div className="block block-4">
             <h3 className="company">Company/Team</h3>
 
             <p className="content">

@@ -77,10 +77,13 @@
         }
 
         .modal {
-          @include abs-expand;
           -webkit-animation: expand-8 2s forwards;
           animation: expand-8 2s forwards;
           background: rgba(0, 0, 0, 0.75);
+          position: fixed;
+          @media screen and (min-width: 600px) {
+            @include abs-expand;
+          }
           .cancel-btn-wrapper {
             cursor: pointer;
             background: rgba(0, 0, 0, 0.5);

@@ -16,8 +16,10 @@ export default function Channel4(props) {
       <div className="wrapper">
         <ChannelNumber number="4" /> <Mute muted={store.mute} />
         <div className="block-group">
-          <img className="block logo" alt="Volusion Logo" src={volLogoSrc} />
           <div className="block block-1">
+            <img className="logo" alt="Volusion Logo" src={volLogoSrc} />
+          </div>
+          <div className="block block-2">
             <h3 className="role">Role</h3>
             <div className="content">
               <span>
@@ -33,7 +35,7 @@ export default function Channel4(props) {
               </span>
             </div>
           </div>
-          <div className="block block-2">
+          <div className="block block-3">
             <h3 className="skills">Skills</h3>
             <ul className="content">
               <li>Programmed on the 3 main Volusion marketing websites: Volusion.com, Material.com, Mozu.com</li>
@@ -42,7 +44,7 @@ export default function Channel4(props) {
               <li>Added third party APIs(Salesforce) for workflow to help sales</li>
             </ul>
           </div>
-          <div className="block block-3">
+          <div className="block block-4">
             <h3 className="company">Company/Team</h3>
             <p className="content">
               Volusion is an all-in-one ecommerce solution offering 24/7 support to proactively help entrepreneurs build

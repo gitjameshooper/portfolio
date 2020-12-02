@@ -118,7 +118,7 @@
     color: $pcolor1;
     position: relative;
     bottom: 30px;
-    background: #177c8e;
+    background: #26689e;
     border-radius: 5px;
     padding: 8px;
     -webkit-animation: upDown-r 2s infinite ease-in-out;
@@ -129,7 +129,7 @@
     .triangle-down {
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
-      border-top: 20px solid #177c8e;
+      border-top: 20px solid #26689e;
       position: absolute;
       top: 34px;
       right: 42%;
@@ -275,23 +275,13 @@
         }
 
         &.navy {
-          background: #1b486d;
-          border: 1px solid #07121b;
+          background: #26689e;
+          border: 1px solid #1b486d;
           border-radius: 5px;
-          box-shadow: -3px 3px 0px #07121b;
+          box-shadow: -3px 3px 0px #1b486d;
           color: $pcolor1;
-          text-shadow: 1px 1px 1px #07121b;
+          text-shadow: 1px 1px 1px #1b486d;
         }
-
-        &.green {
-          background: #7cc576;
-          color: $pcolor1;
-          border: 1px solid #46963f;
-          border-radius: 5px;
-          box-shadow: -3px 3px 0px #46963f;
-          text-shadow: 1px 1px 1px #46963f;
-        }
-
         &.red {
           background: #df4242;
           color: $pcolor1;

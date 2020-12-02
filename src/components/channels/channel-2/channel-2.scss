@@ -110,7 +110,20 @@
             text-align: center;
             margin: 0;
           }
-          &.block-3 {
+          &.block-1 {
+            display: inline-grid;
+            justify-content: center;
+            align-items: center;
+            height: 140px;
+            width: 100%;
+            background: #fff;
+            margin: 0;
+            .logo {
+              max-width: 200px;
+              width: 100%;
+            }
+          }
+          &.block-4 {
             margin-bottom: 80px;
             img {
               width: 100%;
@@ -120,17 +133,13 @@
           }
           ul {
             list-style: square;
+            li {
+              margin: 5px 0;
+            }
           }
           .content {
             padding: 20px 30px;
             margin: 0;
-          }
-
-          &.logo {
-            display: block;
-            max-width: 340px;
-            margin: 0 auto;
-            width: 100%;
           }
         }
       }
@@ -210,7 +219,6 @@
             top: -230px;
             left: -60px;
           }
-
           .ray-1 {
             height: 270px;
             width: 22px;

@@ -110,31 +110,42 @@
             text-align: center;
             margin: 0;
           }
-          &.block-3 {
-            margin-bottom: 80px;
+          &.block-1 {
+            display: inline-grid;
+            justify-content: center;
+            align-items: center;
+            height: 140px;
+            width: 100%;
+            background: #fff;
+            margin: 0;
+            .logo {
+              max-width: 200px;
+              width: 100%;
+            }
+          }
+          &.block-4 {
+            margin-bottom: 100px;
             img {
               width: 100%;
               margin-top: 15px;
               box-shadow: 0 0 8px $pcolor0;
             }
             .caption {
+              text-align: center;
+              display: block;
               font-style: italic;
               font-size: 14px;
             }
           }
           ul {
             list-style: square;
+            li {
+              margin: 5px 0;
+            }
           }
           .content {
             padding: 20px 30px;
             margin: 0;
-          }
-
-          &.logo {
-            display: block;
-            max-width: 340px;
-            margin: 0 auto;
-            width: 100%;
           }
         }
       }

@@ -63,8 +63,10 @@ export default function Channel3(props) {
         <ChannelNumber number="3" />
         <Mute muted={store.mute} />
         <div className="block-group">
-          <img className="block logo" alt="Spredfast Logo" src={sfLogoSrc} />
           <div className="block block-1">
+            <img className="logo" alt="Spredfast Logo" src={sfLogoSrc} />
+          </div>
+          <div className="block block-2">
             <h3 className="role">Role</h3>
             <div className="content">
               <span>
@@ -80,7 +82,7 @@ export default function Channel3(props) {
               </span>
             </div>
           </div>
-          <div className="block block-2">
+          <div className="block block-3">
             <h3 className="skills">Skills</h3>
             <ul className="content">
               <li>
@@ -98,7 +100,7 @@ export default function Channel3(props) {
               </li>
             </ul>
           </div>
-          <div className="block block-3">
+          <div className="block block-4">
             <h3 className="company">Company/Team</h3>
             <p className="content">
               Spredfast is a platform for digital-first customer engagement. We are a global leader revolutionizing CX

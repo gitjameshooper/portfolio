@@ -72,14 +72,14 @@ export default function Remote(props) {
           <PowerSettingsNewIcon />
         </a>
 
-        <a className="channel-top" onClick={(e) => onBtnClick(e, "btnChTop", e.target.pathname, "9")}>
+        <span className="channel-top" onClick={(e) => onBtnClick(e, "btnChTop", e.target.pathname, "9")}>
           <ExpandLessIcon />
           <span className="text">CH</span>
-        </a>
-        <a className="channel-bot" onClick={(e) => onBtnClick(e, "btnChBot", e.target.pathname, "9")}>
+        </span>
+        <span className="channel-bot" onClick={(e) => onBtnClick(e, "btnChBot", e.target.pathname, "9")}>
           <ExpandMoreIcon />
           <span className="text">CH</span>
-        </a>
+        </span>
       </div>
       <div className="remote-component animate">
         <span className={`tooltip ${store.isTvOn ? "hidden" : ""}`}>
@@ -164,25 +164,25 @@ export default function Remote(props) {
                 Netflix
               </a>
               <div className="btn-push blue btn-volume">
-                <a className="volume-top" onClick={onBtnClick}>
+                <span className="volume-top" onClick={onBtnClick}>
                   +<br />
                   Vol
-                </a>
-                <a className="volume-bot" onClick={onBtnClick}>
+                </span>
+                <span className="volume-bot" onClick={onBtnClick}>
                   _
-                </a>
+                </span>
               </div>
-              <a className="btn-push mute" onClick={(e) => onBtnClick(e, "mute")}>
+              <span className="btn-push mute" onClick={(e) => onBtnClick(e, "mute")}>
                 Mute
-              </a>
+              </span>
               <div className="btn-push blue btn-channel">
-                <a className="channel-top" onClick={(e) => onBtnClick(e, "btnChTop", e.target.pathname, "9")}>
+                <span className="channel-top" onClick={(e) => onBtnClick(e, "btnChTop", e.target.pathname, "9")}>
                   <ExpandLessIcon />
                   <span className="text">CH</span>
-                </a>
-                <a className="channel-bot" onClick={(e) => onBtnClick(e, "btnChBot", e.target.pathname, "9")}>
+                </span>
+                <span className="channel-bot" onClick={(e) => onBtnClick(e, "btnChBot", e.target.pathname, "9")}>
                   <ExpandMoreIcon />
-                </a>
+                </span>
               </div>
             </div>
             <div className="cube-face bottom">bottom</div>

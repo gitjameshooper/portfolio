@@ -16,8 +16,10 @@ export default function Channel5(props) {
       <div className="wrapper">
         <ChannelNumber number="5" /> <Mute muted={store.mute} />
         <div className="block-group">
-          <img className="block logo" alt="Flosports Logo" src={fsLogoSrc} />
           <div className="block block-1">
+            <img className="logo" alt="Flosports Logo" src={fsLogoSrc} />
+          </div>
+          <div className="block block-2">
             <h3 className="role">Role</h3>
             <div className="content">
               <span>
@@ -33,7 +35,7 @@ export default function Channel5(props) {
               </span>
             </div>
           </div>
-          <div className="block block-2">
+          <div className="block block-3">
             <h3 className="skills">Skills</h3>
             <ul className="content">
               <li>
@@ -46,7 +48,7 @@ export default function Channel5(props) {
               <li>Collaborated with marketing to accomplish their goals with Marketo, Kissmetrics, Segment, GA</li>
             </ul>
           </div>
-          <div className="block block-3">
+          <div className="block block-4">
             <h3 className="company">Company/Team</h3>
             <p className="content">
               Founded in 2006, FloSports is a venture-backed subscription video streaming service dedicated to sports,
