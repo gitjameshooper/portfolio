@@ -57,13 +57,15 @@ $red: #ab2c20;
         width: 100%;
         border: 5px solid $pcolor1;
         margin: 0 auto;
+
         @media screen and (min-width: 960px) {
           position: absolute;
           top: 15%;
           right: 10%;
+          width: 35%;
         }
         @media screen and (min-width: 600px) {
-          width: 450px;
+          width: 75%;
         }
         a {
           display: inline-block;
@@ -87,10 +89,12 @@ $red: #ab2c20;
       .info {
         position: absolute;
         bottom: 50px;
-        width: 830px;
+        width: 100%;
         text-align: left;
+        overflow: hidden;
         @media screen and (min-width: 600px) {
           bottom: 0;
+          width: 60%;
         }
         h3 {
           border-top: 5px solid $red;

@@ -7,7 +7,10 @@ body {
 .App {
   text-align: center;
   @include abs-expand;
-  border: 30px solid #1a1a1a;
+
+  @media screen and (min-width: 600px) {
+    border: 30px solid #1a1a1a;
+  }
 
   &:before {
     content: "";

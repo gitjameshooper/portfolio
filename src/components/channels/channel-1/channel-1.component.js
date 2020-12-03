@@ -59,7 +59,7 @@ export default function Channel1(props) {
                 </a>
               </div>
               <p className="intro-text">
-                Hello, I am James Hooper. I grew up in Chattanoga, TN and graduated from the University of TN at
+                Hello, I am James Hooper. I grew up in Chattanooga, TN and graduated from the University of TN at
                 Chattanooga with a Bachelor's Degree in Business. I worked my way through college and had a great
                 experience fixing up an old house. I love my hometown, but after college I knew there was something
                 bigger for me waiting. So I bought a truck, said my goodbyes, and moved to Austin, TX. That is where my

@@ -68,7 +68,8 @@
       }
       .sports {
         position: relative;
-        max-width: 1000px;
+        max-width: 1200px;
+        max-height: 1000px;
         margin: 0 auto;
         height: 93vh;
         overflow: scroll;
@@ -120,12 +121,13 @@
           outline: 3px inset #333;
           width: 50%;
           height: 25%;
-          @media screen and (min-width: 600px) {
-            width: 33.3333%;
-            height: 25%;
-          }
+
           @media screen and (min-width: 960px) {
             width: 20%;
+            height: 25%;
+          }
+          @media screen and (min-width: 600px) {
+            width: 33.3333%;
             height: 25%;
           }
           overflow: hidden;
@@ -134,8 +136,8 @@
           align-items: center;
           float: left;
           img {
-            max-width: 360px;
-            max-height: 360px;
+            max-width: 450px;
+            max-height: 450px;
           }
         }
       }
