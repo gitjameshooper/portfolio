@@ -2,19 +2,16 @@
 
 .channel-number {
   color: $pcolor1;
-  width: 80px;
-  height: 80px;
   @include fluid-type($min_width, $max_width, 40px, 60px);
   position: absolute;
   z-index: 2;
-  top: 0px;
-  right: 0px;
+  top: 2%;
+  right: 4%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-shadow: 0px 0px 5px $pcolor0;
   @media screen and (min-width: 600px) {
-    top: 20px;
-    right: 20px;
+    right: 2%;
   }
 }

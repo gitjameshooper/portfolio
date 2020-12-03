@@ -54,11 +54,12 @@ $red: #ab2c20;
         }
       }
       .projects {
-        width: 100%;
+        width: 80%;
         border: 5px solid $pcolor1;
-        margin: 0 auto;
+        margin: 20% auto 0;
 
         @media screen and (min-width: 960px) {
+          margin: 0 auto;
           position: absolute;
           top: 15%;
           right: 10%;
@@ -66,6 +67,7 @@ $red: #ab2c20;
         }
         @media screen and (min-width: 600px) {
           width: 75%;
+          margin: 10% auto 0;
         }
         a {
           display: inline-block;
@@ -88,11 +90,14 @@ $red: #ab2c20;
       }
       .info {
         position: absolute;
-        bottom: 50px;
+        bottom: 65px;
         width: 100%;
         text-align: left;
         overflow: hidden;
         @media screen and (min-width: 600px) {
+          bottom: 35px;
+        }
+        @media screen and (min-width: 960px) {
           bottom: 0;
           width: 60%;
         }

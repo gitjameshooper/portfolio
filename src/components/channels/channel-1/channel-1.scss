@@ -191,7 +191,8 @@
         align-items: center;
         text-align: justify;
         line-height: 1.2;
-        padding: 25px 25px 140px;
+        padding: 25px 25px 120px;
+        overflow: auto;
         @media screen and (min-width: 960px) {
           display: flex;
           left: 15%;
@@ -238,11 +239,14 @@
 
         .contact {
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
           align-items: center;
           flex-wrap: wrap;
           margin-top: 20px;
           max-width: 450px;
+          @media screen and (min-width: 600px) {
+            justify-content: space-between;
+          }
           .resume {
             font-family: "Cookie", cursive;
             font-size: 2.8rem;

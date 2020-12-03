@@ -34,11 +34,12 @@
         position: absolute;
         top: 0;
         left: 0;
-        max-width: 200px;
+        width: 25%;
+        max-width: 250px;
         z-index: 1;
-        padding: 2%;
+        padding: 3%;
         opacity: 0.7;
-        @media screen and (min-width: 600px) {
+        @media screen and (min-width: 960px) {
           bottom: 0;
           top: auto;
         }
