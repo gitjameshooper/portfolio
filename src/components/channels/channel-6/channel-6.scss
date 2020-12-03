@@ -28,13 +28,16 @@ $red: #ab2c20;
       }
       .location {
         position: absolute;
-        top: 20%;
+        top: 0;
         width: 100%;
         max-width: 250px;
         color: $pcolor0;
         background: $pcolor1;
         z-index: 1;
         display: none;
+        @media screen and (min-width: 600px) {
+          top: 20%;
+        }
         @media screen and (min-width: 960px) {
           display: block;
         }
@@ -54,6 +57,7 @@ $red: #ab2c20;
           width: 100%;
           display: inline-block;
           padding: 2px 0px;
+          text-align: center;
         }
       }
       .projects {
@@ -97,9 +101,6 @@ $red: #ab2c20;
         width: 100%;
         text-align: left;
         overflow: hidden;
-        @media screen and (min-width: 600px) {
-          bottom: 35px;
-        }
         @media screen and (min-width: 960px) {
           bottom: 0;
           width: 60%;

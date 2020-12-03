@@ -178,12 +178,14 @@
       border: 2px solid $pcolor0;
       display: flex;
       @media screen and (min-width: 960px) {
-        width: 100%;
-        height: 105%;
+        width: 150%;
+        height: 130%;
         position: absolute;
-        transform: translate3d(-20%, 0%, -310px) rotateY(30deg);
-        transform-origin: center;
+        transform: translate3d(-36.5%, -7.5%, -1161px) rotateY(30deg);
+        transform-origin: right center;
         align-items: center;
+        justify-content: center;
+        left: -10%;
       }
 
       .content {
@@ -195,7 +197,6 @@
         overflow: auto;
         @media screen and (min-width: 960px) {
           display: flex;
-          left: 15%;
           padding: 0;
           min-width: 730px;
           width: 75%;
@@ -285,31 +286,33 @@
     }
     .ceiling {
       display: none;
-      transform: rotateY(28deg) rotateX(-60deg) translate3d(-40%, -25%, -150px);
-      transform-origin: center;
-      background: #111;
+      transform: rotateX(-90deg) rotateZ(30deg) translate3d(-39.5%, 0%, -410px);
+      transform-origin: bottom right;
+      background: $pcolor0;
       width: 100%;
-      height: 111%;
+      height: 100%;
       position: absolute;
+      right: 0;
       @media screen and (min-width: 960px) {
-        display: block;
+        display: none;
       }
       .beam {
         height: 25px;
-        width: 200%;
+        width: 40%;
         background: linear-gradient(to bottom, #37374b 0%, #464757 100%);
         position: absolute;
+        right: 0;
         &.beam-1 {
-          top: 375px;
+          bottom: 375px;
         }
         &.beam-2 {
-          top: 250px;
+          bottom: 250px;
         }
         &.beam-3 {
-          top: 125px;
+          bottom: 125px;
         }
         &.beam-4 {
-          top: 0;
+          bottom: 0;
         }
         .inner {
           height: 5px;
@@ -338,11 +341,11 @@
       display: none;
       justify-content: space-evenly;
       align-items: center;
-      width: 100%;
-      height: 119.5%;
+      width: 140%;
+      height: 167%;
       background: #f1f1f1;
-      transform: translate3d(52%, -8%, -300px) rotateY(-60deg);
-      transform-origin: center;
+      transform: translate3d(94.5%, -16%, -1617px) rotateY(-60deg);
+      transform-origin: left center;
       position: absolute;
       right: 0%;
       border: 2px solid $pcolor0;
@@ -353,7 +356,6 @@
 
       .picture-other {
         max-width: 25%;
-        bottom: 5%;
         position: relative;
         height: 40%;
         width: 100%;
@@ -399,8 +401,8 @@
       height: 100%;
       background-image: url("./../../../assets/img/channel-1/concrete-floor.jpg");
       background-size: cover;
-      transform: translate3d(0%, 91.5%, 80px) rotateX(90deg) rotateZ(-30deg);
-      transform-origin: left top;
+      transform: translate3d(-29.5%, 90%, -415px) rotateX(90deg) rotateZ(-30deg);
+      transform-origin: top right;
       left: 0%;
       border: 2px solid $pcolor0;
       @media screen and (min-width: 960px) {
