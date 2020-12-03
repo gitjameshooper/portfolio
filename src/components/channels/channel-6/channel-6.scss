@@ -22,6 +22,9 @@ $red: #ab2c20;
         @media screen and (min-width: 960px) {
           display: block;
         }
+        @media screen and (min-width: 1920px) {
+          transform: scale(1.5);
+        }
       }
       .location {
         position: absolute;
@@ -57,7 +60,10 @@ $red: #ab2c20;
         width: 80%;
         border: 5px solid $pcolor1;
         margin: 20% auto 0;
-
+        @media screen and (min-width: 600px) {
+          width: 75%;
+          margin: 10% auto 0;
+        }
         @media screen and (min-width: 960px) {
           margin: 0 auto;
           position: absolute;
@@ -65,10 +71,7 @@ $red: #ab2c20;
           right: 10%;
           width: 35%;
         }
-        @media screen and (min-width: 600px) {
-          width: 75%;
-          margin: 10% auto 0;
-        }
+
         a {
           display: inline-block;
           box-shadow: 0 0 20px $pcolor0;
@@ -101,6 +104,7 @@ $red: #ab2c20;
           bottom: 0;
           width: 60%;
         }
+
         h3 {
           border-top: 5px solid $red;
           background: $pcolor1;

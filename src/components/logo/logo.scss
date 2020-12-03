@@ -3,8 +3,9 @@
   font-family: "Arimo", sans-serif;
   font-size: 80px;
   color: $pcolor1;
-  position: relative;
-  top: 40%;
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto;
   &.hidden {
     display: none;
   }
