@@ -81,6 +81,7 @@
           background: rgba(0, 0, 0, 0.75);
           position: fixed;
           overflow: auto;
+          text-align: center;
           @media screen and (min-width: 960px) {
             @include abs-expand;
           }
