@@ -21,7 +21,7 @@ export default function Channel1(props) {
       <div className="inner-3"></div>
     </div>
   ));
-  const lightsArr = [1, 2, 3, 4, 5, 6];
+  const lightsArr = [1, 2, 3, 4, 5, 6, 7];
   const lights = lightsArr.map((val) => (
     <img className={`light-cans can-${val}`} alt="Can Lights" src={lightCansSrc} />
   ));

@@ -265,43 +265,51 @@
     }
     .light-cans {
       position: absolute;
-      left: 77%;
       width: 260px;
-      top: 146px;
       z-index: 1;
+      transform: rotateX(180deg) rotateY(45deg);
+
       &.can-1 {
-        top: 505px;
-        transform: rotateX(180deg) rotateY(45deg) rotateZ(0deg);
-        width: 230px;
+        top: 343px;
+        right: 8%;
       }
       &.can-2 {
-        top: 343px;
-        left: 50%;
-        transform: rotateX(180deg) rotateY(45deg);
+        top: 350px;
+        right: 25%;
+        width: 240px;
+        display: none;
+        @media screen and (min-width: 1280px) {
+          display: block;
+        }
       }
       &.can-3 {
-        width: 240px;
-        left: 70%;
         top: 350px;
-        transform: rotateX(180deg) rotateY(45deg);
+        right: 44%;
+        width: 240px;
       }
       &.can-4 {
-        width: 240px;
-        left: 25%;
-        top: 350px;
-        transform: rotateX(180deg) rotateY(45deg);
+        top: 505px;
+        right: 5%;
+        width: 230px;
       }
       &.can-5 {
-        width: 240px;
-        left: 50%;
         top: 502px;
-        transform: rotateX(180deg) rotateY(45deg);
+        right: 21%;
+        width: 240px;
+        display: none;
+        @media screen and (min-width: 1280px) {
+          display: block;
+        }
       }
       &.can-6 {
+        top: 502px;
+        right: 40%;
         width: 240px;
-        left: 65%;
+      }
+      &.can-7 {
         top: 652px;
-        transform: rotateX(180deg) rotateY(45deg);
+        right: 8%;
+        width: 240px;
       }
     }
     .ceiling {
