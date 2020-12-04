@@ -13,6 +13,18 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 
 export default function Channel1(props) {
   const [store, setStore] = useContext(Context);
+  const beamsArr = [1, 2, 3, 4, 5, 6];
+  const beams = beamsArr.map((val) => (
+    <div className={`beams beam-${val}`}>
+      <div className="inner"></div>
+      <div className="inner-2"></div>
+      <div className="inner-3"></div>
+    </div>
+  ));
+  const lightsArr = [1, 2, 3, 4, 5, 6];
+  const lights = lightsArr.map((val) => (
+    <img className={`light-cans can-${val}`} alt="Can Lights" src={lightCansSrc} />
+  ));
   return (
     <div
       className={`channel-1 channels ${
@@ -24,29 +36,8 @@ export default function Channel1(props) {
         <Mute muted={store.mute} />
         <div className="scene">
           <section className="ceiling">
-            <img className="light-cans can-1" alt="Can Lights" src={lightCansSrc} />
-            <img className="light-cans can-2" alt="Can Lights" src={lightCansSrc} />
-            <img className="light-cans can-3" alt="Can Lights" src={lightCansSrc} />
-            <div className="beam beam-1">
-              <div className="inner"></div>
-              <div className="inner-2"></div>
-              <div className="inner-3"></div>
-            </div>
-            <div className="beam beam-2">
-              <div className="inner"></div>
-              <div className="inner-2"></div>
-              <div className="inner-3"></div>
-            </div>
-            <div className="beam beam-3">
-              <div className="inner"></div>
-              <div className="inner-2"></div>
-              <div className="inner-3"></div>
-            </div>
-            <div className="beam beam-4">
-              <div className="inner"></div>
-              <div className="inner-2"></div>
-              <div className="inner-3"></div>
-            </div>
+            {lights}
+            {beams}
           </section>
           <section className="left-wall">
             <div className="content">

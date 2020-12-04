@@ -164,7 +164,6 @@
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #f1f1f1;
     perspective: 600px;
     overflow: hidden;
     background: $pcolor0;
@@ -204,16 +203,17 @@
         }
         .intro-text {
           margin: 0;
-          @include fluid-type($min_width, $max_width, 16px, 24px);
+          @include fluid-type($min_width, $max_width, 16px, 26px);
         }
         .portrait {
-          max-width: 350px;
           margin: 0 auto;
-
+          @media screen and (min-width: 600px) {
+            max-width: 450px;
+          }
           @media screen and (min-width: 960px) {
             margin-right: 30px;
             width: 100%;
-            min-width: 325px;
+            min-width: 400px;
           }
 
           .email {
@@ -223,6 +223,7 @@
             font-style: italic;
             text-decoration: none;
             text-align: center;
+            @include fluid-type($min_width, $max_width, 16px, 22px);
             &:hover {
               text-decoration: underline;
             }
@@ -264,55 +265,81 @@
     }
     .light-cans {
       position: absolute;
-      left: 34%;
-      width: 180px;
+      left: 77%;
+      width: 260px;
       top: 146px;
       z-index: 1;
       &.can-1 {
-        top: 267px;
-        transform: rotateY(45deg);
+        top: 505px;
+        transform: rotateX(180deg) rotateY(45deg) rotateZ(0deg);
+        width: 230px;
       }
       &.can-2 {
-        top: 267px;
-        left: 12%;
-        transform: rotateY(45deg);
+        top: 343px;
+        left: 50%;
+        transform: rotateX(180deg) rotateY(45deg);
       }
       &.can-3 {
-        transform: rotateY(-180deg);
-        height: 80px;
-        width: 140px;
-        top: 142px;
+        width: 240px;
+        left: 70%;
+        top: 350px;
+        transform: rotateX(180deg) rotateY(45deg);
+      }
+      &.can-4 {
+        width: 240px;
+        left: 25%;
+        top: 350px;
+        transform: rotateX(180deg) rotateY(45deg);
+      }
+      &.can-5 {
+        width: 240px;
+        left: 50%;
+        top: 502px;
+        transform: rotateX(180deg) rotateY(45deg);
+      }
+      &.can-6 {
+        width: 240px;
+        left: 65%;
+        top: 652px;
+        transform: rotateX(180deg) rotateY(45deg);
       }
     }
     .ceiling {
       display: none;
-      transform: rotateX(-90deg) rotateZ(30deg) translate3d(-39.5%, 0%, -410px);
-      transform-origin: bottom right;
-      background: $pcolor0;
-      width: 100%;
-      height: 100%;
+      transform: translate3d(-25%, 5%, -709px) rotateX(90deg) rotateZ(-30deg);
+      transform-origin: top right;
+      background: #000;
+      width: 130%;
+      height: 200%;
       position: absolute;
       right: 0;
       @media screen and (min-width: 960px) {
-        display: none;
+        display: block;
       }
-      .beam {
+      .beams {
         height: 25px;
-        width: 40%;
+        width: 100%;
         background: linear-gradient(to bottom, #37374b 0%, #464757 100%);
         position: absolute;
         right: 0;
+        transform: rotateX(180deg);
         &.beam-1 {
-          bottom: 375px;
+          top: 900px;
         }
         &.beam-2 {
-          bottom: 250px;
+          top: 750px;
         }
         &.beam-3 {
-          bottom: 125px;
+          top: 600px;
         }
         &.beam-4 {
-          bottom: 0;
+          top: 450px;
+        }
+        &.beam-5 {
+          top: 300px;
+        }
+        &.beam-6 {
+          top: 150px;
         }
         .inner {
           height: 5px;
@@ -374,11 +401,11 @@
         max-height: 44%;
         .name {
           position: absolute;
-          bottom: -30px;
+          bottom: -50px;
           width: 100%;
           text-align: center;
           left: 0;
-          font-size: 20px;
+          @include fluid-type($min_width, $max_width, 20px, 40px);
         }
 
         .image {
@@ -389,8 +416,8 @@
           width: 100%;
           border: 4px solid #f1f1f1;
           box-shadow: 0 0 10px $pcolor0;
-          -webkit-animation: changePic-1 4s infinite both alternate;
-          animation: changePic-1 4s infinite both alternate;
+          // -webkit-animation: changePic-1 4s infinite both alternate;
+          // animation: changePic-1 4s infinite both alternate;
         }
       }
     }

@@ -64,9 +64,13 @@ $red: #ab2c20;
         width: 80%;
         border: 5px solid $pcolor1;
         margin: 20% auto 0;
+
         @media screen and (min-width: 600px) {
           width: 75%;
           margin: 10% auto 0;
+        }
+        @media only screen and (min-device-width: 600px) and (orientation: landscape) {
+          margin: 0 auto;
         }
         @media screen and (min-width: 960px) {
           margin: 0 auto;

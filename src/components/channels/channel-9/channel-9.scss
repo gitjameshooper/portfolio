@@ -97,7 +97,7 @@
     .quote {
       position: absolute;
 
-      @include fluid-type($min_width, $max_width, 20px, 28px);
+      @include fluid-type($min_width, $max_width, 16px, 28px);
       line-height: 1;
       font-style: italic;
       max-width: 600px;
@@ -109,7 +109,7 @@
         display: inline-block;
         margin-top: 10px;
         font-family: "Kalam", cursive;
-        @include fluid-type($min_width, $max_width, 20px, 24px);
+        @include fluid-type($min_width, $max_width, 14px, 24px);
         font-style: normal;
         text-align: right;
         width: 100%;
@@ -117,11 +117,11 @@
       &:before {
         content: "\201C";
         position: absolute;
-        top: -50px;
-        left: -50px;
+        top: -50%;
+        left: -10%;
         color: $pcolor0;
-        opacity: 0.1;
-        font-size: 5em;
+        opacity: 0.25;
+        @include fluid-type($min_width, $max_width, 70px, 120px);
         z-index: -1;
       }
     }
