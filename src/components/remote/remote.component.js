@@ -62,7 +62,6 @@ export default function Remote(props) {
       playonClickSound(clickOnSrc);
       history.push(path);
     }
-    console.log(store);
   }
 
   return (
