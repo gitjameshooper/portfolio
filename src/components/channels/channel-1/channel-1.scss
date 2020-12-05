@@ -270,32 +270,31 @@
       transform: rotateX(180deg) rotateY(45deg);
 
       &.can-1 {
-        top: 343px;
-        right: 8%;
+        top: 337px;
+        transform: rotateX(205deg) rotateY(25deg) skew(45deg, -10deg);
+        right: 7%;
       }
       &.can-2 {
         top: 350px;
-        right: 25%;
-        width: 240px;
+        right: 27%;
         display: none;
         @media screen and (min-width: 1280px) {
           display: block;
         }
       }
       &.can-3 {
-        top: 350px;
+        top: 338px;
         right: 44%;
-        width: 240px;
+        transform: rotateX(176deg) rotateY(35deg) skew(-15deg, 0deg);
       }
       &.can-4 {
-        top: 505px;
+        top: 487px;
         right: 5%;
-        width: 230px;
+        transform: rotateX(205deg) rotateY(25deg) skew(45deg, -10deg);
       }
       &.can-5 {
         top: 502px;
-        right: 21%;
-        width: 240px;
+        right: 25%;
         display: none;
         @media screen and (min-width: 1280px) {
           display: block;
@@ -304,12 +303,11 @@
       &.can-6 {
         top: 502px;
         right: 40%;
-        width: 240px;
       }
       &.can-7 {
-        top: 652px;
+        top: 642px;
         right: 8%;
-        width: 240px;
+        transform: rotateX(205deg) rotateY(25deg) skew(45deg, -10deg);
       }
     }
     .ceiling {
