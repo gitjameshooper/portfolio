@@ -275,9 +275,10 @@
         right: 7%;
       }
       &.can-2 {
-        top: 350px;
+        top: 351px;
         right: 27%;
         display: none;
+        transform: rotateX(205deg) rotateY(135deg) skew(-15deg, -18deg);
         @media screen and (min-width: 1280px) {
           display: block;
         }
@@ -291,6 +292,9 @@
         top: 487px;
         right: 5%;
         transform: rotateX(205deg) rotateY(25deg) skew(45deg, -10deg);
+        top: 499px;
+        right: 5%;
+        transform: rotateX(205deg) rotateY(155deg) skew(-15deg, -11deg);
       }
       &.can-5 {
         top: 502px;
