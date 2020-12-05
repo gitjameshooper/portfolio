@@ -15,7 +15,7 @@ export default function Channel1(props) {
   const [store, setStore] = useContext(Context);
   const beamsArr = [1, 2, 3, 4, 5, 6];
   const beams = beamsArr.map((val) => (
-    <div className={`beams beam-${val}`}>
+    <div key={val} className={`beams beam-${val}`}>
       <div className="inner"></div>
       <div className="inner-2"></div>
       <div className="inner-3"></div>
@@ -23,7 +23,7 @@ export default function Channel1(props) {
   ));
   const lightsArr = [1, 2, 3, 4, 5, 6, 7];
   const lights = lightsArr.map((val) => (
-    <img className={`light-cans can-${val}`} alt="Can Lights" src={lightCansSrc} />
+    <img key={val} className={`light-cans can-${val}`} alt="Can Lights" src={lightCansSrc} />
   ));
   return (
     <div
