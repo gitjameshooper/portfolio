@@ -9,9 +9,9 @@ export default function Modal(props) {
   const style = { height: 200 };
   const items = travelData
     .filter((item) => {
-      return item.id === props.modal.id;
+      return item.location === props.modal.id;
     })
-    .map((item, i) => <img key={i} alt="Vacation" style={style} src={item.src} className={item.pos} />);
+    .map((item) => <img key={item.id} alt="Vacation" style={style} src={item.src} className={item.pos} />);
   const settings = {
     adaptiveHeight: false,
     dots: false,
