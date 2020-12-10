@@ -1,5 +1,23 @@
 @import "./../../../variables.scss";
 
+@-webkit-keyframes fadeIn-8 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn-8 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
 @-webkit-keyframes expand-8 {
   0% {
     width: 0;
@@ -103,6 +121,7 @@
               font-size: 40px;
             }
           }
+
           img.hor {
             width: 100%;
           }
@@ -117,9 +136,10 @@
         }
         .item {
           cursor: pointer;
-          outline: 3px inset #333;
+          border: 2px inset $pcolor0;
           width: 50%;
           height: 25%;
+          box-sizing: border-box;
 
           @media screen and (min-width: 600px) {
             width: 33.3333%;
@@ -137,6 +157,8 @@
           img {
             max-width: 450px;
             max-height: 450px;
+            -webkit-animation: fadeIn-8 1s linear forwards;
+            animation: fadeIn-8 1s linear forwards;
           }
         }
       }

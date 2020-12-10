@@ -44,7 +44,7 @@
     {"id": "denver", "src": "./../assets/img/denver/6.jpg"},
     {"id": "denver", "src": "./../assets/img/denver/7.jpg", "pos": "vert"},
     {"id": "denver", "src": "./../assets/img/denver/8.jpg"},
-    {"id": "prague", "src": "./../assets/img/czech/1.jpg"},
+    {"id": "prague", "src": "./../assets/img/czech/1.jpg", "pos": "vert"},
     {"id": "prague","src": "./../assets/img/czech/2.jpg", "pos": "vert"},
     {"id": "prague","src": "./../assets/img/czech/3.jpg", "pos": "vert"},
     {"id": "prague","src": "./../assets/img/czech/4.jpg", "pos": "vert"},

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Context } from "./../../../store";
 import "./channel-2.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
+import Rays from "./../rays/rays.component";
 import Mute from "./../mute/mute.component";
 import sxswSrc from "./../../../assets/img/channel-2/sxsw.jpg";
 import cdLogoSrc from "./../../../assets/img/logos/cart-designers.png";
@@ -31,8 +32,7 @@ export default function Channel2(props) {
     haloSiteSrc,
     dlPrintSiteSrc,
   ];
-  const raysArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-  const rays = raysArr.map((i) => <span key={i} className={`ray ray-${i}`}></span>);
+
   const websites = srcs.map((item, i) => (
     <img
       alt="cart designers ecommerce websites"
@@ -106,9 +106,7 @@ export default function Channel2(props) {
             </p>
           </div>
         </section>
-        <section className="sun">
-          <div className="ray-box">{rays}</div>
-        </section>
+        <Rays />
         <section className="projects">{websites}</section>
       </div>
     </div>

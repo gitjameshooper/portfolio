@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Context } from "./../../../store";
 import "./channel-3.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
+import Rays from "./../rays/rays.component";
 import Mute from "./../mute/mute.component";
 import sfLogoSrc from "./../../../assets/img/logos/spredfast.jpg";
 import devTeamSrc from "./../../../assets/img/channel-3/dev-team.jpg";
@@ -26,8 +27,6 @@ export default function Channel3(props) {
     { imgSrc: mcSrc, linkSrc: "http://mass-relevance-all-access.massrel.io/mastercard-octagon-example/" },
     { imgSrc: iheartSrc, linkSrc: "http://up.massrelevance.com/iheartradio/musicawards-2014/index.html" },
   ];
-  const raysArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-  const rays = raysArr.map((i) => <span key={i} className={`ray ray-${i}`}></span>);
   const websites = srcs.map((item, i) => (
     <div key={i} className={`website ${websiteN === i ? "active" : "hidden"} ${exitAnim ? "spin-out" : ""}`}>
       <a rel="noreferrer" target="_blank" href={item.linkSrc}>
@@ -111,9 +110,7 @@ export default function Channel3(props) {
             </p>
           </div>
         </section>
-        <section className="sun">
-          <div className="ray-box">{rays}</div>
-        </section>
+        <Rays />
         <section className="projects">{websites}</section>
       </div>
     </div>

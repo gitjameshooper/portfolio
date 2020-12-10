@@ -3,14 +3,13 @@ import { Context } from "./../../../store";
 import "./channel-5.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import Mute from "./../mute/mute.component";
+import Rays from "./../rays/rays.component";
 import fsTeamSrc from "./../../../assets/img/channel-5/flosports-team.jpg";
 import fsLogoSrc from "./../../../assets/img/logos/flosports.png";
 import fsWebSrc from "./../../../assets/img/channel-5/flosports-web.png";
 
 export default function Channel5(props) {
   const [store, setStore] = useContext(Context);
-  const raysArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-  const rays = raysArr.map((i) => <span key={i} className={`ray ray-${i}`}></span>);
   return (
     <div className={`channel-5 channels ${store.isTvOn ? "active" : "hidden"} `}>
       <div className="wrapper">
@@ -62,9 +61,7 @@ export default function Channel5(props) {
             </p>
           </div>
         </section>
-        <section className="sun">
-          <div className="ray-box">{rays}</div>
-        </section>
+        <Rays />
         <section className="projects">
           <div className="website active">
             <a target="_blank" href="https://www.flowrestling.org/" rel="noreferrer">

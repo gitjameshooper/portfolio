@@ -4,13 +4,13 @@ import "./channel-4.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import teamSrc from "./../../../assets/img/channel-4/team.jpg";
 import Mute from "./../mute/mute.component";
+import Rays from "./../rays/rays.component";
 import volLogoSrc from "./../../../assets/img/channel-4/volusion-logo.png";
 import volWebSrc from "./../../../assets/img/channel-4/volusion-website.png";
 
 export default function Channel4(props) {
   const [store, setStore] = useContext(Context);
-  const raysArr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-  const rays = raysArr.map((i) => <span key={i} className={`ray ray-${i}`}></span>);
+
   return (
     <div className={`channel-4 channels ${store.isTvOn ? "active" : "hidden"} `}>
       <div className="wrapper">
@@ -59,9 +59,7 @@ export default function Channel4(props) {
             </p>
           </div>
         </section>
-        <section className="sun">
-          <div className="ray-box">{rays}</div>
-        </section>
+        <Rays />
         <section className="projects">
           <div className="website active">
             <a target="_blank" href="https://www.volusion.com/v1/" rel="noreferrer">
