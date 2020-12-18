@@ -68,14 +68,18 @@
   }
 }
 .channel-9 {
-  background-image: url("./../../../assets/img/channel-9/blue-sky.jpg");
-  background-repeat: repeat;
+  background: $pcolor0;
+
   &.hidden {
     display: none;
   }
 
   &.active {
+    background-image: url("./../../../assets/img/channel-9/blue-sky.jpg");
+    background-repeat: repeat;
     .wrapper {
+      -webkit-animation: fadeIn-G 1s linear forwards;
+      animation: fadeIn-G 1s linear forwards;
       @include abs-expand;
     }
   }

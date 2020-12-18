@@ -1,23 +1,5 @@
 @import "./../../../variables.scss";
 
-@-webkit-keyframes fadeIn-8 {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fadeIn-8 {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
 @-webkit-keyframes expand-8 {
   0% {
     width: 0;
@@ -70,6 +52,8 @@
 
   &.active {
     .wrapper {
+      -webkit-animation: fadeIn-G 1s linear forwards;
+      animation: fadeIn-G 1s linear forwards;
       @include abs-expand;
       .logo {
         position: absolute;
@@ -155,10 +139,14 @@
           align-items: center;
           float: left;
           img {
+            visibility: hidden;
             max-width: 450px;
             max-height: 450px;
-            -webkit-animation: fadeIn-8 1s linear forwards;
-            animation: fadeIn-8 1s linear forwards;
+            &.loaded {
+              visibility: visible;
+              -webkit-animation: fadeIn-G 1s linear forwards;
+              animation: fadeIn-G 1s linear forwards;
+            }
           }
         }
       }

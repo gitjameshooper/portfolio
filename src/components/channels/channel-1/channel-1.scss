@@ -122,6 +122,7 @@
 }
 
 .channel-1 {
+  background: $pcolor0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -139,6 +140,8 @@
 
   &.active {
     .wrapper {
+      -webkit-animation: fadeIn-G 1s linear forwards;
+      animation: fadeIn-G 1s linear forwards;
       @include abs-expand;
     }
   }

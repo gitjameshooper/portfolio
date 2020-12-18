@@ -56,7 +56,13 @@ export default function Channel8(props) {
       key={item.id}
       onClick={() => setModal({ id: item.id, imgSrc: item.imgSrc, alt: item.alt, pos: item.pos })}
       className="item">
-      <img alt={item.alt} src={item.imgSrc} />
+      <img
+        onLoad={(e) => {
+          e.target.classList.add("loaded");
+        }}
+        alt={item.alt}
+        src={item.imgSrc}
+      />
     </div>
   ));
   return (

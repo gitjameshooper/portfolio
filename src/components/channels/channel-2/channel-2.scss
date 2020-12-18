@@ -1,91 +1,18 @@
 @import "./../../../variables.scss";
 
-@-webkit-keyframes ray-2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes ray-2 {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes spin-2 {
-  100% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(360deg);
-  }
-}
-@keyframes spin-2 {
-  100% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes move-2 {
-  10% {
-    left: 50%;
-    top: 50%;
-  }
-  100% {
-    left: 200%;
-    top: 200%;
-  }
-}
-@keyframes move-2 {
-  10% {
-    left: 50%;
-    top: 50%;
-  }
-  100% {
-    left: 200%;
-    top: 200%;
-  }
-}
-@-webkit-keyframes grow-2 {
-  0% {
-    transform: scale(0);
-  }
-
-  15% {
-    transform: scale(1);
-  }
-  100% {
-    left: 50%;
-    top: 50%;
-  }
-}
-@keyframes grow-2 {
-  0% {
-    transform: scale(0);
-  }
-
-  15% {
-    transform: scale(1);
-  }
-  100% {
-    left: 50%;
-    top: 50%;
-  }
-}
 .channel-2 {
-  background: radial-gradient(farthest-side, #40beeb, $pcolor0);
+  background: $pcolor0;
+
   &.hidden {
     display: none;
   }
 
   &.active {
+    background: radial-gradient(farthest-side, #40beeb, $pcolor0);
+
     .wrapper {
+      -webkit-animation: fadeIn-G 1s linear forwards;
+      animation: fadeIn-G 1s linear forwards;
       @include abs-expand;
       .block-group {
         background: $pcolor1;
@@ -167,12 +94,12 @@
 
           &.active {
             display: block;
-            -webkit-animation: grow-2 8s linear forwards;
-            animation: grow-2 8s linear forwards;
+            -webkit-animation: grow-G 8s linear forwards;
+            animation: grow-G 8s linear forwards;
           }
           &.spin-out {
-            -webkit-animation: move-2 1.5s forwards, spin-2 250ms linear infinite;
-            animation: move-2 1.5s forwards, spin-2 250ms linear infinite;
+            -webkit-animation: move-G 1.5s forwards, spin-G 250ms linear infinite;
+            animation: move-G 1.5s forwards, spin-G 250ms linear infinite;
           }
         }
       }

@@ -1,16 +1,20 @@
 @import "./../../../variables.scss";
 $red: #ab2c20;
 .channel-6 {
-  background: url("./../../../assets/img/channel-6/news-bg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  background: $pcolor0;
+
   &.hidden {
     display: none;
   }
 
   &.active {
+    background: url("./../../../assets/img/channel-6/news-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     .wrapper {
+      -webkit-animation: fadeIn-G 1s linear forwards;
+      animation: fadeIn-G 1s linear forwards;
       @include abs-expand;
       overflow: auto;
       @media screen and (min-width: 960px) {

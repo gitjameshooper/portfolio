@@ -1,8 +1,11 @@
 @import "./../../../variables.scss";
 
 .netflix {
+  background: $pcolor0;
   iframe {
     position: "relative";
+    -webkit-animation: fadeIn-G 1s linear forwards;
+    animation: fadeIn-G 1s linear forwards;
     &.hidden {
       display: none;
     }
