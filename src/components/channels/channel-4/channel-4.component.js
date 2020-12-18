@@ -6,7 +6,7 @@ import teamSrc from "./../../../assets/img/channel-4/team.jpg";
 import Mute from "./../mute/mute.component";
 import Rays from "./../rays/rays.component";
 import volLogoSrc from "./../../../assets/img/channel-4/volusion-logo.png";
-import volWebSrc from "./../../../assets/img/channel-4/volusion-website.png";
+import volWebSrc from "./../../../assets/img/channel-4/volusion-website.jpg";
 
 export default function Channel4(props) {
   const [store, setStore] = useContext(Context);

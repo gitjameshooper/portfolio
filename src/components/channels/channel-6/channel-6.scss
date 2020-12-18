@@ -102,6 +102,12 @@ $red: #ab2c20;
         img {
           width: 100%;
           display: block;
+          visibility: hidden;
+          &.loaded {
+            visibility: visible;
+            -webkit-animation: fadeIn-G 1s linear forwards;
+            animation: fadeIn-G 1s linear forwards;
+          }
         }
       }
       .info {

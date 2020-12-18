@@ -1,18 +1,28 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Context } from "./../../../store";
 import "./channel-6.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import Mute from "./../mute/mute.component";
-import lcSrc from "./../../../assets/img/channel-6/land-accrue-web.png";
+import lcSrc from "./../../../assets/img/channel-6/land-accrue-web.jpg";
 
 export default function Channel6(props) {
   const [store, setStore] = useContext(Context);
+  const [chuck, setChuck] = useState(false);
   const time = () => {
     let t = new Date().toLocaleTimeString();
     let arr = t.split(" ");
     let arr2 = arr[0].split(":");
     return arr2[0] + ":" + arr2[1] + " " + arr[1];
   };
+  useEffect(() => {
+    let animTimer = setTimeout(() => {
+      setChuck(true);
+    }, 2000);
+
+    return () => {
+      clearTimeout(animTimer);
+    };
+  }, []);
   return (
     <div className={`channel-6 channels ${store.isTvOn ? "active" : "hidden"} `}>
       <div className="wrapper">
@@ -21,10 +31,16 @@ export default function Channel6(props) {
           <span className="city">Austin, TX</span>
           <span className="time">{time()}</span>
         </div>
-        <img alt="Chuck the Reporter" className="chuck" src={`./../assets/img/chuck.gif?${Math.random()}`} />
+        {chuck && <img alt="Chuck the Reporter" className="chuck" src={`./../assets/img/chuck.gif?${Math.random()}`} />}
         <section className="projects">
           <a target="_blank" rel="noreferrer" href="https://glacial-oasis-04139.herokuapp.com/">
-            <img src={lcSrc} alt="Land Accrue" />
+            <img
+              onLoad={(e) => {
+                e.target.classList.add("loaded");
+              }}
+              src={lcSrc}
+              alt="Land Accrue"
+            />
             <span className="caption">Land Accrue App</span>
           </a>
         </section>

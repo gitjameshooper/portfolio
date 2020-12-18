@@ -168,7 +168,14 @@ export default function Channel9(props) {
       <div className="wrapper">
         <ChannelNumber number="9" />
         <Mute muted={store.mute} />
-        <img className="meditation" alt="Meditation" src={medLogo} />
+        <img
+          onLoad={(e) => {
+            e.target.classList.add("loaded");
+          }}
+          className="meditation"
+          alt="Meditation"
+          src={medLogo}
+        />
         <section className="sky">
           {quote &&
             (quote.video ? (

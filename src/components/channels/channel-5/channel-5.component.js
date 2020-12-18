@@ -6,7 +6,7 @@ import Mute from "./../mute/mute.component";
 import Rays from "./../rays/rays.component";
 import fsTeamSrc from "./../../../assets/img/channel-5/flosports-team.jpg";
 import fsLogoSrc from "./../../../assets/img/logos/flosports.png";
-import fsWebSrc from "./../../../assets/img/channel-5/flosports-web.png";
+import fsWebSrc from "./../../../assets/img/channel-5/flosports-web.jpg";
 
 export default function Channel5(props) {
   const [store, setStore] = useContext(Context);

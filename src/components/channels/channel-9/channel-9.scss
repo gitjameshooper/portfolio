@@ -135,6 +135,12 @@
     bottom: 0;
     left: 0;
     position: absolute;
+    visibility: hidden;
+    &.loaded {
+      visibility: visible;
+      -webkit-animation: fadeIn-G 1s linear forwards;
+      animation: fadeIn-G 1s linear forwards;
+    }
     @media screen and (min-width: 600px) {
       bottom: -30%;
     }
