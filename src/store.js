@@ -4,7 +4,7 @@ const initialState = {
   isTvOn: false,
   isTvPwrBtn: false,
   channel: 1,
-  volumeNum: 5,
+  volumeNum: 10,
   mute: false,
   showVolume: false,
   guide: false,

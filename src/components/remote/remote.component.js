@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "./../../store";
 import "./remote.scss";
 import clickOnSrc from "./../../assets/audio/click-on.mp3";
@@ -10,28 +10,41 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 export default function Remote(props) {
   const [store, setStore] = useContext(Context);
+  const [inter, setInter] = useState(null);
   let history = useHistory();
   function playonClickSound(src) {
     let audio = new Audio(src);
     if (!store.mute) {
       audio.load();
+      audio.volume = (store.volumeNum * 5) / 100;
       audio.play();
     }
   }
 
-  function onBtnClick(e, btnName, path, channel) {
+  function onBtnDown(e, btnName, type) {
     e.preventDefault();
     // Volume
-    if (store.isTvOn && btnName === "btnVolTop") {
-      let num = store.volumeNum + 1 >= 20 ? 20 : store.volumeNum + 1;
-      setStore({ ...store, showVolume: true, volumeNum: num, mute: false });
-      return;
+    if (store.isTvOn && type === "mouseDown") {
+      setInter(
+        setInterval(() => {
+          let num;
+          if (btnName === "btnVolTop") {
+            num = store.volumeNum >= 20 ? 20 : store.volumeNum++;
+          } else if (btnName === "btnVolBot") {
+            num = store.volumeNum <= 0 ? 0 : store.volumeNum--;
+          }
+          setStore({ ...store, showVolume: true, volumeNum: num, mute: false });
+        }, 150)
+      );
+    } else {
+      clearInterval(inter);
     }
-    if (store.isTvOn && btnName === "btnVolBot") {
-      let num = store.volumeNum - 1 <= 0 ? 0 : store.volumeNum - 1;
-      setStore({ ...store, showVolume: true, volumeNum: num, mute: false });
-      return;
-    }
+    return;
+  }
+
+  function onBtnClick(e, btnName, path, channel) {
+    e.preventDefault();
+
     // Mute
     if (store.isTvOn && btnName === "mute") {
       setStore({ ...store, showVolume: true, mute: !store.mute });
@@ -173,11 +186,25 @@ export default function Remote(props) {
                 Netflix
               </a>
               <div className="btn-push blue btn-volume">
-                <span className="volume-top" onClick={(e) => onBtnClick(e, "btnVolTop")}>
+                <span
+                  className="volume-top"
+                  onMouseUp={(e) => {
+                    onBtnDown(e, "btnVolTop", "mouseUp");
+                  }}
+                  onMouseDown={(e) => {
+                    onBtnDown(e, "btnVolTop", "mouseDown");
+                  }}>
                   +<br />
                   Vol
                 </span>
-                <span className="volume-bot" onClick={(e) => onBtnClick(e, "btnVolBot")}>
+                <span
+                  className="volume-bot"
+                  onMouseUp={(e) => {
+                    onBtnDown(e, "btnVolBot", "mouseUp");
+                  }}
+                  onMouseDown={(e) => {
+                    onBtnDown(e, "btnVolBot", "mouseDown");
+                  }}>
                   _
                 </span>
               </div>

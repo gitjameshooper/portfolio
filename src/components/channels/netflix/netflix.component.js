@@ -8,6 +8,7 @@ export default function Netflix(props) {
   return (
     <div className="netflix channels">
       <iframe
+        id="netflixVideo"
         width="100%"
         height="100%"
         className={store.isTvOn ? "active" : "hidden"}

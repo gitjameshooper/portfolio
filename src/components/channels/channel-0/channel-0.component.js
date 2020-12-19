@@ -14,6 +14,7 @@ export default function Channel0(props) {
     if (!store.mute) {
       audio.loop = true;
       audio.load();
+      audio.volume = (store.volumeNum * 5) / 100;
       audio.play();
     }
 
