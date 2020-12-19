@@ -6,31 +6,44 @@ import Rays from "./../rays/rays.component";
 import Mute from "./../mute/mute.component";
 import sxswSrc from "./../../../assets/img/channel-2/sxsw.jpg";
 import cdLogoSrc from "./../../../assets/img/logos/cart-designers.png";
-import mmSiteSrc from "./../../../assets/img/channel-2/marthaemmanuel.png";
-import oakSiteSrc from "./../../../assets/img/channel-2/oakway.png";
-import waFreshSiteSrc from "./../../../assets/img/channel-2/wafresh.png";
-import wildSiteSrc from "./../../../assets/img/channel-2/wildseed.png";
-import engSiteSrc from "./../../../assets/img/channel-2/english.png";
-import fudgeSiteSrc from "./../../../assets/img/channel-2/fudge.png";
-import greensSiteSrc from "./../../../assets/img/channel-2/greensplus.png";
-import haloSiteSrc from "./../../../assets/img/channel-2/halosleep.png";
-import dlPrintSiteSrc from "./../../../assets/img/channel-2/dlprint.png";
+import ahhaSiteSrc from "./../../../assets/img/channel-2/ahha.jpg";
+import caravanSiteSrc from "./../../../assets/img/channel-2/caravan.jpg";
+import constructionSiteSrc from "./../../../assets/img/channel-2/construction.jpg";
+import desiresSiteSrc from "./../../../assets/img/channel-2/desires.jpg";
+import dlPrintSiteSrc from "./../../../assets/img/channel-2/dlprint.jpg";
+import engSiteSrc from "./../../../assets/img/channel-2/english.jpg";
+import fudgeSiteSrc from "./../../../assets/img/channel-2/fudge.jpg";
+import greensSiteSrc from "./../../../assets/img/channel-2/greensplus.jpg";
+import haloSiteSrc from "./../../../assets/img/channel-2/halosleep.jpg";
+import holyCrossSiteSrc from "./../../../assets/img/channel-2/holycross.jpg";
+import oneStorySiteSrc from "./../../../assets/img/channel-2/onestorytall.jpg";
+import threebySiteSrc from "./../../../assets/img/channel-2/threeby.jpg";
+import totelcomSiteSrc from "./../../../assets/img/channel-2/totelcom.jpg";
+import turtleSiteSrc from "./../../../assets/img/channel-2/turtle.jpg";
+import waFreshSiteSrc from "./../../../assets/img/channel-2/wafresh.jpg";
+import wildSiteSrc from "./../../../assets/img/channel-2/wildseed.jpg";
 
-// First tech job and making a portfolio 	WOrking at Cart Designers
 export default function Channel2(props) {
   const [store, setStore] = useContext(Context);
   const [websiteN, setWebsiteN] = useState(0);
   const [exitAnim, setExitAnim] = useState(false);
   const srcs = [
-    mmSiteSrc,
-    oakSiteSrc,
+    engSiteSrc,
     wildSiteSrc,
     waFreshSiteSrc,
-    engSiteSrc,
+    caravanSiteSrc,
+    constructionSiteSrc,
+    oneStorySiteSrc,
+    threebySiteSrc,
+    totelcomSiteSrc,
+    turtleSiteSrc,
+    holyCrossSiteSrc,
+    ahhaSiteSrc,
     fudgeSiteSrc,
     greensSiteSrc,
     haloSiteSrc,
     dlPrintSiteSrc,
+    desiresSiteSrc,
   ];
 
   const websites = srcs.map((item, i) => (
