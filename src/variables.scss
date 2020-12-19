@@ -58,6 +58,25 @@ $max_font: 18px;
   }
 }
 
+@-webkit-keyframes fadeOut-G {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut-G {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 @-webkit-keyframes ray-G {
   0% {
     -webkit-transform: rotate(0deg);

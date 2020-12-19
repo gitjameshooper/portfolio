@@ -3,7 +3,7 @@ import { Context } from "./../../../store";
 import "./channel-3.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import Rays from "./../rays/rays.component";
-import Mute from "./../mute/mute.component";
+import Volume from "./../volume/volume.component";
 import sfLogoSrc from "./../../../assets/img/logos/spredfast.jpg";
 import devTeamSrc from "./../../../assets/img/channel-3/dev-team.jpg";
 import guessSrc from "./../../../assets/img/channel-3/guess.png";
@@ -60,7 +60,7 @@ export default function Channel3(props) {
     <div className={`channel-3 channels ${store.isTvOn ? "active" : "hidden"} `}>
       <div className="wrapper">
         <ChannelNumber number="3" />
-        <Mute muted={store.mute} />
+        <Volume />
         <section className="block-group">
           <div className="block block-1">
             <img className="logo" alt="Spredfast Logo" src={sfLogoSrc} />

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState, useRef } from "react";
 import { Context } from "./../../../store";
 import "./channel-9.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
-import Mute from "./../mute/mute.component";
+import Volume from "./../volume/volume.component";
 import medLogo from "./../../../assets/img/channel-9/meditation.jpg";
 import bruceLeeVideo from "./../../../assets/video/bruce-lee.mp4";
 import ericThomasVideo from "./../../../assets/video/eric-thomas.mp4";
@@ -167,7 +167,7 @@ export default function Channel9(props) {
     <div className={`channel-9 channels ${store.isTvOn ? "active" : "hidden"} `}>
       <div className="wrapper">
         <ChannelNumber number="9" />
-        <Mute muted={store.mute} />
+        <Volume />
         <img
           onLoad={(e) => {
             e.target.classList.add("loaded");

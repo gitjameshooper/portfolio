@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "./../../../store";
 import "./channel-1.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
-import Mute from "./../mute/mute.component";
+import Volume from "./../volume/volume.component";
 import jamesSrc from "./../../../assets/img/channel-1/james.jpg";
 import resumeSrc from "./../../../assets/img/channel-1/james-hooper-resume.pdf";
 import gifSrc from "./../../../assets/img/channel-1/giphy-1.gif";
@@ -33,7 +33,7 @@ export default function Channel1(props) {
       <span className={`intro ${store.isTvOn && store.isTvPwrBtn ? "animate" : "hidden"}`}></span>
       <section className="wrapper">
         <ChannelNumber number="1" />
-        <Mute muted={store.mute} />
+        <Volume />
         <div className="scene">
           <section className="ceiling">
             {lights}

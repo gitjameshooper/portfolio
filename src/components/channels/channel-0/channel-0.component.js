@@ -3,7 +3,7 @@ import { Context } from "./../../../store";
 import "./channel-0.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import tvStaticSrc from "./../../../assets/audio/tv-static.mp3";
-import Mute from "./../mute/mute.component";
+import Volume from "./../volume/volume.component";
 
 export default function Channel0(props) {
   const [store, setStore] = useContext(Context);
@@ -29,7 +29,7 @@ export default function Channel0(props) {
   return (
     <section className={`channel-0 channels ${store.isTvOn ? "active" : "hidden"} `}>
       <ChannelNumber number="0" />
-      <Mute muted={store.mute} />
+      <Volume />
     </section>
   );
 }

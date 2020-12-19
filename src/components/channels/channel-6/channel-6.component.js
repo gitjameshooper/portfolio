@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Context } from "./../../../store";
 import "./channel-6.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
-import Mute from "./../mute/mute.component";
+import Volume from "./../volume/volume.component";
 import lcSrc from "./../../../assets/img/channel-6/land-accrue-web.jpg";
 
 export default function Channel6(props) {
@@ -26,7 +26,7 @@ export default function Channel6(props) {
   return (
     <div className={`channel-6 channels ${store.isTvOn ? "active" : "hidden"} `}>
       <div className="wrapper">
-        <ChannelNumber number="6" /> <Mute muted={store.mute} />
+        <ChannelNumber number="6" /> <Volume />
         <div className="location">
           <span className="city">Austin, TX</span>
           <span className="time">{time()}</span>

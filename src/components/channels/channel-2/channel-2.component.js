@@ -3,7 +3,7 @@ import { Context } from "./../../../store";
 import "./channel-2.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import Rays from "./../rays/rays.component";
-import Mute from "./../mute/mute.component";
+import Volume from "./../volume/volume.component";
 import sxswSrc from "./../../../assets/img/channel-2/sxsw.jpg";
 import cdLogoSrc from "./../../../assets/img/logos/cart-designers.png";
 import ahhaSiteSrc from "./../../../assets/img/channel-2/ahha.jpg";
@@ -76,7 +76,7 @@ export default function Channel2(props) {
     <div className={`channel-2 channels ${store.isTvOn ? "active" : "hidden"} `}>
       <div className="wrapper">
         <ChannelNumber number="2" />
-        <Mute muted={store.mute} />
+        <Volume />
 
         <section className="block-group">
           <div className="block block-1">

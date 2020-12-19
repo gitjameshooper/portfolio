@@ -21,9 +21,20 @@ export default function Remote(props) {
 
   function onBtnClick(e, btnName, path, channel) {
     e.preventDefault();
+    // Volume
+    if (store.isTvOn && btnName === "btnVolTop") {
+      let num = store.volumeNum + 1 >= 20 ? 20 : store.volumeNum + 1;
+      setStore({ ...store, showVolume: true, volumeNum: num, mute: false });
+      return;
+    }
+    if (store.isTvOn && btnName === "btnVolBot") {
+      let num = store.volumeNum - 1 <= 0 ? 0 : store.volumeNum - 1;
+      setStore({ ...store, showVolume: true, volumeNum: num, mute: false });
+      return;
+    }
     // Mute
     if (store.isTvOn && btnName === "mute") {
-      setStore({ ...store, mute: !store.mute });
+      setStore({ ...store, showVolume: true, mute: !store.mute });
       return;
     }
     // Guide
@@ -32,7 +43,6 @@ export default function Remote(props) {
       playonClickSound(clickOnSrc);
       return;
     }
-
     // Channel
     if (store.isTvOn && btnName === "btnChTop") {
       let channel = store.channel < 9 ? store.channel + 1 : 0;
@@ -163,11 +173,11 @@ export default function Remote(props) {
                 Netflix
               </a>
               <div className="btn-push blue btn-volume">
-                <span className="volume-top" onClick={onBtnClick}>
+                <span className="volume-top" onClick={(e) => onBtnClick(e, "btnVolTop")}>
                   +<br />
                   Vol
                 </span>
-                <span className="volume-bot" onClick={onBtnClick}>
+                <span className="volume-bot" onClick={(e) => onBtnClick(e, "btnVolBot")}>
                   _
                 </span>
               </div>

@@ -3,7 +3,7 @@ import { Context } from "./../../../store";
 import "./channel-4.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
 import teamSrc from "./../../../assets/img/channel-4/team.jpg";
-import Mute from "./../mute/mute.component";
+import Volume from "./../volume/volume.component";
 import Rays from "./../rays/rays.component";
 import volLogoSrc from "./../../../assets/img/channel-4/volusion-logo.png";
 import volWebSrc from "./../../../assets/img/channel-4/volusion-website.jpg";
@@ -14,7 +14,7 @@ export default function Channel4(props) {
   return (
     <div className={`channel-4 channels ${store.isTvOn ? "active" : "hidden"} `}>
       <div className="wrapper">
-        <ChannelNumber number="4" /> <Mute muted={store.mute} />
+        <ChannelNumber number="4" /> <Volume />
         <section className="block-group">
           <div className="block block-1">
             <img className="logo" alt="Volusion Logo" src={volLogoSrc} />

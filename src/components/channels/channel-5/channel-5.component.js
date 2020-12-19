@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "./../../../store";
 import "./channel-5.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
-import Mute from "./../mute/mute.component";
+import Volume from "./../volume/volume.component";
 import Rays from "./../rays/rays.component";
 import fsTeamSrc from "./../../../assets/img/channel-5/flosports-team.jpg";
 import fsLogoSrc from "./../../../assets/img/logos/flosports.png";
@@ -13,7 +13,7 @@ export default function Channel5(props) {
   return (
     <div className={`channel-5 channels ${store.isTvOn ? "active" : "hidden"} `}>
       <div className="wrapper">
-        <ChannelNumber number="5" /> <Mute muted={store.mute} />
+        <ChannelNumber number="5" /> <Volume />
         <section className="block-group">
           <div className="block block-1">
             <img className="logo" alt="Flosports Logo" src={fsLogoSrc} />

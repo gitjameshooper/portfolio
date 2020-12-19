@@ -4,9 +4,10 @@ const initialState = {
   isTvOn: false,
   isTvPwrBtn: false,
   channel: 1,
-  volume: "low",
-  guide: false,
+  volumeNum: 5,
   mute: false,
+  showVolume: false,
+  guide: false,
 };
 
 export const Context = React.createContext();
