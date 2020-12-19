@@ -136,6 +136,9 @@ export default function Channel9(props) {
   }
   // error in rotating to the end
   useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.volume = store.mute ? 0 : (store.volumeNum * 5) / 100;
+    }
     let i = quoteNum === 0 ? quotes.length - 1 : quoteNum - 1;
     let timerSecs = (quotes[i].secs || 10) * 1000;
 
@@ -162,7 +165,7 @@ export default function Channel9(props) {
     return () => {
       clearTimeout(timer);
     };
-  }, [quoteNum]);
+  }, [quoteNum, store.volumeNum, store.mute]);
 
   return (
     <div className={`channel-9 channels ${store.isTvOn ? "active" : "hidden"} `}>

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Context } from "./../../../store";
 import "./channel-0.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
@@ -7,25 +7,23 @@ import Volume from "./../volume/volume.component";
 
 export default function Channel0(props) {
   const [store, setStore] = useContext(Context);
-
+  const [loaded, setLoaded] = useState(false);
   let audio = new Audio(tvStaticSrc);
 
   useEffect(() => {
-    if (!store.mute) {
-      audio.loop = true;
+    if (store.isTvOn && !loaded) {
       audio.load();
-      audio.volume = (store.volumeNum * 5) / 100;
-      audio.play();
+      audio.loop = true;
+      setLoaded(true);
     }
 
-    if (store.mute) {
-      audio.pause();
-    }
+    audio.play();
+    audio.volume = store.mute ? 0 : (store.volumeNum * 5) / 100;
 
-    return function cleanup() {
+    return () => {
       audio.pause();
     };
-  });
+  }, [store.mute, store.volumeNum]);
 
   return (
     <section className={`channel-0 channels ${store.isTvOn ? "active" : "hidden"} `}>
