@@ -1,114 +1,111 @@
 @import "./../../../variables.scss";
-
 .channel-5 {
-  background: $pcolor0;
-  &.hidden {
-    display: none;
-  }
-
-  &.active {
-    background: radial-gradient(farthest-side, #ff140f, $pcolor0);
-    .wrapper {
-      -webkit-animation: fadeIn-G 1s linear forwards;
-      animation: fadeIn-G 1s linear forwards;
-      @include abs-expand;
-      .block-group {
-        background: $pcolor1;
-        text-align: left;
-        display: flex;
-        flex-direction: column;
-        overflow: auto;
-        height: 100vh;
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        @media screen and (min-width: 600px) {
-          max-width: 400px;
-        }
-        .block {
-          position: relative;
-          margin-bottom: 10px;
-          h3 {
-            background: #ff140f;
-            color: $pcolor1;
-            padding: 3px;
-            text-align: center;
-            margin: 0;
-          }
-          &.block-1 {
-            display: inline-grid;
-            justify-content: center;
-            align-items: center;
-            height: 140px;
-            width: 100%;
-            background: $pcolor1;
-            margin: 0;
-            .logo {
-              max-width: 200px;
-              width: 100%;
-            }
-          }
-          &.block-4 {
-            margin-bottom: 120px;
-            img {
-              width: 100%;
-              margin-top: 15px;
-              box-shadow: 0 0 8px $pcolor0;
-            }
-          }
-          ul {
-            list-style: square;
-            li {
-              margin: 5px 0;
-            }
-          }
-          .content {
-            padding: 20px 30px;
-            margin: 0;
-          }
-        }
-      }
-
-      .projects {
-        @include abs-expand;
-        left: 30%;
+    background: $pcolor0;
+    &.hidden {
         display: none;
-        @media screen and (min-width: 1280px) {
-          left: 0;
-        }
-        @media screen and (min-width: 960px) {
-          display: block;
-        }
-        .website {
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 400px;
-          margin-left: -200px;
-          margin-top: -106px;
-          display: none;
-          box-shadow: 0 0 30px $pcolor0;
-          img {
-            width: 100%;
-            display: block;
-          }
-          .link {
-            bottom: 0;
-            width: 98%;
-            background: #ff140f;
-            color: $pcolor1;
-            display: inline-block;
-            padding: 1%;
-            font-weight: bold;
-            text-align: center;
-          }
-          &.active {
-            display: block;
-            -webkit-animation: grow-G 8s linear forwards;
-            animation: grow-G 8s linear forwards;
-          }
-        }
-      }
     }
-  }
+    &.active {
+        background: radial-gradient(farthest-side, #ff140f, $pcolor0);
+        .wrapper {
+            -webkit-animation: fadeIn-G 1s linear forwards;
+            animation: fadeIn-G 1s linear forwards;
+            @include abs-expand;
+            .block-group {
+                background: $pcolor1;
+                text-align: left;
+                overflow: auto;
+                height: 100vh;
+                position: relative;
+                z-index: 1;
+                width: 100%;
+                border-right: 5px solid #000;
+                box-shadow: 0px 0px 50px #000;
+                @media screen and (min-width: 600px) {
+                    max-width: 400px;
+                }
+                .block {
+                    position: relative;
+                    margin-bottom: 10px;
+                    h3 {
+                        background: #ff140f;
+                        color: $pcolor1;
+                        padding: 3px;
+                        text-align: center;
+                        margin: 0;
+                    }
+                    &.block-1 {
+                        display: inline-grid;
+                        justify-content: center;
+                        align-items: center;
+                        height: 140px;
+                        width: 100%;
+                        background: $pcolor1;
+                        margin: 0;
+                        .logo {
+                            max-width: 200px;
+                            width: 100%;
+                        }
+                    }
+                    &.block-4 {
+                        margin-bottom: 120px;
+                        img {
+                            width: 100%;
+                            margin-top: 15px;
+                            box-shadow: 0 0 8px $pcolor0;
+                        }
+                    }
+                    ul {
+                        list-style: square;
+                        li {
+                            margin: 5px 0;
+                        }
+                    }
+                    .content {
+                        padding: 20px 30px;
+                        margin: 0;
+                    }
+                }
+            }
+            .projects {
+                @include abs-expand;
+                left: 30%;
+                display: none;
+                @media screen and (min-width: 1280px) {
+                    left: 0;
+                }
+                @media screen and (min-width: 960px) {
+                    display: block;
+                }
+                .website {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 400px;
+                    margin-left: -200px;
+                    margin-top: -106px;
+                    display: none;
+                    box-shadow: 0 0 30px $pcolor0;
+                    img {
+                        width: 100%;
+                        display: block;
+                    }
+                    .link {
+                        bottom: 0;
+                        width: 98%;
+                        background: #ff140f;
+                        color: $pcolor1;
+                        display: inline-block;
+                        padding: 1%;
+                        font-weight: bold;
+                        text-align: center;
+                    }
+                    &.active {
+                        display: block;
+                        -webkit-animation: grow-G 8s linear forwards;
+                        animation: grow-G 8s linear forwards;
+                    }
+                }
+            }
+        }
+    }
 }

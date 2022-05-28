@@ -30,32 +30,32 @@ export default function Channel8(props) {
   const [store, setStore] = useContext(Context);
   const [modal, setModal] = useState(null);
   const srcs = [
-    { id: 1, imgSrc: imgSrc1, alt: "Hiking Horshoe Bend", pos: "hor" },
-    { id: 2, imgSrc: imgSrc2, alt: "Scuba Diving Thailand", pos: "vert" },
-    { id: 3, imgSrc: imgSrc3, alt: "High School Soccer Team", pos: "hor" },
-    { id: 4, imgSrc: imgSrc4, alt: "Volleyball Tournament", pos: "hor" },
-    { id: 5, imgSrc: imgSrc5, alt: "Surfing", pos: "hor" },
-    { id: 6, imgSrc: imgSrc6, alt: "Color Run San Antonio", pos: "vert" },
-    { id: 7, imgSrc: imgSrc7, alt: "Flying San Diego", pos: "hor" },
-    { id: 8, imgSrc: imgSrc8, alt: "Volleyball San Diego", pos: "vert" },
-    { id: 9, imgSrc: imgSrc9, alt: "Batting Practive", pos: "vert" },
-    { id: 10, imgSrc: imgSrc10, alt: "Rafting Colorado", pos: "hor" },
-    { id: 11, imgSrc: imgSrc11, alt: "Hiking Zion", pos: "hor" },
-    { id: 12, imgSrc: imgSrc12, alt: "Hang Gliding Chattanooga", pos: "hor" },
-    { id: 13, imgSrc: imgSrc13, alt: "High School Soccer", pos: "hor" },
-    { id: 14, imgSrc: imgSrc14, alt: "Santa Run San Diego", pos: "hor" },
-    { id: 15, imgSrc: imgSrc15, alt: "Ziplining Austin", pos: "hor" },
-    { id: 16, imgSrc: imgSrc16, alt: "Austin Volleyball", pos: "vert" },
-    { id: 17, imgSrc: imgSrc17, alt: "Austing Volleyball", pos: "vert" },
-    { id: 18, imgSrc: imgSrc18, alt: "Hiking Colorado", pos: "vert" },
-    { id: 19, imgSrc: imgSrc19, alt: "Wake Boarding Chattanooga", pos: "hor" },
-    { id: 20, imgSrc: imgSrc20, alt: "Scuba Diving Thailand", pos: "hor" },
+    { id: 1, imgSrc: imgSrc1, alt: "Hiking Horshoe Bend", pos: "hor", align: "middle" },
+    { id: 2, imgSrc: imgSrc2, alt: "Scuba Diving Thailand", pos: "vert", align: "top" },
+    { id: 3, imgSrc: imgSrc3, alt: "High School Soccer Team", pos: "hor", align: "middle" },
+    { id: 4, imgSrc: imgSrc4, alt: "Volleyball Tournament", pos: "hor", align: "middle" },
+    { id: 5, imgSrc: imgSrc5, alt: "Surfing", pos: "hor", align: "middle" },
+    { id: 6, imgSrc: imgSrc6, alt: "Color Run San Antonio", pos: "vert", align: "top" },
+    { id: 7, imgSrc: imgSrc7, alt: "Flying San Diego", pos: "hor", align: "top" },
+    { id: 8, imgSrc: imgSrc8, alt: "Volleyball San Diego", pos: "vert", align: "top" },
+    { id: 9, imgSrc: imgSrc9, alt: "Batting Practive", pos: "vert", align: "middle" },
+    { id: 10, imgSrc: imgSrc10, alt: "Rafting Colorado", pos: "hor", align: "middle" },
+    { id: 11, imgSrc: imgSrc11, alt: "Hiking Zion", pos: "hor", align: "middle" },
+    { id: 12, imgSrc: imgSrc12, alt: "Hang Gliding Chattanooga", pos: "hor", align: "bottom" },
+    { id: 13, imgSrc: imgSrc13, alt: "High School Soccer", pos: "hor", align: "middle" },
+    { id: 14, imgSrc: imgSrc14, alt: "Santa Run San Diego", pos: "hor", align: "middle" },
+    { id: 15, imgSrc: imgSrc15, alt: "Ziplining Austin", pos: "hor", align: "middle" },
+    { id: 16, imgSrc: imgSrc16, alt: "Austin Volleyball Team", pos: "vert", align: "middle" },
+    { id: 17, imgSrc: imgSrc17, alt: "Austin Volleyball", pos: "vert", align: "middle" },
+    { id: 18, imgSrc: imgSrc18, alt: "Hiking Colorado", pos: "vert", align: "middle" },
+    { id: 19, imgSrc: imgSrc19, alt: "Wake Boarding Chattanooga", pos: "vert", align: "middle" },
+    { id: 20, imgSrc: imgSrc20, alt: "Scuba Diving Thailand", pos: "hor", align: "middle" },
   ];
   const sports = srcs.map((item) => (
     <div
       key={item.id}
       onClick={() => setModal({ id: item.id, imgSrc: item.imgSrc, alt: item.alt, pos: item.pos })}
-      className="item">
+      className={`item ${item.align}`}>
       <img
         onLoad={(e) => {
           e.target.classList.add("loaded");

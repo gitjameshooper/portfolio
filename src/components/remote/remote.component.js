@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useRef } from "react";
 import { Context } from "./../../store";
 import "./remote.scss";
 import clickOnSrc from "./../../assets/audio/click-on.mp3";
@@ -11,19 +11,22 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 export default function Remote(props) {
   const [store, setStore] = useContext(Context);
   const [inter, setInter] = useState(null);
-  let history = useHistory();
-  function playonClickSound(src) {
+  const timerRef = useRef(null);
+  const history = useHistory();
+  if (!store.isTvOn){
+    history.push('/');
+  }
+  const playonClickSound = (src) => {
     let audio = new Audio(src);
     if (!store.mute) {
       audio.load();
       audio.volume = (store.volumeNum * 5) / 100;
       audio.play();
     }
-  }
-
-  function onBtnDown(e, btnName, type) {
+  };
+  const onBtnDown = (e, btnName, type) => {
     e.preventDefault();
-    // Volume
+    // Volume Button
     if (store.isTvOn && type === "mouseDown") {
       setInter(
         setInterval(() => {
@@ -40,9 +43,9 @@ export default function Remote(props) {
       clearInterval(inter);
     }
     return;
-  }
+  };
 
-  function onBtnClick(e, btnName, path, channel) {
+  const onBtnClick = (e, btnName, path, channel) => {
     e.preventDefault();
 
     // Mute
@@ -75,17 +78,33 @@ export default function Remote(props) {
     if (!store.isTvOn && btnName === "power") {
       setStore({ ...store, isTvOn: true, isTvPwrBtn: true, channel: channel });
       playonClickSound(clickOnSrc);
-      history.push(path);
+      history.push("/channel-1");
     } else if (store.isTvOn && btnName === "power") {
       setStore({ ...store, isTvOn: false, isTvPwrBtn: true, guide: false, mute: false });
       playonClickSound(clickOffSrc);
-      history.push(path);
+      history.push("/");
     } else if (store.isTvOn) {
       setStore({ ...store, channel: channel, isTvPwrBtn: false, guide: false });
       playonClickSound(clickOnSrc);
       history.push(path);
     }
-  }
+  };
+
+  const showRemote = (value) => {
+    if (!value && store.isTvOn && store.isRemoteInView) {
+      // console.log("r set");
+      timerRef.current = setTimeout(() => {
+        // console.log("r called");
+        setStore({ ...store, isRemoteInView: false });
+      }, 10 * 1000);
+    } else if (timerRef.current && value) {
+      // console.log("r cleared");
+      setStore({ ...store, isRemoteInView: value });
+      clearTimeout(timerRef.current);
+    } else if (value) {
+      setStore({ ...store, isRemoteInView: value });
+    }
+  };
 
   return (
     <>
@@ -103,13 +122,22 @@ export default function Remote(props) {
           <span className="text">CH</span>
         </span>
       </div>
-      <div className="remote-component animate">
-        <span className={`tooltip ${store.isTvOn ? "hidden" : ""}`}>
-          Power on the TV<span className="triangle-down"></span>
-        </span>
 
-        <div className="controller">
+      <div className="remote-component">
+        <div
+          className={`remote-hover ${store.isRemoteInView ? "hide" : ""}`}
+          onClick={() => showRemote(true)}
+          onMouseEnter={() => showRemote(true)}>
+          <span className="remote-hover-text">Hover here for remote</span>
+        </div>
+        <div
+          className={`controller ${store.isRemoteInView ? "show" : "hide"}`}
+          onMouseOver={() => showRemote(true)}
+          onMouseLeave={() => showRemote(false)}>
           <div className="cube">
+            <span className={`tooltip ${store.isTvOn ? "hide" : ""}`}>
+              Power on the TV<span className="triangle-down"></span>
+            </span>
             <div className="cube-face top">
               <div className="btn-power">
                 <a className="btn-push red" href="/channel-1" onClick={(e) => onBtnClick(e, "power", "/channel-1", 1)}>

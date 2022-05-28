@@ -1,337 +1,355 @@
 @import "./../../variables.scss";
+@-webkit-keyframes slideOut-r {
+    0% {
+        right: 50px;
+    }
+    100% {
+        right: -1000px;
+    }
+}
+
+@keyframes slideOut-r {
+    0% {
+        right: 50px;
+    }
+    100% {
+        right: -1000px;
+    }
+}
+
 @-webkit-keyframes slideIn-r {
-  0% {
-    right: -2000px;
-  }
-  60% {
-    right: 300px;
-  }
-  75% {
-    right: 0px;
-  }
-  90% {
-    right: 100px;
-  }
-  100% {
-    right: 50px;
-  }
+    0% {
+        right: -500px;
+    }
+    100% {
+        right: 50px;
+    }
 }
+
 @keyframes slideIn-r {
-  0% {
-    right: -2000px;
-  }
-  60% {
-    right: 300px;
-  }
-  75% {
-    right: 0px;
-  }
-  90% {
-    right: 100px;
-  }
-  100% {
-    right: 50px;
-  }
+    0% {
+        right: -500px;
+    }
+    100% {
+        right: 50px;
+    }
 }
+
 @-webkit-keyframes upDown-r {
-  0% {
-    bottom: 30px;
-  }
-  50% {
-    bottom: 50px;
-  }
-  100% {
-    bottom: 30px;
-  }
+    0% {
+        bottom: 30px;
+    }
+    50% {
+        bottom: 50px;
+    }
+    100% {
+        bottom: 30px;
+    }
 }
+
 @keyframes upDown-r {
-  0% {
-    bottom: 30px;
-  }
-  50% {
-    bottom: 50px;
-  }
-  100% {
-    bottom: 30px;
-  }
+    0% {
+        top: -90px;
+    }
+    50% {
+        top: -70px;
+    }
+    100% {
+        top: -90px;
+    }
 }
+
 .remote-component-mobile {
-  display: flex;
-  align-items: center;
-  background: red;
-  position: fixed;
-  bottom: 0;
-  height: 65px;
-  width: 100%;
-  left: 0;
-  z-index: 1;
-  font-size: 24px;
-  .MuiSvgIcon-root {
-    font-size: 2rem;
-  }
-  .btn-power {
-    width: 20%;
-    background: #df4242;
-    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: $pcolor1;
-  }
-  .channel-top {
-    cursor: pointer;
-    color: $pcolor1;
-    width: 40%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #2ec2dd;
-    border-left: 2px solid $pcolor1;
-    border-right: 2px solid$pcolor1;
-  }
-  .channel-bot {
-    cursor: pointer;
-    color: $pcolor1;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
-    background: #2ec2dd;
-  }
-  @media screen and (min-width: 960px) {
-    display: none;
-  }
-}
-.remote-component {
-  position: absolute;
-  bottom: 100px;
-  right: 50px;
-  z-index: 2;
-  display: none;
-  text-align: center;
-  @media screen and (min-width: 960px) {
-    display: block;
-  }
-
-  &.animate {
-    -webkit-animation: slideIn-r 3s ease-in-out;
-    animation: slideIn-r 3s ease-in-out;
-  }
-  .tooltip {
-    color: $pcolor1;
-    position: relative;
-    bottom: 30px;
-    background: #26689e;
-    border-radius: 5px;
-    padding: 8px;
-    -webkit-animation: upDown-r 2s infinite ease-in-out;
-    animation: upDown-r 2s infinite ease-in-out;
-    &.hidden {
-      display: none;
+    background: red;
+    position: fixed;
+    bottom: 0;
+    height: 65px;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+    font-size: 24px;
+    .MuiSvgIcon-root {
+        font-size: 2rem;
     }
-    .triangle-down {
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 20px solid #26689e;
-      position: absolute;
-      top: 34px;
-      right: 42%;
-      z-index: 1;
+    .btn-power {
+        width: 20%;
+        background: #df4242;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $pcolor1;
     }
-  }
-
-  .controller {
-    width: 200px;
-    height: 200px;
-
-    .cube {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transform-style: preserve-3d;
-      transform: rotateY(15deg) rotateX(20deg);
-
-      .btn-power {
-        width: 100%;
-
-        .btn-push {
-          width: 60px;
-          display: inline-block;
-          height: 22px;
-
-          svg {
-            position: relative;
-            bottom: 2px;
-          }
-        }
-      }
-
-      .btn-push {
+    .channel-top {
         cursor: pointer;
-        position: relative;
-        top: 0px;
-        text-decoration: none;
-        font-size: 18px;
-        background: #f7f7f7;
-        border: 1px solid #c4c4c4;
-        border-radius: 5px;
-        box-shadow: -3px 3px 0px #c4c4c4;
-        color: #222;
-        text-shadow: 1px 1px 1px $pcolor1;
-        transition: All 250ms ease;
-
-        &.numbers {
-          height: 27px;
-          width: 30px;
-          margin: 6px 10px;
-          padding-top: 3px;
-        }
-
-        &.guide {
-          font-size: 16px;
-          padding-top: 6px;
-          height: 26px;
-          width: 55px;
-          margin: 5px;
-        }
-
-        &.netflix {
-          font-size: 16px;
-          padding-top: 6px;
-          height: 26px;
-          width: 55px;
-          margin: 5px;
-        }
-        &.btn-volume {
-          width: 40px;
-          height: 70px;
-          margin: 5px 10px;
-
-          .volume-top {
-            display: inline-block;
-            width: 40px;
-            height: 35px;
-          }
-
-          .volume-bot {
-            display: inline-block;
-            width: 40px;
-            height: 35px;
-            position: relative;
-            bottom: 10px;
-          }
-        }
-
-        &.btn-channel {
-          width: 40px;
-          height: 70px;
-          margin: 5px 10px;
-
-          .channel-top {
-            display: inline-block;
-            width: 40px;
-            height: 35px;
-          }
-
-          .text {
-            position: relative;
-            bottom: 6px;
-          }
-
-          .channel-bot {
-            display: inline-block;
-            width: 40px;
-            height: 35px;
-            position: relative;
-            bottom: 12px;
-            padding-top: 5px;
-          }
-        }
-
-        &.volume {
-          height: 70px;
-          width: 40px;
-          margin: 5px 10px;
-        }
-
-        &.channel {
-          height: 70px;
-          width: 40px;
-          margin: 5px 10px;
-        }
-
-        &.mute {
-          font-size: 16px;
-          padding-top: 6px;
-          height: 25px;
-          width: 50px;
-          margin: 23px 0px;
-        }
-
-        &:active {
-          position: relative;
-          top: 3px;
-          left: -3px;
-          box-shadow: none !important;
-          transition: All 250ms ease;
-        }
-
-        &.navy {
-          background: #26689e;
-          border: 1px solid #1b486d;
-          border-radius: 5px;
-          box-shadow: -3px 3px 0px #1b486d;
-          color: $pcolor1;
-          text-shadow: 1px 1px 1px #1b486d;
-        }
-        &.red {
-          background: #df4242;
-          color: $pcolor1;
-          border: 1px solid #a01b1b;
-          border-radius: 5px;
-          box-shadow: -3px 3px 0px #a01b1b;
-          text-shadow: 1px 1px 1px #a01b1b;
-        }
-
-        &.blue {
-          background: #2ec2dd;
-          color: $pcolor1;
-          border: 1px solid #177c8e;
-          border-radius: 5px;
-          box-shadow: -3px 3px 0px #177c8e;
-          text-shadow: 1px 1px 1px #177c8e;
-        }
-      }
-
-      .cube-face {
-        position: absolute;
-
-        &.top {
-          transform: rotateY(0deg) translateZ(35px);
-          width: 200px;
-          height: 310px;
-          background: $pcolor0;
-          display: flex;
-          flex-wrap: wrap;
-          align-content: center;
-          justify-content: center;
-          border-radius: 25px;
-          border: 1px solid #444;
-        }
-
-        &.bottom {
-          transform: rotateY(0deg) translateZ(0px);
-          background: $pcolor0;
-          height: 310px;
-          width: 210px;
-          top: 0px;
-          left: -5px;
-          border: 1px solid #444;
-          border-radius: 25px;
-        }
-      }
+        color: $pcolor1;
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #2ec2dd;
+        border-left: 2px solid $pcolor1;
+        border-right: 2px solid$pcolor1;
     }
-  }
+    .channel-bot {
+        cursor: pointer;
+        color: $pcolor1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+        background: #2ec2dd;
+    }
+    @media screen and (min-width: 960px) {
+        display: none;
+    }
+}
+
+.remote-component {
+    display: none;
+    @media screen and (min-width: 960px) {
+        display: block;
+    }
+    .remote-hover {
+        border-radius: 50%;
+        height: 275px;
+        width: 275px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+        position: absolute;
+        bottom: -130px;
+        right: -130px;
+        opacity: .75;
+        background: #26689e;
+        background: radial-gradient(circle, #26689e 0%, #26689e 25%, transparent 100%);
+        cursor: pointer;
+        transition: opacity 1s ease-in;
+        &.hide {
+            opacity: 0;
+            transition: opacity 1s ease-out;
+        }
+        .remote-hover-text {
+            position: absolute;
+            left: 45px;
+            top: 70px;
+            width: 110px;
+            font-size: 20px;
+            font-style: italic;
+        }
+        @media screen and (min-width: 960px) {
+            display: flex;
+        }
+    }
+    .controller {
+        position: absolute;
+        bottom: 110px;
+        right: 40px;
+        z-index: 2;
+        text-align: center;
+        width: 200px;
+        height: 200px;
+        &.hide {
+            -webkit-animation: slideOut-r 3s forwards;
+            animation: slideOut-r 3s forwards;
+        }
+        &.show {
+            -webkit-animation: slideIn-r 1.5s forwards;
+            animation: slideIn-r 1.5s forwards;
+        }
+        .tooltip {
+            color: $pcolor1;
+            position: absolute;
+            top: -90px;
+            background: #26689e;
+            border-radius: 5px;
+            padding: 8px;
+            animation: upDown-r 2s infinite ease-in-out;
+            -webkit-animation: upDown-r 2s infinite ease-in-out;
+            right: 17px;
+            white-space: nowrap;
+            &.hide {
+                display: none;
+            }
+            .triangle-down {
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 20px solid #26689e;
+                position: absolute;
+                top: 34px;
+                right: 42%;
+                z-index: 1;
+            }
+        }
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateY(15deg) rotateX(20deg);
+            .btn-power {
+                width: 100%;
+                .btn-push {
+                    width: 60px;
+                    display: inline-block;
+                    height: 22px;
+                    svg {
+                        position: relative;
+                        bottom: 2px;
+                    }
+                }
+            }
+            .btn-push {
+                cursor: pointer;
+                position: relative;
+                top: 0px;
+                text-decoration: none;
+                font-size: 18px;
+                background: #f7f7f7;
+                border: 1px solid #c4c4c4;
+                border-radius: 5px;
+                box-shadow: -3px 3px 0px #c4c4c4;
+                color: #222;
+                text-shadow: 1px 1px 1px $pcolor1;
+                transition: All 250ms ease;
+                &.numbers {
+                    height: 27px;
+                    width: 30px;
+                    margin: 6px 10px;
+                    padding-top: 3px;
+                }
+                &.guide {
+                    font-size: 16px;
+                    padding-top: 6px;
+                    height: 26px;
+                    width: 55px;
+                    margin: 5px;
+                }
+                &.netflix {
+                    font-size: 16px;
+                    padding-top: 6px;
+                    height: 26px;
+                    width: 55px;
+                    margin: 5px;
+                }
+                &.btn-volume {
+                    width: 40px;
+                    height: 70px;
+                    margin: 5px 10px;
+                    .volume-top {
+                        display: inline-block;
+                        width: 40px;
+                        height: 35px;
+                    }
+                    .volume-bot {
+                        display: inline-block;
+                        width: 40px;
+                        height: 35px;
+                        position: relative;
+                        bottom: 10px;
+                    }
+                }
+                &.btn-channel {
+                    width: 40px;
+                    height: 70px;
+                    margin: 5px 10px;
+                    .channel-top {
+                        display: inline-block;
+                        width: 40px;
+                        height: 35px;
+                    }
+                    .text {
+                        position: relative;
+                        bottom: 6px;
+                    }
+                    .channel-bot {
+                        display: inline-block;
+                        width: 40px;
+                        height: 35px;
+                        position: relative;
+                        bottom: 12px;
+                        padding-top: 5px;
+                    }
+                }
+                &.volume {
+                    height: 70px;
+                    width: 40px;
+                    margin: 5px 10px;
+                }
+                &.channel {
+                    height: 70px;
+                    width: 40px;
+                    margin: 5px 10px;
+                }
+                &.mute {
+                    font-size: 16px;
+                    padding-top: 6px;
+                    height: 25px;
+                    width: 50px;
+                    margin: 23px 0px;
+                }
+                &:active {
+                    position: relative;
+                    top: 3px;
+                    left: -3px;
+                    box-shadow: none !important;
+                    transition: All 250ms ease;
+                }
+                &.navy {
+                    background: #26689e;
+                    border: 1px solid #1b486d;
+                    border-radius: 5px;
+                    box-shadow: -3px 3px 0px #1b486d;
+                    color: $pcolor1;
+                    text-shadow: 1px 1px 1px #1b486d;
+                }
+                &.red {
+                    background: #df4242;
+                    color: $pcolor1;
+                    border: 1px solid #a01b1b;
+                    border-radius: 5px;
+                    box-shadow: -3px 3px 0px #a01b1b;
+                    text-shadow: 1px 1px 1px #a01b1b;
+                }
+                &.blue {
+                    background: #2ec2dd;
+                    color: $pcolor1;
+                    border: 1px solid #177c8e;
+                    border-radius: 5px;
+                    box-shadow: -3px 3px 0px #177c8e;
+                    text-shadow: 1px 1px 1px #177c8e;
+                }
+            }
+            .cube-face {
+                position: absolute;
+                &.top {
+                    transform: rotateY(0deg) translateZ(35px);
+                    width: 200px;
+                    height: 310px;
+                    background: $pcolor0;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: center;
+                    justify-content: center;
+                    border-radius: 25px;
+                    border: 1px solid #444;
+                }
+                &.bottom {
+                    transform: rotateY(0deg) translateZ(0px);
+                    background: $pcolor0;
+                    height: 310px;
+                    width: 210px;
+                    top: 0px;
+                    left: -5px;
+                    border: 1px solid #444;
+                    border-radius: 25px;
+                }
+            }
+        }
+    }
 }

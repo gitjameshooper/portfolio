@@ -1,155 +1,163 @@
 @import "./../../../variables.scss";
-
 @-webkit-keyframes expand-8 {
-  0% {
-    width: 0;
-    top: 50%;
-    left: 50%;
-    height: 0vh;
-  }
-  100% {
-    height: 100vh;
-    width: 100%;
-    top: 0%;
-    left: 0%;
-  }
-}
-@keyframes expand-8 {
-  0% {
-    width: 0;
-    top: 50%;
-    left: 50%;
-    height: 0vh;
-  }
-  100% {
-    height: 100vh;
-    width: 100%;
-    top: 0%;
-    left: 0%;
-  }
-}
-@-webkit-keyframes expand-vert-8 {
-  0% {
-    height: 0vh;
-  }
-  100% {
-    height: 50vh;
-  }
-}
-@keyframes expand-vert-8 {
-  0% {
-    height: 0vh;
-  }
-  100% {
-    height: 100vh;
-  }
-}
-.channel-8 {
-  background: $pcolor0;
-  &.hidden {
-    display: none;
-  }
-
-  &.active {
-    .wrapper {
-      -webkit-animation: fadeIn-G 1s linear forwards;
-      animation: fadeIn-G 1s linear forwards;
-      @include abs-expand;
-      .logo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 25%;
-        max-width: 250px;
-        z-index: 1;
-        padding: 3%;
-        opacity: 0.7;
-        @media screen and (min-width: 960px) {
-          bottom: 0;
-          top: auto;
-        }
-      }
-      .sports {
-        position: relative;
-        max-width: 1200px;
-        max-height: 1000px;
-        margin: 0 auto;
-        height: 93vh;
-        overflow: auto;
-
-        .modal {
-          -webkit-animation: expand-8 2s forwards;
-          animation: expand-8 2s forwards;
-          background: rgba(0, 0, 0, 0.75);
-          position: fixed;
-          overflow: auto;
-          text-align: center;
-          @media screen and (min-width: 960px) {
-            @include abs-expand;
-          }
-          .cancel-btn-wrapper {
-            cursor: pointer;
-            background: rgba(0, 0, 0, 0.5);
-            width: 100%;
-            height: 60px;
-            position: absolute;
-            top: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .close-icon {
-              position: absolute;
-              cursor: pointer;
-              color: $pcolor1;
-              font-size: 40px;
-            }
-          }
-
-          img.hor {
-            width: 100%;
-          }
-          img.vert {
-            height: 100vh;
-            -webkit-animation: expand-vert-8 2s forwards;
-            animation: expand-vert-8 2s forwards;
-          }
-          &.active {
-            display: block;
-          }
-        }
-        .item {
-          cursor: pointer;
-          border: 2px inset $pcolor0;
-          width: 50%;
-          height: 25%;
-          box-sizing: border-box;
-
-          @media screen and (min-width: 600px) {
-            width: 33.3333%;
-            height: 25%;
-          }
-          @media screen and (min-width: 960px) {
-            width: 20%;
-            height: 25%;
-          }
-          overflow: hidden;
-          display: inline-flex;
-          justify-content: center;
-          align-items: center;
-          float: left;
-          img {
-            visibility: hidden;
-            max-width: 450px;
-            max-height: 450px;
-            &.loaded {
-              visibility: visible;
-              -webkit-animation: fadeIn-G 1s linear forwards;
-              animation: fadeIn-G 1s linear forwards;
-            }
-          }
-        }
-      }
+    0% {
+        width: 0;
+        top: 50%;
+        left: 50%;
+        height: 0vh;
     }
-  }
+    100% {
+        height: 100vh;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+    }
+}
+
+@keyframes expand-8 {
+    0% {
+        width: 0;
+        top: 50%;
+        left: 50%;
+        height: 0vh;
+    }
+    100% {
+        height: 100vh;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+    }
+}
+
+@-webkit-keyframes expand-vert-8 {
+    0% {
+        height: 0vh;
+    }
+    100% {
+        height: 50vh;
+    }
+}
+
+@keyframes expand-vert-8 {
+    0% {
+        height: 0vh;
+    }
+    100% {
+        height: 100vh;
+    }
+}
+
+.channel-8 {
+    background: $pcolor0;
+    &.hidden {
+        display: none;
+    }
+    &.active {
+        .wrapper {
+            -webkit-animation: fadeIn-G 1s linear forwards;
+            animation: fadeIn-G 1s linear forwards;
+            @include abs-expand;
+            .logo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 25%;
+                max-width: 250px;
+                z-index: 1;
+                padding: 3%;
+                opacity: 0.7;
+                pointer-events: none;
+                @media screen and (min-width: 960px) {
+                    bottom: 0;
+                    top: auto;
+                }
+            }
+            .sports {
+                position: relative;
+                max-width: 1200px;
+                max-height: 1000px;
+                margin: 0 auto;
+                height: 93vh;
+                overflow: auto;
+                .modal {
+                    -webkit-animation: expand-8 2s forwards;
+                    animation: expand-8 2s forwards;
+                    background: rgba(0, 0, 0, 0.75);
+                    position: fixed;
+                    overflow: auto;
+                    text-align: center;
+                    @media screen and (min-width: 960px) {
+                        @include abs-expand;
+                    }
+                    .cancel-btn-wrapper {
+                        cursor: pointer;
+                        background: rgba(0, 0, 0, 0.5);
+                        width: 100%;
+                        height: 60px;
+                        position: absolute;
+                        top: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .close-icon {
+                            position: absolute;
+                            cursor: pointer;
+                            color: $pcolor1;
+                            font-size: 40px;
+                        }
+                    }
+                    img.hor {
+                        width: 100%;
+                    }
+                    img.vert {
+                        height: 100vh;
+                        -webkit-animation: expand-vert-8 2s forwards;
+                        animation: expand-vert-8 2s forwards;
+                    }
+                    &.active {
+                        display: block;
+                    }
+                }
+                .item {
+                    cursor: pointer;
+                    border: 2px inset $pcolor0;
+                    width: 50%;
+                    height: 25%;
+                    box-sizing: border-box;
+                    @media screen and (min-width: 600px) {
+                        width: 33.3333%;
+                        height: 25%;
+                    }
+                    @media screen and (min-width: 960px) {
+                        width: 20%;
+                        height: 25%;
+                    }
+                    overflow: hidden;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    float: left;
+                    &.top {
+                        align-items: flex-start;
+                    }
+                    &.middle {
+                        align-items: center;
+                    }
+                    &.bottom {
+                        align-items: flex-end;
+                    }
+                    img {
+                        visibility: hidden;
+                        max-width: 450px;
+                        max-height: 450px;
+                        &.loaded {
+                            visibility: visible;
+                            -webkit-animation: fadeIn-G 1s linear forwards;
+                            animation: fadeIn-G 1s linear forwards;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

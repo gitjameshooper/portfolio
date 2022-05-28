@@ -62,10 +62,10 @@ export default function Channel4(props) {
         <Rays />
         <section className="projects">
           <div className="website active">
-            <a target="_blank" href="https://www.volusion.com/v1/" rel="noreferrer">
+            <a target="_blank" href="https://www.volusion.com/" rel="noreferrer">
               <img alt="Volusion Website" src={volWebSrc} />
             </a>
-            <a className="link" target="_blank" href="https://www.volusion.com/v1/" rel="noreferrer">
+            <a className="link" target="_blank" href="https://www.volusion.com/" rel="noreferrer">
               Visit Project
             </a>
           </div>

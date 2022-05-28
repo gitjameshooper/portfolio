@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const initialState = {
   isTvOn: false,
   isTvPwrBtn: false,
+  isRemoteInView: true,
   channel: 1,
   volumeNum: 10,
   mute: false,

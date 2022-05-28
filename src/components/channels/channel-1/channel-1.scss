@@ -1,432 +1,478 @@
 @import "./../../../variables.scss";
-
 @-webkit-keyframes changePic-1 {
-  0% {
-    background: url("./../../../assets/img/channel-1/marilyn-monroe.jpg");
-    background-size: cover;
-  }
-  50% {
-    background: url("./../../../assets/img/channel-1/marilyn-monroe-50.jpg");
-    background-size: cover;
-  }
-  100% {
-    background: url("./../../../assets/img/channel-1/marilyn-monroe-100.jpg");
-    background-size: cover;
-  }
+    0% {
+        background-position: 0 0%;
+    }
+    3% {
+        background-position: 0 0%;
+    }
+    12% {
+        background-position: 50% 0%;
+    }
+    24% {
+        background-position: 100% 0%;
+    }
+    36% {
+        background-position: 100% 50%;
+    }
+    48% {
+        background-position: 50% 50%;
+    }
+    60% {
+        background-position: 0 50%;
+    }
+    72% {
+        background-position: 0% 100%;
+    }
+    84% {
+        background-position: 50% 100%;
+    }
+    96% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
+
 @keyframes changePic-1 {
-  0% {
-    background: url("./../../../assets/img/channel-1/marilyn-monroe.jpg");
-    background-size: cover;
-  }
-  50% {
-    background: url("./../../../assets/img/channel-1/marilyn-monroe-50.jpg");
-    background-size: cover;
-  }
-  100% {
-    background: url("./../../../assets/img/channel-1/marilyn-monroe-100.jpg");
-    background-size: cover;
-  }
+    0% {
+        background-position: 0 0%;
+    }
+    3% {
+        background-position: 0 0%;
+    }
+    12% {
+        background-position: 50% 0%;
+    }
+    24% {
+        background-position: 100% 0%;
+    }
+    36% {
+        background-position: 100% 50%;
+    }
+    48% {
+        background-position: 50% 50%;
+    }
+    60% {
+        background-position: 0 50%;
+    }
+    72% {
+        background-position: 0% 100%;
+    }
+    84% {
+        background-position: 50% 100%;
+    }
+    96% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
 }
+
 @-webkit-keyframes powerOn-1 {
-  0% {
-    width: 80px;
-    height: 40px;
-  }
-
-  15% {
-    filter: blur(0);
-    border-radius: 0;
-  }
-
-  25% {
-    filter: blur(0);
-    border-radius: 0;
-    width: 100%;
-    height: 5px;
-  }
-
-  50% {
-    filter: blur(0);
-    border-radius: 0;
-    background: url("../../../assets/img/bw-static.gif");
-    width: 100%;
-    height: 100%;
-    opacity: 0.75;
-  }
-
-  100% {
-    filter: blur(0);
-    border-radius: 0;
-    background: url("../../../assets/img/bw-static.gif");
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0;
-  }
+    0% {
+        width: 80px;
+        height: 40px;
+    }
+    15% {
+        filter: blur(0);
+        border-radius: 0;
+    }
+    25% {
+        filter: blur(0);
+        border-radius: 0;
+        width: 100%;
+        height: 5px;
+    }
+    50% {
+        filter: blur(0);
+        border-radius: 0;
+        background: url("../../../assets/img/bw-static.gif");
+        width: 100%;
+        height: 100%;
+        opacity: 0.75;
+    }
+    100% {
+        filter: blur(0);
+        border-radius: 0;
+        background: url("../../../assets/img/bw-static.gif");
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+    }
 }
+
 @keyframes powerOn-1 {
-  0% {
-    width: 80px;
-    height: 40px;
-  }
-
-  15% {
-    filter: blur(0);
-    border-radius: 0;
-  }
-
-  25% {
-    border-radius: 0;
-    width: 100%;
-    height: 5px;
-  }
-
-  50% {
-    border-radius: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.75;
-  }
-
-  100% {
-    filter: blur(0);
-    border-radius: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    opacity: 0;
-  }
+    0% {
+        width: 80px;
+        height: 40px;
+    }
+    15% {
+        filter: blur(0);
+        border-radius: 0;
+    }
+    25% {
+        border-radius: 0;
+        width: 100%;
+        height: 5px;
+    }
+    50% {
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.75;
+    }
+    100% {
+        filter: blur(0);
+        border-radius: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+    }
 }
 
 .channel-1 {
-  background: $pcolor0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  &.hidden {
-    display: none;
-  }
-
-  &.animate {
-    .wrapper {
-      -webkit-animation: fadeIn-G 1.5s ease-in forwards;
-      animation: fadeIn-G 1.5s ease-in forwards;
-    }
-  }
-
-  &.active {
-    .wrapper {
-      -webkit-animation: fadeIn-G 1s linear forwards;
-      animation: fadeIn-G 1s linear forwards;
-      @include abs-expand;
-    }
-  }
-
-  .intro {
-    width: 0px;
-    // background: $pcolor1;
-    height: 0px;
-    filter: blur(4px);
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px $pcolor1;
-    background: url("../../../assets/img/bw-static.gif");
-    visibility: visible;
-    &.animate {
-      -webkit-animation: powerOn-1 750ms linear forwards;
-      animation: powerOn-1 750ms linear forwards;
-    }
-    &.hidden {
-      visibility: hidden;
-    }
-  }
-
-  .scene {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    perspective: 600px;
-    overflow: hidden;
     background: $pcolor0;
-    .left-wall {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      transform-origin: center;
-      left: 0%;
-      background: #f1f1f1;
-      border: 2px solid $pcolor0;
-      display: flex;
-      @media screen and (min-width: 960px) {
-        width: 150%;
-        height: 130%;
-        position: absolute;
-        transform: translate3d(-36.5%, -7.5%, -1161px) rotateY(30deg);
-        transform-origin: right center;
-        align-items: center;
-        justify-content: center;
-        left: -10%;
-      }
-
-      .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &.hidden {
+        display: none;
+    }
+    &.animate {
+        .wrapper {
+            -webkit-animation: fadeIn-G 1.5s ease-in forwards;
+            animation: fadeIn-G 1.5s ease-in forwards;
+        }
+    }
+    &.active {
+        .wrapper {
+            -webkit-animation: fadeIn-G 1s linear forwards;
+            animation: fadeIn-G 1s linear forwards;
+            @include abs-expand;
+        }
+    }
+    .intro {
+        width: 0px;
+        // background: $pcolor1;
+        height: 0px;
+        filter: blur(4px);
+        border-radius: 50%;
+        box-shadow: 0px 0px 20px $pcolor1;
+        background: url("../../../assets/img/bw-static.gif");
+        visibility: visible;
+        &.animate {
+            -webkit-animation: powerOn-1 750ms linear forwards;
+            animation: powerOn-1 750ms linear forwards;
+        }
+        &.hidden {
+            visibility: hidden;
+        }
+    }
+    .scene {
         position: relative;
-        align-items: center;
-        text-align: justify;
-        line-height: 1.2;
-        padding: 25px 25px 120px;
-        overflow: auto;
-        @media screen and (min-width: 960px) {
-          display: flex;
-          padding: 0;
-          min-width: 730px;
-          width: 75%;
-          max-width: 1100px;
-        }
-        .intro-text {
-          margin: 0;
-          @include fluid-type($min_width, $max_width, 16px, 26px);
-        }
-        .portrait {
-          margin: 0 auto;
-          @media screen and (min-width: 600px) {
-            max-width: 450px;
-          }
-          @media screen and (min-width: 960px) {
-            margin-right: 30px;
+        width: 100%;
+        height: 100vh;
+        perspective: 600px;
+        overflow: hidden;
+        background: $pcolor0;
+        .left-wall {
             width: 100%;
-            min-width: 400px;
-          }
-
-          .email {
-            margin: 8px 0px 25px;
-            color: $pcolor0;
-            display: block;
-            font-style: italic;
-            text-decoration: none;
-            text-align: center;
-            @include fluid-type($min_width, $max_width, 16px, 22px);
-            &:hover {
-              text-decoration: underline;
+            height: 100%;
+            position: relative;
+            transform-origin: center;
+            left: 0%;
+            background: #f1f1f1;
+            border: 2px solid $pcolor0;
+            display: flex;
+            @media screen and (min-width: 960px) {
+                width: 150%;
+                height: 130%;
+                position: absolute;
+                transform: translate3d(-36.5%, -7.5%, -1161px) rotateY(30deg);
+                transform-origin: right center;
+                align-items: center;
+                justify-content: center;
+                left: -10%;
             }
-          }
-          .img-wrapper {
-            border: 15px solid #333;
-            box-shadow: 0 0 10px $pcolor0;
-
-            img {
-              display: block;
-              width: 100%;
+            .content {
+                position: relative;
+                align-items: center;
+                text-align: justify;
+                line-height: 1.2;
+                padding: 25px 25px 120px;
+                overflow: auto;
+                @media screen and (min-width: 960px) {
+                    display: flex;
+                    padding: 0;
+                    min-width: 730px;
+                    width: 75%;
+                    max-width: 1100px;
+                }
+                .intro-text {
+                    margin: 0;
+                    @include fluid-type($min_width,
+                    $max_width,
+                    16px,
+                    26px);
+                }
+                .portrait {
+                    margin: 0 auto;
+                    @media screen and (min-width: 600px) {
+                        max-width: 450px;
+                    }
+                    @media screen and (min-width: 960px) {
+                        margin-right: 30px;
+                        width: 100%;
+                        min-width: 400px;
+                    }
+                    .email {
+                        margin: 8px 0px 25px;
+                        color: $pcolor0;
+                        display: block;
+                        font-style: italic;
+                        text-decoration: none;
+                        text-align: center;
+                        @include fluid-type($min_width,
+                        $max_width,
+                        16px,
+                        22px);
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    .img-wrapper {
+                        border: 15px solid #333;
+                        box-shadow: 0 0 10px $pcolor0;
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+                .contact {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    margin-top: 20px;
+                    max-width: 450px;
+                    @media screen and (min-width: 600px) {
+                        // justify-content: space-between;
+                    }
+                    .resume {
+                        font-family: "Cookie", cursive;
+                        font-size: 2.8rem;
+                        text-decoration: none;
+                        color: $pcolor0;
+                    }
+                    svg {
+                        font-size: 50px;
+                        margin: 0 20px;
+                        color: $pcolor0;
+                    }
+                }
             }
-          }
         }
-
-        .contact {
-          display: flex;
-          justify-content: space-around;
-          align-items: center;
-          flex-wrap: wrap;
-          margin-top: 20px;
-          max-width: 450px;
-          @media screen and (min-width: 600px) {
-            justify-content: space-between;
-          }
-          .resume {
-            font-family: "Cookie", cursive;
-            font-size: 2.8rem;
-            text-decoration: none;
-            color: $pcolor0;
-          }
-          svg {
-            font-size: 50px;
-            margin: 0 20px;
-            color: $pcolor0;
-          }
+        .light-cans {
+            position: absolute;
+            width: 260px;
+            z-index: 1;
+            transform: rotateX(180deg) rotateY(45deg);
+            &.can-1 {
+                top: 337px;
+                transform: rotateX(205deg) rotateY(25deg) skew(45deg, -10deg);
+                right: 7%;
+            }
+            &.can-2 {
+                top: 351px;
+                right: 27%;
+                display: none;
+                transform: rotateX(205deg) rotateY(135deg) skew(-15deg, -18deg);
+                @media screen and (min-width: 1280px) {
+                    display: block;
+                }
+            }
+            &.can-3 {
+                top: 338px;
+                right: 44%;
+                transform: rotateX(176deg) rotateY(35deg) skew(-15deg, 0deg);
+            }
+            &.can-4 {
+                top: 487px;
+                right: 5%;
+                transform: rotateX(205deg) rotateY(25deg) skew(45deg, -10deg);
+                top: 499px;
+                right: 5%;
+                transform: rotateX(205deg) rotateY(155deg) skew(-15deg, -11deg);
+            }
+            &.can-5 {
+                top: 502px;
+                right: 25%;
+                display: none;
+                @media screen and (min-width: 1280px) {
+                    display: block;
+                }
+            }
+            &.can-6 {
+                top: 502px;
+                right: 40%;
+            }
+            &.can-7 {
+                top: 642px;
+                right: 8%;
+                transform: rotateX(205deg) rotateY(25deg) skew(45deg, -10deg);
+            }
         }
-      }
+        .ceiling {
+            display: none;
+            transform: translate3d(-25%, 5%, -709px) rotateX(90deg) rotateZ(-30deg);
+            transform-origin: top right;
+            background: #000;
+            width: 130%;
+            height: 200%;
+            position: absolute;
+            right: 0;
+            @media screen and (min-width: 960px) {
+                display: block;
+            }
+            .beams {
+                height: 25px;
+                width: 100%;
+                background: linear-gradient(to bottom, #37374b 0%, #464757 100%);
+                position: absolute;
+                right: 0;
+                transform: rotateX(180deg);
+                &.beam-1 {
+                    top: 900px;
+                }
+                &.beam-2 {
+                    top: 750px;
+                }
+                &.beam-3 {
+                    top: 600px;
+                }
+                &.beam-4 {
+                    top: 450px;
+                }
+                &.beam-5 {
+                    top: 300px;
+                }
+                &.beam-6 {
+                    top: 150px;
+                }
+                .inner {
+                    height: 5px;
+                    width: 100%;
+                    background: linear-gradient(to bottom, #766f76 0%, #464757 100%);
+                    position: relative;
+                    top: 25px;
+                }
+                .inner-2 {
+                    height: 10px;
+                    width: 100%;
+                    background: #1b1820;
+                    position: relative;
+                    top: 25px;
+                }
+                .inner-3 {
+                    height: 5px;
+                    width: 100%;
+                    background: linear-gradient(to bottom, #766f76 0%, #464757 100%);
+                    position: relative;
+                    top: 25px;
+                }
+            }
+        }
+        .right-wall {
+            display: none;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 140%;
+            height: 167%;
+            background: #f1f1f1;
+            transform: translate3d(94.5%, -16%, -1617px) rotateY(-60deg);
+            transform-origin: left center;
+            position: absolute;
+            right: 0%;
+            border: 2px solid $pcolor0;
+            box-shadow: 0 0 20px $pcolor0;
+            @media screen and (min-width: 960px) {
+                display: flex;
+            }
+            .picture-other {
+                max-width: 25%;
+                position: relative;
+                height: 40%;
+                width: 100%;
+                img {
+                    @include abs-expand;
+                    width: 100%;
+                    display: block;
+                    border: 4px solid #f1f1f1;
+                    box-shadow: 0 0 10px $pcolor0;
+                }
+            }
+            .picture-monroe {
+                max-width: 30%;
+                width: 100%;
+                position: relative;
+                height: 100%;
+                max-height: 44%;
+                .name {
+                    position: absolute;
+                    bottom: -60px;
+                    width: 100%;
+                    text-align: center;
+                    left: 0;
+                    font-style: italic;
+                    @include fluid-type($min_width,
+                    $max_width,
+                    20px,
+                    40px);
+                }
+                .image {
+                    background: url("./../../../assets/img/channel-1/marilyn-monroe-tile.jpg");
+                    @include abs-expand;
+                    background-position: 0 0%;
+                    background-size: 300% 300%;
+                    display: block;
+                    width: 100%;
+                    border: 4px solid #f1f1f1;
+                    box-shadow: 0 0 10px $pcolor0;
+                    animation: changePic-1 45s both 30 alternate;
+                    backface-visibility: hidden;
+                    -webkit-animation: changePic-1 45s both 30 alternate;
+                    -webkit-backface-visibility: hidden;
+                    -moz-backface-visibility: hidden;
+                    -ms-backface-visibility: hidden;
+                    -webkit-transform: translateZ(0);
+                    -moz-transform: translateZ(0);
+                    -ms-transform: translateZ(0);
+                    -o-transform: translateZ(0);
+                    transform: translateZ(0);
+                }
+            }
+        }
+        .floor {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url("./../../../assets/img/channel-1/concrete-floor.jpg");
+            background-size: cover;
+            transform: translate3d(-29.5%, 90%, -415px) rotateX(90deg) rotateZ(-30deg);
+            transform-origin: top right;
+            left: 0%;
+            border: 2px solid $pcolor0;
+            @media screen and (min-width: 960px) {
+                display: block;
+            }
+        }
     }
-    .light-cans {
-      position: absolute;
-      width: 260px;
-      z-index: 1;
-      transform: rotateX(180deg) rotateY(45deg);
-
-      &.can-1 {
-        top: 337px;
-        transform: rotateX(205deg) rotateY(25deg) skew(45deg, -10deg);
-        right: 7%;
-      }
-      &.can-2 {
-        top: 351px;
-        right: 27%;
-        display: none;
-        transform: rotateX(205deg) rotateY(135deg) skew(-15deg, -18deg);
-        @media screen and (min-width: 1280px) {
-          display: block;
-        }
-      }
-      &.can-3 {
-        top: 338px;
-        right: 44%;
-        transform: rotateX(176deg) rotateY(35deg) skew(-15deg, 0deg);
-      }
-      &.can-4 {
-        top: 487px;
-        right: 5%;
-        transform: rotateX(205deg) rotateY(25deg) skew(45deg, -10deg);
-        top: 499px;
-        right: 5%;
-        transform: rotateX(205deg) rotateY(155deg) skew(-15deg, -11deg);
-      }
-      &.can-5 {
-        top: 502px;
-        right: 25%;
-        display: none;
-        @media screen and (min-width: 1280px) {
-          display: block;
-        }
-      }
-      &.can-6 {
-        top: 502px;
-        right: 40%;
-      }
-      &.can-7 {
-        top: 642px;
-        right: 8%;
-        transform: rotateX(205deg) rotateY(25deg) skew(45deg, -10deg);
-      }
-    }
-    .ceiling {
-      display: none;
-      transform: translate3d(-25%, 5%, -709px) rotateX(90deg) rotateZ(-30deg);
-      transform-origin: top right;
-      background: #000;
-      width: 130%;
-      height: 200%;
-      position: absolute;
-      right: 0;
-      @media screen and (min-width: 960px) {
-        display: block;
-      }
-      .beams {
-        height: 25px;
-        width: 100%;
-        background: linear-gradient(to bottom, #37374b 0%, #464757 100%);
-        position: absolute;
-        right: 0;
-        transform: rotateX(180deg);
-        &.beam-1 {
-          top: 900px;
-        }
-        &.beam-2 {
-          top: 750px;
-        }
-        &.beam-3 {
-          top: 600px;
-        }
-        &.beam-4 {
-          top: 450px;
-        }
-        &.beam-5 {
-          top: 300px;
-        }
-        &.beam-6 {
-          top: 150px;
-        }
-        .inner {
-          height: 5px;
-          width: 100%;
-          background: linear-gradient(to bottom, #766f76 0%, #464757 100%);
-          position: relative;
-          top: 25px;
-        }
-        .inner-2 {
-          height: 10px;
-          width: 100%;
-          background: #1b1820;
-          position: relative;
-          top: 25px;
-        }
-        .inner-3 {
-          height: 5px;
-          width: 100%;
-          background: linear-gradient(to bottom, #766f76 0%, #464757 100%);
-          position: relative;
-          top: 25px;
-        }
-      }
-    }
-    .right-wall {
-      display: none;
-      justify-content: space-evenly;
-      align-items: center;
-      width: 140%;
-      height: 167%;
-      background: #f1f1f1;
-      transform: translate3d(94.5%, -16%, -1617px) rotateY(-60deg);
-      transform-origin: left center;
-      position: absolute;
-      right: 0%;
-      border: 2px solid $pcolor0;
-      box-shadow: 0 0 20px $pcolor0;
-      @media screen and (min-width: 960px) {
-        display: flex;
-      }
-
-      .picture-other {
-        max-width: 25%;
-        position: relative;
-        height: 40%;
-        width: 100%;
-        img {
-          @include abs-expand;
-          width: 100%;
-          display: block;
-          border: 4px solid #f1f1f1;
-        }
-      }
-      .picture-monroe {
-        max-width: 30%;
-        width: 100%;
-        position: relative;
-        height: 100%;
-        max-height: 44%;
-        .name {
-          position: absolute;
-          bottom: -50px;
-          width: 100%;
-          text-align: center;
-          left: 0;
-          @include fluid-type($min_width, $max_width, 20px, 40px);
-        }
-
-        .image {
-          background: url("./../../../assets/img/channel-1/marilyn-monroe.jpg");
-          @include abs-expand;
-          background-size: cover;
-          display: block;
-          width: 100%;
-          border: 4px solid #f1f1f1;
-          box-shadow: 0 0 10px $pcolor0;
-          -webkit-animation: changePic-1 4s both 30 alternate;
-          animation: changePic-1 4s both 30 alternate;
-        }
-      }
-    }
-    .floor {
-      display: none;
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: url("./../../../assets/img/channel-1/concrete-floor.jpg");
-      background-size: cover;
-      transform: translate3d(-29.5%, 90%, -415px) rotateX(90deg) rotateZ(-30deg);
-      transform-origin: top right;
-      left: 0%;
-      border: 2px solid $pcolor0;
-      @media screen and (min-width: 960px) {
-        display: block;
-      }
-    }
-  }
 }
