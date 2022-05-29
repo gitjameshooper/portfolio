@@ -12,9 +12,11 @@ $red: #ab2c20;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    -webkit-animation: fadeIn-G 500ms linear forwards;
+    animation: fadeIn-G 500ms linear forwards;
     .wrapper {
-      -webkit-animation: fadeIn-G 1s linear forwards;
-      animation: fadeIn-G 1s linear forwards;
+      -webkit-animation: fadeIn-G 500ms linear forwards;
+      animation: fadeIn-G 500ms linear forwards;
       @include abs-expand;
       overflow: auto;
       @media screen and (min-width: 960px) {
@@ -105,8 +107,8 @@ $red: #ab2c20;
           visibility: hidden;
           &.loaded {
             visibility: visible;
-            -webkit-animation: fadeIn-G 1s linear forwards;
-            animation: fadeIn-G 1s linear forwards;
+            // -webkit-animation: fadeIn-G 1s linear forwards;
+            // animation: fadeIn-G 1s linear forwards;
           }
         }
       }

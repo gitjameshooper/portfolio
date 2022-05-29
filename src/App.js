@@ -13,6 +13,7 @@ import Channel7 from "./components/channels/channel-7/channel-7.component";
 import Channel8 from "./components/channels/channel-8/channel-8.component";
 import Channel9 from "./components/channels/channel-9/channel-9.component";
 import Netflix from "./components/channels/netflix/netflix.component";
+import PreloadImages from "./components/preload-images/preload-images.component";
 import Guide from "./components/guide/guide.component";
 import Logo from "./components/logo/logo.component";
 import lgLogo from "./assets/img/logos/lg.png";
@@ -21,6 +22,7 @@ import "./App.scss";
 function App() {
   return (
     <Store>
+      <PreloadImages />
       <div className="App">
         <Logo />
         <span className="on-off-light"></span>

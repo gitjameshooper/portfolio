@@ -156,7 +156,6 @@ export default function Channel9(props) {
         ...quotes[quoteNum],
         position: { left: left, top: getRandomInt(5, 30), marginLeft: marginLeft },
       });
-      console.log(videoRef.current);
       if (quotes[quoteNum].video) {
         videoRef.current.volume = (store.volumeNum * 5) / 100;
         videoRef.current.play();

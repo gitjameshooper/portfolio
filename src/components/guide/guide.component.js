@@ -86,7 +86,7 @@ export default function Guide(props) {
     },
   ];
 
-  function btnClick(e, btnName, path, channel) {
+  const btnClick = (e, btnName, path, channel) => {
     if (e) {
       e.preventDefault();
     }
@@ -94,7 +94,7 @@ export default function Guide(props) {
     if (path) {
       history.push(path);
     }
-  }
+  };
   const channels = guidelist.map((x) => (
     <li key={x.channel} className={`guide-channel-${x.channel}`}>
       <a href={x.href} onClick={(e) => btnClick(e, `btn-${x.channel}`, x.href, x.channel)}>
