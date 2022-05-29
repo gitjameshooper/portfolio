@@ -16,6 +16,7 @@ export default function Channel4(props) {
       <div className="wrapper">
         <ChannelNumber number="4" /> <Volume />
         <section className="block-group">
+          <div className="block-shadow"></div>
           <div className="block block-1">
             <img className="logo" alt="Volusion Logo" src={volLogoSrc} />
           </div>

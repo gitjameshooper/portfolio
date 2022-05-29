@@ -15,6 +15,7 @@ export default function Channel5(props) {
       <div className="wrapper">
         <ChannelNumber number="5" /> <Volume />
         <section className="block-group">
+          <div className="block-shadow"></div>
           <div className="block block-1">
             <img className="logo" alt="Flosports Logo" src={fsLogoSrc} />
           </div>

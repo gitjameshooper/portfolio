@@ -56,13 +56,13 @@ export default function Channel2(props) {
   ));
 
   useEffect(() => {
-    let nextTimer = setTimeout(() => {
+    const nextTimer = setTimeout(() => {
       setExitAnim(false);
       let n = websiteN + 1;
       if (n >= srcs.length) n = 0;
       setWebsiteN(n);
     }, 10000);
-    let animTimer = setTimeout(() => {
+    const animTimer = setTimeout(() => {
       setExitAnim(true);
     }, 8500);
 
@@ -79,6 +79,7 @@ export default function Channel2(props) {
         <Volume />
 
         <section className="block-group">
+          <div className="block-shadow"></div>
           <div className="block block-1">
             <img className="logo" alt="Cart Designers Logo" src={cdLogoSrc} />
           </div>

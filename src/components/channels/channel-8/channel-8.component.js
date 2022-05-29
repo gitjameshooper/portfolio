@@ -45,11 +45,12 @@ export default function Channel8(props) {
     { id: 13, imgSrc: imgSrc13, alt: "High School Soccer", pos: "hor", align: "middle" },
     { id: 14, imgSrc: imgSrc14, alt: "Santa Run San Diego", pos: "hor", align: "middle" },
     { id: 15, imgSrc: imgSrc15, alt: "Ziplining Austin", pos: "hor", align: "middle" },
-    { id: 16, imgSrc: imgSrc16, alt: "Austin Volleyball Team", pos: "vert", align: "middle" },
+    { id: 16, imgSrc: imgSrc20, alt: "Scuba Diving Thailand", pos: "hor", align: "middle" },
     { id: 17, imgSrc: imgSrc17, alt: "Austin Volleyball", pos: "vert", align: "middle" },
     { id: 18, imgSrc: imgSrc18, alt: "Hiking Colorado", pos: "vert", align: "middle" },
     { id: 19, imgSrc: imgSrc19, alt: "Wake Boarding Chattanooga", pos: "vert", align: "middle" },
-    { id: 20, imgSrc: imgSrc20, alt: "Scuba Diving Thailand", pos: "hor", align: "middle" },
+    { id: 20, imgSrc: imgSrc16, alt: "Austin Volleyball Team", pos: "vert", align: "middle" },
+   ,
   ];
   const sports = srcs.map((item) => (
     <div

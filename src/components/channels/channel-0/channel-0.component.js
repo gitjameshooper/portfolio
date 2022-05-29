@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Context } from "./../../../store";
 import "./channel-0.scss";
 import ChannelNumber from "./../channel-number/channel-number.component";
@@ -7,21 +7,20 @@ import Volume from "./../volume/volume.component";
 
 export default function Channel0(props) {
   const [store, setStore] = useContext(Context);
-  const [loaded, setLoaded] = useState(false);
-  let audio = new Audio(tvStaticSrc);
+  const audio = useRef(null);
 
   useEffect(() => {
-    if (store.isTvOn && !loaded) {
-      audio.load();
-      audio.loop = true;
-      setLoaded(true);
+    if (store.isTvOn && !audio.current) {
+      audio.current = new Audio(tvStaticSrc);
+      audio.current.load();
+      audio.current.loop = true;
     }
-
-    audio.play();
-    audio.volume = store.mute ? 0 : (store.volumeNum * 5) / 100;
-
+    if (audio.current) {
+      audio.current.play();
+      audio.current.volume = store.mute ? 0 : (store.volumeNum * 5) / 100;
+    }
     return () => {
-      audio.pause();
+      audio.current.pause();
     };
   }, [store.mute, store.volumeNum]);
 

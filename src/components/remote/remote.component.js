@@ -1,4 +1,4 @@
-import React, { useContext, useState, useRef } from "react";
+import React, { useContext, useState, useRef, useEffect } from "react";
 import { Context } from "./../../store";
 import "./remote.scss";
 import clickOnSrc from "./../../assets/audio/click-on.mp3";
@@ -10,13 +10,10 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 export default function Remote(props) {
   const [store, setStore] = useContext(Context);
-  const [inter, setInter] = useState(null);
   const timerRef = useRef(null);
+  const intervalRef = useRef(null);
   const history = useHistory();
-  if (!store.isTvOn){
-    history.push('/');
-  }
-  const playonClickSound = (src) => {
+  const playClickSound = (src) => {
     let audio = new Audio(src);
     if (!store.mute) {
       audio.load();
@@ -28,21 +25,20 @@ export default function Remote(props) {
     e.preventDefault();
     // Volume Button
     if (store.isTvOn && type === "mouseDown") {
-      setInter(
-        setInterval(() => {
-          let num;
-          if (btnName === "btnVolTop") {
-            num = store.volumeNum >= 20 ? 20 : store.volumeNum++;
-          } else if (btnName === "btnVolBot") {
-            num = store.volumeNum <= 0 ? 0 : store.volumeNum--;
-          }
-          setStore({ ...store, showVolume: true, volumeNum: num, mute: false });
-        }, 150)
-      );
+      intervalRef.current = setInterval(() => {
+        let num;
+        if (btnName === "btnVolTop") {
+          num = store.volumeNum >= 20 ? 20 : store.volumeNum++;
+        } else if (btnName === "btnVolBot") {
+          num = store.volumeNum <= 0 ? 0 : store.volumeNum--;
+        }
+        setStore((store) => {
+          return { ...store, showVolume: true, volumeNum: num, mute: false };
+        });
+      }, 150);
     } else {
-      clearInterval(inter);
+      clearInterval(intervalRef.current);
     }
-    return;
   };
 
   const onBtnClick = (e, btnName, path, channel) => {
@@ -56,55 +52,69 @@ export default function Remote(props) {
     // Guide
     if (store.isTvOn && btnName === "guide") {
       setStore({ ...store, guide: !store.guide });
-      playonClickSound(clickOnSrc);
+      playClickSound(clickOnSrc);
       return;
     }
-    // Channel
+    // Channel Button Top
     if (store.isTvOn && btnName === "btnChTop") {
       let channel = store.channel < 9 ? store.channel + 1 : 0;
       setStore({ ...store, channel: channel, isTvPwrBtn: false });
-      playonClickSound(clickOnSrc);
+      playClickSound(clickOnSrc);
       history.push(`/channel-${channel}`);
       return;
     }
+    // Channel Button Bottom
     if (store.isTvOn && btnName === "btnChBot") {
       let channel = store.channel > 0 ? store.channel - 1 : 9;
       setStore({ ...store, channel: channel, isTvPwrBtn: false });
-      playonClickSound(clickOnSrc);
+      playClickSound(clickOnSrc);
       history.push(`/channel-${channel}`);
       return;
     }
-
+    // Power Button
     if (!store.isTvOn && btnName === "power") {
       setStore({ ...store, isTvOn: true, isTvPwrBtn: true, channel: channel });
-      playonClickSound(clickOnSrc);
+      playClickSound(clickOnSrc);
       history.push("/channel-1");
     } else if (store.isTvOn && btnName === "power") {
       setStore({ ...store, isTvOn: false, isTvPwrBtn: true, guide: false, mute: false });
-      playonClickSound(clickOffSrc);
+      playClickSound(clickOffSrc);
       history.push("/");
     } else if (store.isTvOn) {
       setStore({ ...store, channel: channel, isTvPwrBtn: false, guide: false });
-      playonClickSound(clickOnSrc);
+      playClickSound(clickOnSrc);
       history.push(path);
     }
   };
 
   const showRemote = (value) => {
     if (!value && store.isTvOn && store.isRemoteInView) {
-      // console.log("r set");
       timerRef.current = setTimeout(() => {
-        // console.log("r called");
-        setStore({ ...store, isRemoteInView: false });
+        setStore((store) => {
+          return { ...store, isRemoteInView: false };
+        });
       }, 10 * 1000);
     } else if (timerRef.current && value) {
-      // console.log("r cleared");
-      setStore({ ...store, isRemoteInView: value });
+      setStore((store) => {
+        return { ...store, isRemoteInView: value };
+      });
       clearTimeout(timerRef.current);
     } else if (value) {
-      setStore({ ...store, isRemoteInView: value });
+      setStore((store) => {
+        return { ...store, isRemoteInView: value };
+      });
     }
   };
+
+  useEffect(() => {
+    if (!store.isTvOn) {
+      history.push("/");
+    }
+    return () => {
+      clearTimeout(timerRef.current);
+      clearInterval(intervalRef.current);
+    }
+  }, [store.isTvOn, history]);
 
   return (
     <>

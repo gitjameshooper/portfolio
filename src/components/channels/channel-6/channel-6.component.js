@@ -8,7 +8,6 @@ import lcSrc from "./../../../assets/img/channel-6/land-accrue-web.jpg";
 export default function Channel6(props) {
   const [store, setStore] = useContext(Context);
   const [chuck, setChuck] = useState(false);
-  const animTimer = useRef(null);
   const time = () => {
     let t = new Date().toLocaleTimeString();
     let arr = t.split(" ");
@@ -16,13 +15,14 @@ export default function Channel6(props) {
     return arr2[0] + ":" + arr2[1] + " " + arr[1];
   };
   useEffect(() => {
+    let animTimer;
     if (!chuck) {
-      animTimer.current = setTimeout(() => {
+      animTimer = setTimeout(() => {
         setChuck(true);
       }, 2000);
     }
     return () => {
-        clearTimeout(animTimer.current);
+        clearTimeout(animTimer);
     };
   });
   return (

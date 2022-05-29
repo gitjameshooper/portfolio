@@ -73,7 +73,7 @@ $max_font: 18px;
 @-webkit-keyframes ray-G {
     0% {
         -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
+        transform: rotate(0deg) translateZ(0);
     }
     100% {
         -webkit-transform: rotate(360deg);
@@ -84,7 +84,7 @@ $max_font: 18px;
 @keyframes ray-G {
     0% {
         -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
+        transform: rotate(0deg) translateZ(0);
     }
     100% {
         -webkit-transform: rotate(360deg);
@@ -130,10 +130,10 @@ $max_font: 18px;
 
 @-webkit-keyframes grow-G {
     0% {
-        transform: scale(0);
+        transform: scale(0) translateZ(0);
     }
     15% {
-        transform: scale(1);
+        transform: scale(1) translateZ(0);
     }
     100% {
         left: 50%;
@@ -143,10 +143,10 @@ $max_font: 18px;
 
 @keyframes grow-G {
     0% {
-        transform: scale(0);
+        transform: scale(0) translateZ(0);
     }
     15% {
-        transform: scale(1);
+        transform: scale(1) translateZ(0);
     }
     100% {
         left: 50%;

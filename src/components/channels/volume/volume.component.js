@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import { Context } from "./../../../store";
 import VolumeOffIcon from "@material-ui/icons/VolumeOff";
 import VolumeUpIcon from "@material-ui/icons/VolumeUp";
@@ -7,19 +7,22 @@ import "./volume.scss";
 export default function Volume(props) {
   const [store, setStore] = useContext(Context);
   const [volTimer, setVolTimer] = useState(null);
+  const timerRef = useRef(null);
   const volBar = {
     height: store.volumeNum * 5 + "%",
   };
 
   useEffect(() => {
     if (!volTimer && store.showVolume) {
-      var timer = setTimeout(() => {
+      timerRef.current = setTimeout(() => {
         setVolTimer(true);
-        setStore({ ...store, showVolume: false });
+        setStore((store) => {
+          return { ...store, showVolume: false };
+        });
       }, 5000);
     }
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timerRef.current);
       setVolTimer(false);
     };
   }, [store.showVolume, store.volumeNum, store.mute]);
