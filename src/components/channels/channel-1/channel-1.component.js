@@ -5,7 +5,7 @@ import ChannelNumber from "./../channel-number/channel-number.component";
 import Volume from "./../volume/volume.component";
 import jamesSrc from "./../../../assets/img/channel-1/james.jpg";
 import resumeSrc from "./../../../assets/img/channel-1/james-hooper-resume.pdf";
-import gifSrc from "./../../../assets/img/channel-1/giphy-1.gif";
+import monkeySrc from "./../../../assets/img/channel-1/monkey.jpg";
 import lightCansSrc from "./../../../assets/img/channel-1/light-cans.png";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -80,7 +80,7 @@ export default function Channel1(props) {
               <span className="name">Marilyn Monroe</span>
             </div>
             <div className="picture-other">
-              <img alt="Colorful Potrait" src={gifSrc} />
+              <img alt="Monkey Potrait" src={monkeySrc} />
             </div>
           </section>
         </div>

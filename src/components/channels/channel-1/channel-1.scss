@@ -428,9 +428,9 @@
             }
             .picture-other {
                 display: none;
-                max-width: 300px;
+                max-width: 375px;
                 position: relative;
-                height: 28%;
+                height: 30%;
                 width: 100%;
                 img {
                     @include abs-expand;
