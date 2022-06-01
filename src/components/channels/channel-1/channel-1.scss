@@ -286,32 +286,45 @@
             z-index: 1;
             transform: rotateX(180deg) rotateY(45deg);
             &.can-1 {
-                top: 337px;
+                width: 210px;
+                top: 362px;
                 transform: rotateX(205deg) rotateY(25deg) skew(45deg, -10deg);
-                right: 7%;
+                right: 15%;
+                @media screen and (min-width: 1280px) {
+                    right: 7%;
+                }
             }
             &.can-2 {
-                top: 351px;
+                width: 230px;
+                top: 355px;
                 right: 27%;
                 display: none;
-                transform: rotateX(205deg) rotateY(135deg) skew(-15deg, -18deg);
+                transform: rotateX(180deg) rotateY(180deg) skew(-15deg, 0deg);
                 @media screen and (min-width: 1280px) {
                     display: block;
                 }
             }
             &.can-3 {
-                top: 338px;
-                right: 44%;
-                transform: rotateX(176deg) rotateY(35deg) skew(-15deg, 0deg);
+                width: 250px;
+                top: 349px;
+                right: 40%;
+                transform: rotateX(181deg) rotateY(60deg) skew(-25deg, 0deg);
+                @media screen and (min-width: 1280px) {
+                    right: 47%;
+                }
             }
             &.can-4 {
-                top: 499px;
-                right: 5%;
-                transform: rotateX(205deg) rotateY(155deg) skew(-15deg, -11deg);
+                width: 230px;
+                top: 506px;
+                right: 10%;
+                transform: rotateX(180deg) rotateY(180deg) skew(-45deg, 0deg);
+                @media screen and (min-width: 1280px) {
+                    right: 7%;
+                }
             }
             &.can-5 {
-                top: 502px;
-                right: 25%;
+                top: 493px;
+                right: 27%;
                 display: none;
                 @media screen and (min-width: 1280px) {
                     display: block;
@@ -320,11 +333,18 @@
             &.can-6 {
                 top: 502px;
                 right: 40%;
+                transform: rotateX(180deg) rotateY(180deg) skew(-15deg, 0deg);
+                @media screen and (min-width: 1280px) {
+                    right: 47%;
+                }
             }
             &.can-7 {
-                top: 642px;
-                right: 8%;
-                transform: rotateX(205deg) rotateY(25deg) skew(45deg, -10deg);
+                top: 643px;
+                right: 12%;
+                transform: rotateX(180deg) rotateY(25deg) skew(40deg, 0deg);
+                @media screen and (min-width: 1280px) {
+                    right: 7%;
+                }
             }
         }
         .ceiling {
@@ -391,7 +411,7 @@
             display: none;
             justify-content: space-evenly;
             align-items: center;
-            width: 140%;
+            width: 120%;
             height: 165%;
             background: #f1f1f1;
             transform: translate3d(94.5%, -15.5%, -1617px) rotateY(-60deg);
@@ -403,10 +423,14 @@
             @media screen and (min-width: 960px) {
                 display: flex;
             }
+            @media screen and (min-width: 1800px) {
+                width: 100%;
+            }
             .picture-other {
-                max-width: 25%;
+                display: none;
+                max-width: 300px;
                 position: relative;
-                height: 40%;
+                height: 28%;
                 width: 100%;
                 img {
                     @include abs-expand;
@@ -415,9 +439,12 @@
                     border: 4px solid #f1f1f1;
                     box-shadow: 0 0 10px $pcolor0;
                 }
+                @media screen and (min-width: 1200px) {
+                    display: block;
+                }
             }
             .picture-monroe {
-                max-width: 30%;
+                max-width: 500px;
                 width: 100%;
                 position: relative;
                 height: 100%;
