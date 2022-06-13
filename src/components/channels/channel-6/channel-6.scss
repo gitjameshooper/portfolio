@@ -91,6 +91,7 @@ $red: #ab2c20;
                     box-shadow: 0 0 20px $pcolor0;
                     color: $pcolor1;
                     border: 3px solid #fff;
+                    opacity: 0;
                     &.loading {
                         -webkit-animation: fadeIn-G 1s linear forwards;
                         animation: fadeIn-G 1s linear forwards;

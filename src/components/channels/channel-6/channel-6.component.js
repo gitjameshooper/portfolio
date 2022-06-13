@@ -81,7 +81,7 @@ export default function Channel6() {
       setSlideIndex((i) => {
         return i < slideData.length - 1 ? i + 1 : 0;
       });
-    }, 20000);
+    }, 10000);
 
     // Gif animation
     let animTimer;
