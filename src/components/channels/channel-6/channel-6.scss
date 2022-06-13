@@ -1,175 +1,183 @@
 @import "./../../../variables.scss";
 $red: #ab2c20;
 .channel-6 {
-  background: $pcolor0;
-
-  &.hidden {
-    display: none;
-  }
-
-  &.active {
-    background: url("./../../../assets/img/channel-6/news-bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-animation: fadeIn-G 500ms linear forwards;
-    animation: fadeIn-G 500ms linear forwards;
-    .wrapper {
-      -webkit-animation: fadeIn-G 500ms linear forwards;
-      animation: fadeIn-G 500ms linear forwards;
-      @include abs-expand;
-      overflow: auto;
-      @media screen and (min-width: 960px) {
-        overflow: hidden;
-      }
-      .chuck {
-        position: absolute;
-        bottom: 0;
-        left: 30%;
-        margin-left: -240px;
+    background: $pcolor0;
+    &.hidden {
         display: none;
-        @media screen and (min-width: 960px) {
-          display: block;
-        }
-        @media screen and (min-width: 1920px) {
-          transform: scale(1.5);
-        }
-      }
-      .location {
-        position: absolute;
-        top: 0;
-        width: 100%;
-        max-width: 250px;
-        color: $pcolor0;
-        background: $pcolor1;
-        z-index: 1;
-        display: none;
-        @media screen and (min-width: 600px) {
-          top: 20%;
-        }
-        @media screen and (min-width: 960px) {
-          display: block;
-        }
-        .city {
-          display: inline-block;
-          width: 100%;
-          padding: 5px 0;
-          text-align: center;
-          font-weight: bold;
-          font-size: 24px;
-          @include fluid-type($min_width, $max_width, 18px, 24px);
-          text-transform: uppercase;
-        }
-        .time {
-          background: $red;
-          color: $pcolor1;
-          width: 100%;
-          display: inline-block;
-          padding: 2px 0px;
-          text-align: center;
-        }
-      }
-      .projects {
-        width: 80%;
-        min-height: 100%;
-        margin: 20% auto;
-        @media screen and (min-width: 600px) {
-          width: 75%;
-          margin: 10% auto;
-        }
-        @media screen and (min-width: 960px) {
-          min-height: auto;
-          margin: 0 auto;
-          position: absolute;
-          top: 15%;
-          right: 10%;
-          width: 35%;
-        }
-
-        a {
-          display: inline-block;
-          box-shadow: 0 0 20px $pcolor0;
-          color: $pcolor1;
-          border: 5px solid #bbb;
-        }
-        .caption {
-          background: $red;
-          color: $pcolor1;
-          @include fluid-type($min_width, $max_width, 18px, 24px);
-          text-transform: uppercase;
-          display: block;
-          text-align: left;
-          padding: 3px 10px;
-        }
-        img {
-          width: 100%;
-          display: block;
-          visibility: hidden;
-          &.loaded {
-            visibility: visible;
-            // -webkit-animation: fadeIn-G 1s linear forwards;
-            // animation: fadeIn-G 1s linear forwards;
-          }
-        }
-      }
-      .info {
-        position: sticky;
-        bottom: 63px;
-        width: 100%;
-        text-align: left;
-        overflow: hidden;
-        @media screen and (min-width: 960px) {
-          position: absolute;
-          bottom: 0;
-          width: 60%;
-        }
-
-        h3 {
-          border-top: 5px solid $red;
-          background: $pcolor1;
-          color: $red;
-          width: 100%;
-          text-align: left;
-          padding-left: 20px;
-          @include fluid-type($min_width, $max_width, 20px, 32px);
-          text-transform: uppercase;
-          margin: 0;
-          position: relative;
-          @media screen and (min-width: 960px) {
-            width: 50%;
-            padding: 0;
-            text-align: center;
-          }
-        }
-        .details {
-          background: $red;
-          padding: 5px 0;
-          box-shadow: 0 0 20px $pcolor0;
-          display: flex;
-          align-items: center;
-
-          .person {
-            @include fluid-type($min_width, $max_width, 20px, 28px);
-            color: $pcolor1;
-            text-align: center;
-            width: 50%;
-            display: inline-block;
-            border-right: 2px solid $pcolor1;
-            text-transform: uppercase;
-            display: none;
-            @media screen and (min-width: 960px) {
-              display: block;
-            }
-          }
-          .subject {
-            color: $pcolor1;
-            @include fluid-type($min_width, $max_width, 18px, 20px);
-            text-transform: uppercase;
-            padding: 0px 20px;
-            display: inline-block;
-          }
-        }
-      }
     }
-  }
+    &.active {
+        background: url("./../../../assets/img/channel-6/news-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-animation: fadeIn-G 500ms linear forwards;
+        animation: fadeIn-G 500ms linear forwards;
+        .wrapper {
+            -webkit-animation: fadeIn-G 500ms linear forwards;
+            animation: fadeIn-G 500ms linear forwards;
+            @include abs-expand;
+            overflow: auto;
+            @media screen and (min-width: 960px) {
+                overflow: hidden;
+            }
+            .chuck {
+                position: absolute;
+                bottom: 0;
+                left: 30%;
+                margin-left: -240px;
+                display: none;
+                @media screen and (min-width: 960px) {
+                    display: block;
+                }
+                @media screen and (min-width: 1920px) {
+                    transform: scale(1.5);
+                }
+            }
+            .location {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                max-width: 250px;
+                color: $pcolor0;
+                background: $pcolor1;
+                z-index: 1;
+                display: none;
+                @media screen and (min-width: 600px) {
+                    top: 20%;
+                }
+                @media screen and (min-width: 960px) {
+                    display: block;
+                }
+                .city {
+                    display: inline-block;
+                    width: 100%;
+                    padding: 5px 0;
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 24px;
+                    @include fluid-type($min_width,
+                    $max_width,
+                    18px,
+                    24px);
+                    text-transform: uppercase;
+                }
+                .time {
+                    background: $red;
+                    color: $pcolor1;
+                    width: 100%;
+                    display: inline-block;
+                    padding: 2px 0px;
+                    text-align: center;
+                }
+            }
+            .projects {
+                width: 80%;
+                min-height: 100%;
+                margin: 20% auto;
+                @media screen and (min-width: 600px) {
+                    width: 75%;
+                    margin: 10% auto;
+                }
+                @media screen and (min-width: 960px) {
+                    min-height: auto;
+                    margin: 0 auto;
+                    position: absolute;
+                    top: 15%;
+                    right: 10%;
+                    width: 35%;
+                }
+                a {
+                    display: inline-block;
+                    box-shadow: 0 0 20px $pcolor0;
+                    color: $pcolor1;
+                    border: 3px solid #fff;
+                    &.loading {
+                        -webkit-animation: fadeIn-G 1s linear forwards;
+                        animation: fadeIn-G 1s linear forwards;
+                    }
+                }
+                .caption {
+                    background: $red;
+                    color: $pcolor1;
+                    @include fluid-type($min_width,
+                    $max_width,
+                    18px,
+                    22px);
+                    text-transform: uppercase;
+                    display: block;
+                    text-align: left;
+                    padding: 5px 10px;
+                }
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+            .info {
+                position: sticky;
+                bottom: 63px;
+                width: 100%;
+                text-align: left;
+                overflow: hidden;
+                @media screen and (min-width: 960px) {
+                    position: absolute;
+                    bottom: 0;
+                    width: 60%;
+                }
+                h3 {
+                    border-top: 5px solid $red;
+                    background: $pcolor1;
+                    color: $red;
+                    width: 100%;
+                    text-align: left;
+                    padding-left: 20px;
+                    @include fluid-type($min_width,
+                    $max_width,
+                    20px,
+                    32px);
+                    text-transform: uppercase;
+                    margin: 0;
+                    position: relative;
+                    @media screen and (min-width: 960px) {
+                        width: 50%;
+                        padding: 0;
+                        text-align: center;
+                    }
+                }
+                .details {
+                    background: $red;
+                    padding: 5px 0;
+                    box-shadow: 0 0 20px $pcolor0;
+                    display: flex;
+                    align-items: center;
+                    .person {
+                        @include fluid-type($min_width,
+                        $max_width,
+                        20px,
+                        28px);
+                        color: $pcolor1;
+                        text-align: center;
+                        width: 50%;
+                        display: inline-block;
+                        border-right: 2px solid $pcolor1;
+                        text-transform: uppercase;
+                        display: none;
+                        @media screen and (min-width: 960px) {
+                            display: block;
+                        }
+                    }
+                    .headline {
+                        color: $pcolor1;
+                        @include fluid-type($min_width,
+                        $max_width,
+                        18px,
+                        20px);
+                        text-transform: uppercase;
+                        padding: 0px 20px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
 }
